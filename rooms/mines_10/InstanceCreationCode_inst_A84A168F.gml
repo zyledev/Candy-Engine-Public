@@ -1,0 +1,1 @@
+targetRoom = minessecret_3;
