@@ -81,7 +81,7 @@ if (!global.panic)
 			}
 		}
 	}
-	if (string_letters(roomname) = "steamy_secret")
+	if (string_letters(roomname) = "steamysecret")
 	{
 		if (!audio_is_playing(mu_steamysecret))
 		{
