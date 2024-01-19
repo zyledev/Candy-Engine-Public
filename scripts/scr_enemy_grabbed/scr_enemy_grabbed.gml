@@ -23,7 +23,7 @@ function scr_enemy_grabbed()
 		suplexhavetomash = other.hp - 1;
 		scr_getinput();
 		move = key_left2 + key_right2;
-		if (state != states.grab && state != states.grabbing && state != states.finishingblow && state != states.slam && state != baddiestates.charge && state != states.punch && state != states.superslam && state != states.backkick && state != states.uppunch && state != states.shoulder)
+		if (state != states.grab && state != states.grabbing && state != states.finishingblow && state != states.slam && state != states.charge && state != states.punch && state != states.superslam && state != states.backkick && state != states.uppunch && state != states.shoulder)
 		{
 			other.x = x;
 			other.y = y;
