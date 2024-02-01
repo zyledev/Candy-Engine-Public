@@ -153,8 +153,8 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					other.baddieID.thrown = true;
 					vsp = -5;
 				}
-			}// /* uncomment out these multiline comments in order to YYC compile at the cost of this part not working.
-			if (instance_exists(other.baddieID) && other.baddieID.state != baddiestates.charge && !attacking && state != states.tackle && state != states.hurt && !y < other.baddieID.y && !y > other.baddieID.y && !grabbing && other.baddieID.state != baddiestates.stun && state != states.handstandjump && state != states.Nhookshot)
+			}
+			if (instance_exists(other.baddieID) && other.baddieID.state != baddiestates.charge && !attacking && state != states.tackle && state != states.hurt && y >= other.baddieID.y && y <= other.baddieID.y && !grabbing && other.baddieID.state != baddiestates.stun && state != states.handstandjump && state != states.Nhookshot)
 			{
 				if (x != other.baddieID.x)
 				{
@@ -179,7 +179,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				obj_player.state = states.bump;
 				if (other.baddieID.state == baddiestates.land)
 					other.baddieID.state = baddiestates.idle;
-			}// */ 
+			}
 		}
 	}
 }

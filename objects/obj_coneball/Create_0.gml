@@ -10,19 +10,14 @@ hurtplayer = function()
 	with (obj_player)
 	{
 		
-		// REDUNDANT CODE INCOMING (still making it better though)
 		if ((state = states.knightpep || state = states.knightpepattack || state = states.knightpepslopes) && !cutscene)
-		{
-		}
+			exit;
 		else if (state = states.bombpep && !hurted)
-		{
-		}
+			exit;
 		else if (state = states.boxxedpep)
-		{
-		}
+			exit;
 		else if (state = states.cheesepep || state = states.cheesepepstick)
-		{
-		}
+			exit;
 		else if (state != states.hurt && !hurted && !cutscene && state != states.bump && state != states.tumble)
 		{
 			scr_sound(sound_touchspike);
