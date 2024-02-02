@@ -6,8 +6,8 @@ Pull requests are welcome!
 
 # Need help downloading?
 
-Click on the green button with "<> Code" on it
-I't should release a drop-down menu.
-Now just press "Download ZIP"
+Click on the Releases tab on the right.
+On a new page, press Source Code (zip).
+Thats all! Have fun modding!
 
 Make sure to extract it of course.
