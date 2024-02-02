@@ -1,4 +1,4 @@
-function __background_set_element()
+function __background_set_element(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9, argument10, argument11, argument12, argument13, argument14)
 {
 	var __result;
 	var __bind = argument0;
@@ -27,7 +27,7 @@ function __background_set_element()
 	var __fglen = string_length(__fgstring);
 	var __bglen = string_length(__bgstring);
 	var __layerlist = layer_get_all();
-	var __layerlistlength = array_length_1d(__layerlist);
+	var __layerlistlength = array_length(__layerlist); // _1d removed
 	var __collayer = -1;
 	for (var __i = 0; __i < 8; __i++)
 	{

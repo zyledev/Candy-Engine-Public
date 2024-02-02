@@ -1,4 +1,4 @@
-function __background_get_element()
+function __background_get_element(argument0)
 {
 	var __result;
 	var __bind = argument0;
@@ -10,7 +10,7 @@ function __background_get_element()
 	var __fglen = string_length(__fgstring);
 	var __bglen = string_length(__bgstring);
 	var __layerlist = layer_get_all();
-	var __layerlistlength = array_length(__layerlist); // _1d removed
+	var __layerlistlength = array_length(__layerlist);
 	var __layerid = -1;
 	var __isforeground = 0;
 	var __i = 0;
@@ -74,7 +74,7 @@ function __background_get_element()
 	if (__layerid != -1)
 	{
 		var __els = layer_get_all_elements(__layerid);
-		var __elslength = array_length(__els); // _1d removed
+		var __elslength = array_length(__els);
 		for (__i = 0; __i < __elslength; __i++)
 		{
 			if (layer_get_element_type(__els[__i]) == 1)

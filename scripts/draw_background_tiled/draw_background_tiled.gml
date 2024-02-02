@@ -1,8 +1,8 @@
 function draw_background_tiled()
 {
-	if (global.panic == 0)
+	if !global.panic
 		draw_sprite_tiled(argument0, 0, argument1, argument2);
-	if (global.panic == 1)
+	if global.panic
 	{
 	}
 }
