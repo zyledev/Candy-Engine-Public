@@ -11,7 +11,7 @@ function scr_applejim_bash()
 		else
 			hsp = 0;
 	}
-	if (roaming == 0)
+	if !roaming
 	{
 		if (grounded || (grounded && !place_meeting(x, y, obj_platform)))
 		{

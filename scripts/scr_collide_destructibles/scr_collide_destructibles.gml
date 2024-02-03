@@ -148,22 +148,22 @@ function scr_collide_destructibles()
 	}
 	with (obj_baddie)
 	{
-		if (place_meeting(x + hsp, y, obj_destructibles) && thrown == 1)
+		if (place_meeting(x + hsp, y, obj_destructibles) && thrown)
 		{
 			instance_destroy(instance_place(x + hsp, y, obj_destructibles));
 			grav = 0.5;
 		}
-		if (place_meeting(x - hsp, y, obj_destructibles) && thrown == 1)
+		if (place_meeting(x - hsp, y, obj_destructibles) && thrown)
 		{
 			instance_destroy(instance_place(x - hsp, y, obj_destructibles));
 			grav = 0.5;
 		}
-		if (place_meeting(x + hsp, y, obj_bigdestructibles) && thrown == 1)
+		if (place_meeting(x + hsp, y, obj_bigdestructibles) && thrown)
 		{
 			instance_destroy(instance_place(x + hsp, y, obj_bigdestructibles));
 			grav = 0.5;
 		}
-		if (place_meeting(x - hsp, y, obj_bigdestructibles) && thrown == 1)
+		if (place_meeting(x - hsp, y, obj_bigdestructibles) && thrown)
 		{
 			instance_destroy(instance_place(x - hsp, y, obj_bigdestructibles));
 			grav = 0.5;

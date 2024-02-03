@@ -5,7 +5,7 @@ function scr_panicbg_start()
 	if event_type = ev_draw && event_number = ev_create
 	{
 		surface_set_target(global.panicbg_surface);
-		draw_clear_alpha(0, 0);
+		draw_clear_alpha(c_black, 0);
 		var _cam_x = camera_get_view_x(view_camera[0]);
 		var _cam_y = camera_get_view_y(view_camera[0]);
 		var a = layer_get_all();

@@ -57,9 +57,9 @@ if (!global.panic)
 	}
 	if (string_letters(roomname) = "steamy")
 	{
-		for (i = 0; i < 20; i++)
+		for (var i = 0; i < 20; i++)
 		{
-			if (roomname = ("steamy_" + string(i)) && i < 8)
+			if (roomname = ("steamy_" + string(i)) && i < 8 && string_letters(roomname) != "steamy_secret")
 			{
 				if (!audio_is_playing(mu_steamy))
 				{
@@ -69,7 +69,7 @@ if (!global.panic)
 					pausedmusic = mu_steamy;
 				}
 			}
-			if ((roomname = ("steamy_" + string(i)) && i >= 7) || room = steamy_11_1)
+			if (roomname = ("steamy_" + string(i)) && i >= 7) && string_letters(roomname) != "steamy_secret" || room = steamy_11_1
 			{
 				if (!audio_is_playing(mu_steamyinner))
 				{
@@ -81,7 +81,7 @@ if (!global.panic)
 			}
 		}
 	}
-	if (string_letters(roomname) = "steamysecret")
+	if string_letters(roomname) = "steamy_secret"
 	{
 		if (!audio_is_playing(mu_steamysecret))
 		{
@@ -113,7 +113,7 @@ if (!global.panic)
 	}
 	if (string_letters(roomname) = "mines")
 	{
-		for (i = 0; i < 20; i++)
+		for (var i = 0; i < 20; i++)
 		{
 			if (roomname = ("mines_" + string(i)) && i < 7)
 			{

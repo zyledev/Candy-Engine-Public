@@ -1,17 +1,13 @@
 with (obj_player)
 {
 	if ((state = states.knightpep || state = states.knightpepattack || state = states.knightpepslopes) && cutscene = 0)
-	{
-	}
+		exit;	
 	else if (state = states.bombpep && !hurted)
-	{
-	}
+		exit;
 	else if (state = states.boxxedpep)
-	{
-	}
+		exit;
 	else if (state = states.cheesepep || state = states.cheesepepstick)
-	{
-	}
+		exit;
 	else if (state != states.hurt && !hurted && !cutscene && state != states.bump && state != states.tumble)
 	{
 		scr_sound(sound_touchspike);

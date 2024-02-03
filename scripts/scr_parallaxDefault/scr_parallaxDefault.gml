@@ -1,6 +1,6 @@
 function scr_default_parallax()
 {
-	if (argument0 == undefined)
+	if argument0 = undefined
 		argument0 = false;
 	bg = undefined;
 	bg = function()
@@ -65,15 +65,15 @@ function scr_default_parallax()
 		var _camera = camera_get_position_struct(view_camera[0]);
 		var array = -4;
 		var lay_y = 0;
-		if (instance_exists(obj_parallax))
+		if instance_exists(obj_parallax)
 		{
 			for (var i = 0; i < array_length(obj_parallax.layers); i++)
 			{
-				if (obj_parallax.layers[i] != undefined)
+				if obj_parallax.layers[i] != undefined
 				{
-					with (obj_parallax.layers[i])
+					with obj_parallax.layers[i]
 					{
-						if (layer_get_name(layer_id) == "Backgrounds_long1")
+						if layer_get_name(layer_id) = "Backgrounds_long1"
 							lay_y = layer_yoffset;
 					}
 				}
@@ -89,15 +89,15 @@ function scr_default_parallax()
 		var _camera = camera_get_position_struct(view_camera[0]);
 		var array = -4;
 		var lay_y = 0;
-		if (instance_exists(obj_parallax))
+		if instance_exists(obj_parallax)
 		{
 			for (var i = 0; i < array_length(obj_parallax.layers); i++)
 			{
-				if (obj_parallax.layers[i] != undefined)
+				if obj_parallax.layers[i] != undefined
 				{
-					with (obj_parallax.layers[i])
+					with obj_parallax.layers[i]
 					{
-						if (layer_get_name(layer_id) == "Backgrounds_long2")
+						if layer_get_name(layer_id) == "Backgrounds_long2"
 							lay_y = layer_yoffset;
 					}
 				}

@@ -6,9 +6,9 @@ function scr_enemy_stun()
 	if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp > 0)
 	{
 		hsp = 0;
-		if (thrown == 1 && hp <= 0 && object_index != obj_noisecrusher)
+		if (thrown && hp <= 0 && object_index != obj_noisecrusher)
 			instance_destroy();
-		if (object_index == obj_noisecrusher && hp <= 0 && thrown == 1)
+		if (object_index == obj_noisecrusher && hp <= 0 && thrown)
 		{
 			alarm[0] = 100;
 			alarm[3] = 20;
@@ -36,9 +36,9 @@ function scr_enemy_stun()
 	if ((grounded || (grounded && !place_meeting(x, y, obj_cottonplatform))) && vsp > 0)
 	{
 		hsp = 0;
-		if (thrown == 1 && hp <= 0 && object_index != obj_noisecrusher)
+		if (thrown && hp <= 0 && object_index != obj_noisecrusher)
 			instance_destroy();
-		if (object_index == obj_noisecrusher && hp <= 0 && thrown == 1)
+		if (object_index == obj_noisecrusher && hp <= 0 && thrown)
 		{
 			alarm[0] = 100;
 			alarm[3] = 20;
@@ -67,7 +67,7 @@ function scr_enemy_stun()
 		hsp = -5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = 5;
-	if (((scr_solid(x + 1, y) && image_xscale == -1) || (scr_solid(x - 1, y) && image_xscale == 1)) && thrown == 0)
+	if scr_solid(x + 1, y) && image_xscale = -1 || scr_solid(x - 1, y) && image_xscale = 1 && !thrown
 	{
 		with (instance_create(x, y, obj_bulletimpact))
 			image_xscale = -other.image_xscale;
@@ -75,21 +75,21 @@ function scr_enemy_stun()
 		image_xscale *= -1;
 		hsp = -image_xscale * 4;
 	}
-	if (((scr_solid(x + 1, y) && image_xscale == -1) || (scr_solid(x - 1, y) && image_xscale == 1)) && thrown == 1)
+	if scr_solid(x + 1, y) && image_xscale = -1 || scr_solid(x - 1, y) && image_xscale = 1 && thrown
 	{
-		with (instance_create(x, y, obj_bulletimpact))
+		with instance_create(x, y, obj_bulletimpact)
 			image_xscale = -other.image_xscale;
 		instance_destroy();
 	}
-	if (floor(image_index) == (image_number - 1) && stunned < 0)
+	if floor(image_index) = image_number - 1 && stunned < 0
 	{
 		image_index = 0;
 		sprite_index = idlespr;
 		state = baddiestates.idle;
-		if (object_index != obj_charger && object_index == obj_swedishfish)
+		if object_index != obj_charger && object_index = obj_swedishfish
 			movespeed = 1;
 	}
-	if (object_index == obj_sluggy && stunned == 0)
+	if object_index = obj_sluggy && stunned = 0
 	{
 		movespeed = 1;
 		state = baddiestates.walk;

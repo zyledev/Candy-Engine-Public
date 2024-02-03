@@ -111,7 +111,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				}
 				else if (other.baddieID.hp <= 0 && other.baddieID.object_index == obj_boss)
 				{
-					other.baddieID.thrown = 1;
+					other.baddieID.thrown = true;
 					vsp = -5;
 				}
 			}

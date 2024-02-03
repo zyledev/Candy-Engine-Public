@@ -16,9 +16,9 @@ function camera_shake()
 		shake_mag_acc = argument1 / room_speed;
 	}
 }
-function camera_get_position_struct()
+function camera_get_position_struct(argument0)
 {
-	if (argument0 == undefined)
+	if argument0 = undefined
 		argument0 = view_camera[0];
 	var camera_pos = undefined;
 	camera_pos = 

@@ -22,7 +22,7 @@ if (object_index != obj_charcherry)
 		{
 			state = baddiestates.stun;
 			hp -= 1;
-			thrown = 1;
+			thrown = true;
 			hsp = obj_player.xscale * 15;
 			vsp = -6;
 			obj_player.hsp = 0;
@@ -35,7 +35,7 @@ if (object_index != obj_charcherry)
 	{
 		state = baddiestates.stun;
 		hp -= 1;
-		thrown = 1;
+		thrown = true;
 		hsp = obj_player.xscale * 15;
 		vsp = -6;
 	}
