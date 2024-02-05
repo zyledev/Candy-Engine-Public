@@ -134,3 +134,4 @@ global.smoothcam = ini_read_real("Settings", "smthcam", 1);
 global.screentilt = ini_read_real("Settings", "scrntilt", 1);
 ini_close();
 inhaling = 0;
+name = "none"

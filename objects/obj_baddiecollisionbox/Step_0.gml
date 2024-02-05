@@ -176,7 +176,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					other.baddieID.state = baddiestates.stun;
 				}
 				image_index = 0;
-				obj_player.state = states.bump;
+				state = states.bump;
 				if (other.baddieID.state == baddiestates.land)
 					other.baddieID.state = baddiestates.idle;
 			}
