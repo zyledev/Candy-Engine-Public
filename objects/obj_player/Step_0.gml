@@ -192,7 +192,7 @@ if (global.starrmode)
 }
 if (state = states.door || place_meeting(x, y, obj_hallway) || state = states.victory)
 	global.roomsave = false;
-if (state == states.finishingblow && !floor(image_index) = (image_number - 1))
+if (state == states.finishingblow && !animation_end())
 {
 	with (instance_place(x, y, obj_baddie))
 		vsp = 0;

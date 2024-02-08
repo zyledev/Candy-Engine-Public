@@ -10,7 +10,7 @@ if (obj_player.state == states.normal && obj_player.key_up && obj_player.grounde
 	image_speed = 0.35;
 	instance_create(x, y, obj_lock);
 	global.key_inv = 0;
-	global.roomsave = 0;
+	global.roomsave = false;
 }
 with (obj_player)
 {
@@ -25,7 +25,7 @@ with (obj_player)
 		targetRoom = other.targetRoom;
 		state = states.door;
 		instance_create(x, y, obj_fadeout);
-		global.roomsave = 0;
+		global.roomsave = false;
 	}
 }
 if (floor(image_index) == 2)

@@ -1,4 +1,4 @@
-if (global.panic == 1)
+if (global.panic)
 {
 	global.seconds -= 1;
 	if (global.collect >= 5)

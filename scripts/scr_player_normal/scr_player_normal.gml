@@ -28,7 +28,7 @@ function scr_player_normal()
 				idle = 0;
 				image_index = 0;
 			}
-			if (sprite_index != spr_caneidle && global.panic == 0 && sprite_index != spr_player_3hpidle)
+			if (sprite_index != spr_caneidle && !global.panic && sprite_index != spr_player_3hpidle)
 			{
 				if (idle >= 300 && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3)
 				{
@@ -72,7 +72,7 @@ function scr_player_normal()
 					}
 				}
 			}
-			if (global.panic == 1)
+			if (global.panic)
 				sprite_index = spr_escapeidle;
 			if (instance_exists(obj_coneball) && sprite_index == spr_escapeidle)
 				sprite_index = spr_timesupidle;

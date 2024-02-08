@@ -22,7 +22,7 @@ font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 
 draw_set_font(font);
 draw_set_halign(fa_center);
 draw_set_color(c_white);
-if (global.panic == 1 || global.starrmode == 1)
+if (global.panic || global.starrmode == 1)
 {
 	if (global.seconds < 10)
 	{

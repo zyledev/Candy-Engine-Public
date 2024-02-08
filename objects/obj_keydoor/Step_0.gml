@@ -23,7 +23,7 @@ with (obj_player)
 		targetRoom = other.targetRoom;
 		state = states.door;
 		instance_create(x, y, obj_fadeout);
-		global.roomsave = 0;
+		global.roomsave = false;
 	}
 }
 if (floor(image_index) == 2)

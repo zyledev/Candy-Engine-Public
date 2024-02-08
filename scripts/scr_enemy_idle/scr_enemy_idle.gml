@@ -5,7 +5,7 @@ function scr_enemy_idle()
 		instance_create(x, y, obj_landcloud);
 		image_index = 0;
 	}
-	if floor(image_index) = (image_number - 1) && roaming && grounded || grounded && !place_meeting(x, y, obj_platform)
+	if animation_end() && roaming && grounded || grounded && !place_meeting(x, y, obj_platform)
 	{
 		state = baddiestates.walk;
 		image_index = 0;
@@ -21,7 +21,7 @@ function scr_enemy_idle()
 		instance_create(x, y, obj_landcloud);
 		image_index = 0;
 	}
-	if floor(image_index) = (image_number - 1) && roaming && grounded || grounded && !place_meeting(x, y, obj_cottonplatform)
+	if animation_end() && roaming && grounded || grounded && !place_meeting(x, y, obj_cottonplatform)
 	{
 		state = baddiestates.walk;
 		image_index = 0;

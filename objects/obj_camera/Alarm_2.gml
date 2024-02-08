@@ -1,4 +1,4 @@
-if (global.panic == 1)
+if (global.panic)
 {
 	if (global.seconds == 0 && global.minutes == 0)
 	{

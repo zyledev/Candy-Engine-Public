@@ -4,4 +4,4 @@ global.login = 1;
 _message = "FUCK";
 global.minutes = 0;
 global.seconds = 0;
-global.panic = 0;
+global.panic = false;

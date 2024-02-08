@@ -4,7 +4,7 @@ else
 	visible = true;
 if (global.panic)
 	timestop = 0;
-if (global.panic == 0)
+if (!global.panic)
 	timestop = 1;
 if (global.seconds == 0 && global.minutes == 0)
 	alarm[1] = -1;
@@ -99,5 +99,5 @@ if (global.panic && global.screentilt == 1)
 	if (angle > -5 && angledir == -1)
 		angle -= 0.025;
 }
-if (global.panicbg == 1 && global.panic == 1)
+if (global.panicbg == 1 && global.panic)
 	global.wave = clamp(clamp(global.wave + (60 / room_speed), 0, global.maxwave - (((global.minutes * 60) + global.seconds) * 60)), 0, global.maxwave);

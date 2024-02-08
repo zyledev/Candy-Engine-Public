@@ -1,7 +1,7 @@
 if (!ds_list_find_index(global.saveroom, id))
 {
 	instance_create(x, y, obj_harrydead);
-	global.panic = 1;
+	global.panic = true;
 	obj_camera.alarm[1] = 60;
 	var time_array = scr_escapetimes();
 	global.minutes = time_array[0];

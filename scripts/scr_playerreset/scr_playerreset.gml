@@ -87,7 +87,7 @@ function scr_playerreset()
 		global.combo = 0;
 		global.combotime = 0;
 		global.pizzacoin = 0;
-		global.roomsave = 0;
+		global.roomsave = false;
 		global.toppintotal = 1;
 		global.hit = 0;
 		in_water = 0;

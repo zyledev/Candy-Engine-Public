@@ -102,7 +102,7 @@ if (!global.panic)
 			}
 			if (tvsprite != idletvspr)
 				tvcount = 500;
-			if ((tvsprite = tvchange1 && floor(image_index) = (image_number - 1)) || (tvsprite = tvchange2 && floor(image_index) = (image_number - 1)))
+			if ((tvsprite = tvchange1 && animation_end()) || (tvsprite = tvchange2 && animation_end()))
 			{
 				tvcount = choose(500, 450, 400, 550);
 				tvsprite = idletvspr;
