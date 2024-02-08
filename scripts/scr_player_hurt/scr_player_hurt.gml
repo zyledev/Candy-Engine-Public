@@ -12,17 +12,17 @@ function scr_player_hurt()
 	jumpAnim = 1;
 	dashAnim = 1;
 	if (grounded)
-		landAnim = 0;
+		landAnim = false;
 	else
-		landAnim = 1;
+		landAnim = true;
 	jumpstop = 0;
-	moveAnim = 1;
+	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
 	crouchAnim = 0;
 	machhitAnim = 0;
-	hurted = 1;
-	turning = 0;
+	hurted = true;
+	turning = false;
 	alarm[5] = 2;
 	alarm[7] = 60;
 	if (grounded)

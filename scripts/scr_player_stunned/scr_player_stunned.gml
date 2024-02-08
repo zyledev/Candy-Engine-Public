@@ -6,19 +6,19 @@ function scr_player_stunned()
 	bounce = 0;
 	jumpAnim = 1;
 	dashAnim = 1;
-	if (grounded)
-		landAnim = 0;
+	if grounded
+		landAnim = false;
 	else
-		landAnim = 1;
+		landAnim = true;
 	jumpstop = 0;
-	moveAnim = 1;
+	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
 	crouchAnim = 0;
 	machhitAnim = 0;
 	movespeed = 0;
-	hurted = 1;
-	turning = 0;
+	hurted = true;
+	turning = false;
 	alarm[5] = 2;
 	alarm[7] = 60;
 	sprite_index = spr_player_stunned;

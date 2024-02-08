@@ -4,7 +4,7 @@ function scr_player_handstandjump()
 	{
 		case "P":
 			move = key_left + key_right;
-			landAnim = 0;
+			landAnim = false;
 			mach2 = 35;
 			hsp = xscale * movespeed;
 			grav = 0;

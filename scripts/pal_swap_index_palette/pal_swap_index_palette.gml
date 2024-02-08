@@ -1,12 +1,12 @@
 function pal_swap_index_palette()
 {
-	if (!ds_map_exists(global.Pal_Map, argument[0]))
+	if !ds_map_exists(global.Pal_Map, argument[0])
 	{
 		var _spr = argument[0];
 		var _colors = sprite_get_height(_spr);
 		var _palettes = ds_list_create();
 		ds_map_add(global.Pal_Map, _spr, _palettes);
-		if (sprite_get_width(_spr) > 1)
+		if sprite_get_width(_spr) > 1
 		{
 			var _num = sprite_get_width(_spr);
 			var _surface = surface_create(_num, _colors);

@@ -1,6 +1,7 @@
 function scr_characterspr()
 {
-	switch obj_player.character {
+	switch obj_player.character
+	{
 		case "P":
 			spr_idle = spr_player_idle;
 			spr_move = spr_player_walk;

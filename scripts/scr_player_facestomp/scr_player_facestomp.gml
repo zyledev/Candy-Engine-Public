@@ -15,7 +15,7 @@ function scr_player_facestomp()
 		movespeed = 0;
 	if (!key_down)
 		state = states.jump;
-	landAnim = 1;
+	landAnim = true;
 	if (vsp > 0)
 		superslam++;
 	else

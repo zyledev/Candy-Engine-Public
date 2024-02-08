@@ -8,7 +8,7 @@ function scr_player_crouch()
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (move * movespeed) + 5;
 	mask_index = spr_crouchmask;
-	turning = 0;
+	turning = false;
 	movespeed = 4;
 	if (!grounded && !key_jump)
 	{

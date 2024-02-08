@@ -16,7 +16,7 @@ function scr_player_highjump()
 		dir = xscale;
 		movespeed = 2;
 	}
-	landAnim = 1;
+	landAnim = true;
 	if (!key_jump2 && jumpstop == 0 && vsp < 0)
 	{
 		vsp /= 2;
@@ -32,7 +32,7 @@ function scr_player_highjump()
 	if (grounded && vsp > 0)
 	{
 		if (key_attack)
-			landAnim = 0;
+			landAnim = false;
 		state = states.normal;
 		jumpAnim = 1;
 		jumpstop = 0;

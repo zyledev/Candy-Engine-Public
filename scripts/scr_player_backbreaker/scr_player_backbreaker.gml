@@ -7,7 +7,7 @@ function scr_player_backbreaker()
 	}
 	else
 		hsp = xscale * movespeed;
-	landAnim = 0;
+	landAnim = false;
 	if (sprite_index == spr_pizzelle_taunt || sprite_index == spr_gumbob_taunt || sprite_index == spr_player_supertaunt || sprite_index == spr_pizzano_taunt)
 	{
 		taunttimer--;

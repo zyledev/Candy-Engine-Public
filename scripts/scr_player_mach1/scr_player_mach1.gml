@@ -5,7 +5,7 @@ function scr_player_mach1()
 		case "P":
 			dir = xscale;
 			move = key_left + key_right;
-			landAnim = 0;
+			landAnim = false;
 			if (scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + 1, y, obj_slope))
 			{
 				mach2 = 0;

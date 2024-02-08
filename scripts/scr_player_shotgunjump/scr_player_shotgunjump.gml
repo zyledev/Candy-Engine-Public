@@ -13,7 +13,7 @@ function scr_player_shotgunjump()
 		dir = xscale;
 		movespeed = 0;
 	}
-	landAnim = 1;
+	landAnim = true;
 	if (ladderbuffer > 0)
 		ladderbuffer--;
 	if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)

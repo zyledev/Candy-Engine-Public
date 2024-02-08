@@ -4,7 +4,7 @@ function scr_collide_player()
 	grinding = false;
 	repeat (abs(vsp))
 	{
-		if (!scr_solid_player(x, y + sign(vsp)))
+		if !scr_solid_player(x, y + sign(vsp))
 			y += sign(vsp);
 		else
 		{
@@ -14,11 +14,11 @@ function scr_collide_player()
 	}
 	repeat (abs(hsp))
 	{
-		if (scr_solid_player(x + sign(hsp), y) && !scr_solid_player(x + sign(hsp), y - 1))
+		if scr_solid_player(x + sign(hsp), y) && !scr_solid_player(x + sign(hsp), y - 1)
 			y--;
-		if (!scr_solid_player(x + sign(hsp), y) && !scr_solid_player(x + sign(hsp), y + 1) && scr_solid_player(x + sign(hsp), y + 2))
+		if !scr_solid_player(x + sign(hsp), y) && !scr_solid_player(x + sign(hsp), y + 1) && scr_solid_player(x + sign(hsp), y + 2)
 			y++;
-		if (!scr_solid_player(x + sign(hsp), y))
+		if !scr_solid_player(x + sign(hsp), y)
 			x += sign(hsp);
 		else
 		{
@@ -26,7 +26,7 @@ function scr_collide_player()
 			break;
 		}
 	}
-	if (vsp < 20)
+	if vsp < 20
 		vsp += grav;
 	grounded = scr_solid_player(x, y + 1);
 }

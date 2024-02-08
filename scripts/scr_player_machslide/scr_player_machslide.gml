@@ -16,7 +16,7 @@ function scr_player_machslide()
 	if (sprite_index == spr_machslidestart && floor(image_index) == (image_number - 1))
 		sprite_index = spr_machslide;
 	image_speed = 0.35;
-	landAnim = 0;
+	landAnim = false;
 	if (floor(movespeed) == 0 && (sprite_index == spr_machslide || sprite_index == spr_player_crouchslide))
 	{
 		image_index = 0;

@@ -17,9 +17,9 @@ function scr_player_slam()
 		movespeed = 0;
 	jumpAnim = 1;
 	dashAnim = 1;
-	landAnim = 0;
+	landAnim = false;
 	machslideAnim = 1;
-	moveAnim = 1;
+	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
 	crouchAnim = 1;
@@ -41,7 +41,7 @@ function scr_player_slam()
 		}
 		with (obj_baddie)
 		{
-			if (point_in_rectangle(x, y, __view_get(0, 0), __view_get(1, 0), __view_get(0, 0) + __view_get(2, 0), __view_get(1, 0) + __view_get(3, 0)))
+			if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
 			{
 				vsp = -7;
 				hsp = 0;

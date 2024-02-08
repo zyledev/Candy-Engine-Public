@@ -7,9 +7,9 @@ function scr_player_freefallprep()
 	alarm[4] = 14;
 	jumpAnim = 1;
 	dashAnim = 1;
-	landAnim = 0;
+	landAnim = false;
 	machslideAnim = 1;
-	moveAnim = 1;
+	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
 	crouchAnim = 1;

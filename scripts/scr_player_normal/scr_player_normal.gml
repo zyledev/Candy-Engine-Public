@@ -15,7 +15,7 @@ function scr_player_normal()
 		hsp = (move * movespeed) - 5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (move * movespeed) + 5;
-	if (machslideAnim == 0 && landAnim == 0 && shotgunAnim == 0)
+	if (machslideAnim == 0 && !landAnim && shotgunAnim == 0)
 	{
 		if (move == 0)
 		{
@@ -92,7 +92,7 @@ function scr_player_normal()
 		if (move != 0)
 			xscale = move;
 	}
-	if (landAnim == 1)
+	if (landAnim)
 	{
 		if (shotgunAnim == 0)
 		{
@@ -101,14 +101,14 @@ function scr_player_normal()
 				movespeed = 0;
 				sprite_index = spr_land;
 				if (floor(image_index) == (image_number - 1))
-					landAnim = 0;
+					landAnim = false;
 			}
 			if (move != 0)
 			{
 				sprite_index = spr_land2;
 				if (floor(image_index) == (image_number - 1))
 				{
-					landAnim = 0;
+					landAnim = false;
 					if (global.cane == 0)
 						sprite_index = spr_move;
 					else
@@ -122,7 +122,7 @@ function scr_player_normal()
 			sprite_index = spr_shotgun_land;
 			if (floor(image_index) == (image_number - 1))
 			{
-				landAnim = 0;
+				landAnim = false;
 				if (global.cane == 0)
 					sprite_index = spr_move;
 				else
@@ -139,7 +139,7 @@ function scr_player_normal()
 	}
 	if (sprite_index == spr_player_shotgun && floor(image_index) == (image_number - 1))
 		sprite_index = spr_shotgun_idle;
-	if (landAnim == 0)
+	if (!landAnim)
 	{
 		if (shotgunAnim == 1 && move == 0 && sprite_index != spr_player_shotgun)
 			sprite_index = spr_shotgun_idle;
@@ -212,7 +212,7 @@ function scr_player_normal()
 	if ((key_down && grounded) || scr_solid(x, y - 3))
 	{
 		state = states.crouch;
-		landAnim = 0;
+		landAnim = false;
 		crouchAnim = 1;
 		image_index = 0;
 		idle = 0;

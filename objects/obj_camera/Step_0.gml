@@ -1,7 +1,7 @@
 if (room == rank_room || room == timesuproom)
-	visible = 0;
+	visible = false;
 else
-	visible = 1;
+	visible = true;
 if (global.panic)
 	timestop = 0;
 if (global.panic == 0)

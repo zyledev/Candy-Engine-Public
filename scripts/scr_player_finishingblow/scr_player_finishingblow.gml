@@ -44,7 +44,7 @@ function scr_player_finishingblow()
 		}
 	}
 	image_speed = 0.35;
-	landAnim = 0;
+	landAnim = false;
 	vsp = 0;
 	if (global.cane == 0)
 		hsp = 0;

@@ -4,7 +4,7 @@ function scr_player_boxxedpep()
 	key_particles = 0;
 	alarm[5] = 2;
 	alarm[7] = 60;
-	hurted = 1;
+	hurted = true;
 	if (key_jump)
 		input_buffer_jump = 0;
 	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)

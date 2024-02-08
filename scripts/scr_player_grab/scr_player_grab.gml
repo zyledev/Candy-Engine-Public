@@ -78,7 +78,7 @@ function scr_player_grab()
 			mach2 = 0;
 			momemtum = 0;
 		}
-		landAnim = 1;
+		landAnim = true;
 		if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
 		{
 			vsp /= 10;
@@ -161,7 +161,7 @@ function scr_player_grab()
 	if (key_down && grounded)
 	{
 		state = states.crouch;
-		landAnim = 0;
+		landAnim = false;
 		crouchAnim = 1;
 		image_index = 0;
 		idle = 0;

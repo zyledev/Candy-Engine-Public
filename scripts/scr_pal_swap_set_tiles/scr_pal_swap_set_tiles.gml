@@ -5,18 +5,18 @@ function scr_pal_swap_set_tiles()
 	var _low = argument[2] + 1;
 	var _high = argument[3] - 1;
 	var _is_surface = argument[4];
-	if (_low < _high)
+	if _low < _high
 	{
 		_low = argument[3] - 1;
 		_high = argument[2] + 1;
 	}
-	var _start_exists = 0;
-	with (obj_tile_swapper_start)
+	var _start_exists = false;
+	with obj_tile_swapper_start
 	{
 		if (depth == _low)
 		{
-			_start_exists = 1;
-			active = 1;
+			_start_exists = true;
+			active = true;
 			pal_sprite = _pal_sprite;
 			pal_index = _pal_index;
 			pal_is_surface = _is_surface;
@@ -24,9 +24,9 @@ function scr_pal_swap_set_tiles()
 	}
 	if (!_start_exists)
 	{
-		with (instance_create(0, 0, obj_tile_swapper_start))
+		with instance_create(0, 0, obj_tile_swapper_start)
 		{
-			active = 1;
+			active = true;
 			depth = _low;
 			pal_sprite = _pal_sprite;
 			pal_index = _pal_index;
@@ -34,19 +34,19 @@ function scr_pal_swap_set_tiles()
 		}
 	}
 	var _end_exists = 0;
-	with (obj_tile_swapper_end)
+	with obj_tile_swapper_end
 	{
-		if (depth == _high)
+		if depth = _high
 		{
-			_end_exists = 1;
-			active = 1;
+			_end_exists = true;
+			active = true;
 		}
 	}
-	if (!_end_exists)
+	if !_end_exists
 	{
-		with (instance_create(0, 0, obj_tile_swapper_end))
+		with instance_create(0, 0, obj_tile_swapper_end)
 		{
-			active = 1;
+			active = true;
 			depth = _high;
 		}
 	}

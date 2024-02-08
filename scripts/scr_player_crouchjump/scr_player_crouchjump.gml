@@ -33,7 +33,7 @@ function scr_player_crouchjump()
 		movespeed = 0;
 		state = states.normal;
 		jumpAnim = 1;
-		landAnim = 1;
+		landAnim = true;
 		crouchAnim = 1;
 		image_index = 0;
 		jumpstop = 0;

@@ -32,7 +32,7 @@ function scr_player_jump()
 		movespeed = 0;
 		momemtum = 0;
 	}
-	landAnim = 1;
+	landAnim = true;
 	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
 	{
 		vsp /= 5;
@@ -82,7 +82,7 @@ function scr_player_jump()
 	if (grounded && vsp > 0 && !key_attack)
 	{
 		if (key_attack)
-			landAnim = 0;
+			landAnim = false;
 		input_buffer_secondjump = 0;
 		state = states.normal;
 		jumpAnim = 1;
@@ -97,7 +97,7 @@ function scr_player_jump()
 		scr_sound(sound_maximumspeedland);
 		with (obj_baddie)
 		{
-			if (point_in_rectangle(x, y, __view_get(0, 0), __view_get(1, 0), __view_get(0, 0) + __view_get(2, 0), __view_get(1, 0) + __view_get(3, 0)))
+			if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
 			{
 				vsp = -7;
 				hsp = 0;

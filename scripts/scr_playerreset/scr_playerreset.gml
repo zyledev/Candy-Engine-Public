@@ -1,15 +1,15 @@
 function scr_playerreset()
 {
-	if (instance_exists(obj_endlevelfade))
+	if instance_exists(obj_endlevelfade)
 		instance_destroy(obj_endlevelfade);
-	if (instance_exists(obj_fadeout))
+	if instance_exists(obj_fadeout)
 		instance_destroy(obj_fadeout);
 	//obj_tv.combofade = 0;
 	global.seconds = 59;
 	global.minutes = 1;
 	global.playminutes = 0;
 	global.playseconds = 0;
-	global.panic = 0;
+	global.panic = false;
 	global.style = 0;
 	global.stylethreshold = 0;
 	obj_tv.image_index = 0;
@@ -31,7 +31,7 @@ function scr_playerreset()
 	global.chocofollow = false;
 	global.wormfollow = false;
 	global.candyfollow = false;
-	with (obj_player)
+	with obj_player
 	{
 		Dashpad_buffer = 0;
 		vertical = false;
@@ -60,19 +60,19 @@ function scr_playerreset()
 		turn = 0;
 		jumpAnim = 1;
 		dashAnim = 1;
-		landAnim = 0;
+		landAnim = false;
 		machslideAnim = 0;
-		moveAnim = 1;
+		moveAnim = true;
 		stopAnim = 1;
 		crouchslideAnim = 1;
 		crouchAnim = 1;
 		machhitAnim = 0;
 		stompAnim = 0;
 		inv_frames = 0;
-		turning = 0;
-		hurtbounce = 0;
-		hurted = 0;
-		autodash = 0;
+		turning = false;
+		hurtbounce = false;
+		hurted = false;
+		autodash = false;
 		mach2 = 0;
 		input_buffer_jump = 8;
 		input_buffer_secondjump = 8;

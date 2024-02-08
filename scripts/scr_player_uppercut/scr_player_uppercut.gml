@@ -38,7 +38,7 @@ function scr_player_uppercut()
 	if ((grounded && vsp > 0) && !place_meeting(x, y + 1, obj_destructibles))
 	{
 		scr_sound(sound_step);
-		landAnim = 1;
+		landAnim = true;
 		input_buffer_secondjump = 0;
 		state = states.normal;
 		jumpAnim = 1;

@@ -29,8 +29,8 @@ function scr_player_fireass()
 			image_index = 0;
 			alarm[5] = 2;
 			alarm[7] = 60;
-			hurted = 1;
-			landAnim = 0;
+			hurted = true;
+			landAnim = false;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 function scr_confecti_init()
 {
 	ds_list_add(global.FollowerList, id);
-	switch (object_index)
+	switch object_index
 	{
 		default:
 			spr_idle = spr_marshmellow_idle;

@@ -43,7 +43,7 @@ function scr_player_slap()
 		movespeed = 0;
 		momemtum = 0;
 	}
-	landAnim = 0;
+	landAnim = false;
 	if (key_slap)
 		slapbuffer = 0;
 	if (floor(image_index) == (image_number - 1) && slapbuffer < 8)

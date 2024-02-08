@@ -3,7 +3,7 @@ function scr_player_chainsawpogo()
 	hsp = xscale * movespeed;
 	if ((scr_solid(x + 1, y) && xscale == 1) || (scr_solid(x - 1, y) && xscale == -1))
 		movespeed = 0;
-	landAnim = 1;
+	landAnim = true;
 	if (ladderbuffer > 0)
 		ladderbuffer--;
 	if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)

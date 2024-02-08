@@ -22,13 +22,13 @@ with (obj_player)
 		obj_player.flash = true;
 		state = states.bump;
 	}
-	else if (state != states.hurt && hurted == 0 && cutscene == 0 && state != states.bump)
+	else if (state != states.hurt && !hurted && cutscene == 0 && state != states.bump)
 	{
 		scr_sound(sound_touchspike); 
 		global.hurtcounter += 1;
 		alarm[8] = 60;
 		alarm[7] = 120;
-		hurted = 1;
+		hurted = true;
 		if (xscale == other.image_xscale)
 			sprite_index = spr_hurtjump;
 		else

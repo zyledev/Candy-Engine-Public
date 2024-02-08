@@ -23,7 +23,7 @@ function scr_player_gameover()
 		vsp = -10;
 		sprite_index = spr_deathend;
 	}
-	hurted = 0;
+	hurted = false;
 	inv_frames = 0;
 	if (place_meeting(x + floor(hsp), y, obj_null))
 	{

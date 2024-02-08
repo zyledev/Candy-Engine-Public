@@ -6,8 +6,8 @@ function scr_player_throw()
 		hsp = 0;
 	jumpAnim = 1;
 	dashAnim = 1;
-	landAnim = 0;
-	moveAnim = 1;
+	landAnim = false;
+	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
 	crouchAnim = 1;

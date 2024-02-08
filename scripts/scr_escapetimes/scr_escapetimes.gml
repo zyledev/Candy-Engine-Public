@@ -1,11 +1,11 @@
 function scr_escapetimes(argument0)
 {
 	var time_array;
-	if (argument0 == undefined)
+	if argument0 = undefined
 		argument0 = room;
 	var seconds = 0;
 	var minutes = 0;
-	switch (argument0)
+	switch argument0
 	{
 		case steamy_12:
 			minutes = 4;

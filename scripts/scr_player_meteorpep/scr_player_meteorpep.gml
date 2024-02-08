@@ -1,7 +1,7 @@
 function scr_player_meteorpep()
 {
 	mach2 = 0;
-	landAnim = 1;
+	landAnim = true;
 	vsp = 0;
 	if (sprite_index == spr_meteorpep_impact && floor(image_index) == (image_number - 1))
 		sprite_index = spr_meteorpep_flying;
@@ -18,7 +18,7 @@ function scr_player_meteorpep()
 		movespeed = 0;
 		with (obj_baddie)
 		{
-			if (point_in_rectangle(x, y, __view_get(0, 0), __view_get(1, 0), __view_get(0, 0) + __view_get(2, 0), __view_get(1, 0) + __view_get(3, 0)))
+			if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
 			{
 				vsp = -7;
 				hsp = 0;
@@ -35,7 +35,7 @@ function scr_player_meteorpep()
 	if (scr_solid(x + 1, y) && xscale == -1 && hsp != 0)
 	{
 		movespeed = 0;
-		if (point_in_rectangle(x, y, __view_get(0, 0), __view_get(1, 0), __view_get(0, 0) + __view_get(2, 0), __view_get(1, 0) + __view_get(3, 0)))
+		if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
 		{
 			vsp = -7;
 			hsp = 0;

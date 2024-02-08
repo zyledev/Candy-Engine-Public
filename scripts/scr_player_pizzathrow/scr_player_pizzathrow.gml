@@ -8,7 +8,7 @@ function scr_player_pizzathrow()
 	if (global.mallowfollow == 0 && global.crackfollow == 0 && global.chocofollow == 0 && global.wormfollow == 0 && global.candyfollow == 0)
 	{
 		state = states.normal;
-		landAnim = 0;
+		landAnim = false;
 		mach2 = 0;
 		image_index = 0;
 	}

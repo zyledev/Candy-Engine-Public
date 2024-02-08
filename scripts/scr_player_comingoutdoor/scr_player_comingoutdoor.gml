@@ -3,8 +3,8 @@ function scr_player_comingoutdoor()
 	mach2 = 0;
 	jumpAnim = 1;
 	dashAnim = 1;
-	landAnim = 0;
-	moveAnim = 1;
+	landAnim = false;
+	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
 	crouchAnim = 1;

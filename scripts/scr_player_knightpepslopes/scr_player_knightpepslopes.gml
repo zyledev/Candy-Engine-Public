@@ -2,7 +2,7 @@ function scr_player_knightpepslopes()
 {
 	alarm[5] = 2;
 	alarm[7] = 60;
-	hurted = 1;
+	hurted = true;
 	hsp = xscale * movespeed;
 	if (sprite_index == spr_knightpep_downslope)
 		movespeed += 0.5;

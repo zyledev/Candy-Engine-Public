@@ -1,4 +1,4 @@
-function scr_slopeangle_player()
+function scr_slopeangle_player(argument0, argument1)
 {
 	var array = 0;
 	var checkside = -1;
@@ -13,7 +13,7 @@ function scr_slopeangle_player()
 			array[i] = argument1;
 			var check_1 = scr_solid_player(argument0 + (1 * checkside), argument1 + top);
 			var check_2 = !scr_solid_player(argument0 + (1 * checkside), (argument1 + top) - 1);
-			if (check_1 && check_2)
+			if check_1 && check_2
 			{
 				var sex = (argument1 + top) - 1;
 				array[i] = sex;
@@ -26,7 +26,7 @@ function scr_slopeangle_player()
 	var pointer1 = array[0];
 	var pointer2 = array[1];
 	var _angle = 0;
-	if (pointer1 != pointer2)
+	if pointer1 != pointer2
 		_angle = point_direction(argument0 - 1, pointer1, argument0 + 1, pointer2);
 	return _angle;
 }
@@ -58,7 +58,7 @@ function scr_slopeangle()
 	var pointer1 = array[0];
 	var pointer2 = array[1];
 	var _angle = 0;
-	if (pointer1 != pointer2)
+	if pointer1 != pointer2
 		_angle = point_direction(argument0 - 1, pointer1, argument0 + 1, pointer2);
 	return _angle;
 }

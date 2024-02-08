@@ -2,7 +2,7 @@ function scr_player_knightpepattack()
 {
 	alarm[5] = 2;
 	alarm[7] = 60;
-	hurted = 1;
+	hurted = true;
 	if (instance_exists(obj_swordhitbox))
 	{
 		if (obj_swordhitbox.bumpeffect == 0)

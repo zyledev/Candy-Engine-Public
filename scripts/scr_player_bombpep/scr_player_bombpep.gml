@@ -16,7 +16,7 @@ function scr_player_bombpep()
 	if (grounded && vsp > 0)
 		jumpstop = 0;
 	mach2 = 0;
-	landAnim = 0;
+	landAnim = false;
 	scr_getinput();
 	alarm[5] = 2;
 	if (sprite_index == spr_bombpep_intro && floor(image_index) == (image_number - 1))
@@ -38,7 +38,7 @@ function scr_player_bombpep()
 	{
 		alarm[5] = 2;
 		alarm[7] = 60;
-		hurted = 1;
+		hurted = true;
 		state = states.normal;
 		sprite_index = spr_player_idle;
 		image_index = 0;
@@ -46,7 +46,7 @@ function scr_player_bombpep()
 	if (bombpeptimer <= 0 && sprite_index == spr_bombpep_runabouttoexplode)
 	{
 		scr_sound(sound_explosion);
-		hurted = 1;
+		hurted = true;
 		instance_create(x, y, obj_bombexplosion);
 		sprite_index = spr_bombpep_end;
 	}

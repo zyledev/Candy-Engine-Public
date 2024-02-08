@@ -3,7 +3,7 @@ function scr_pal_swap_set()
 	shader_set(global.Pal_Shader);
 	var _pal_sprite = argument[0];
 	var _pal_index = argument[1];
-	if (!argument[2])
+	if !argument[2]
 	{
 		var tex = sprite_get_texture(_pal_sprite, 0);
 		var UVs = sprite_get_uvs(_pal_sprite, 0);

@@ -3,7 +3,7 @@ function scr_collide()
 	grounded = false;
 	repeat (abs(vsp))
 	{
-		if (!scr_solid(x, y + sign(vsp)))
+		if !scr_solid(x, y + sign(vsp))
 			y += sign(vsp);
 		else
 		{
@@ -13,11 +13,11 @@ function scr_collide()
 	}
 	repeat (abs(hsp))
 	{
-		if (scr_solid(x + sign(hsp), y) && !scr_solid(x + sign(hsp), y - 1))
+		if scr_solid(x + sign(hsp), y) && !scr_solid(x + sign(hsp), y - 1)
 			y--;
-		if (!scr_solid(x + sign(hsp), y) && !scr_solid(x + sign(hsp), y + 1) && scr_solid(x + sign(hsp), y + 2))
+		if !scr_solid(x + sign(hsp), y) && !scr_solid(x + sign(hsp), y + 1) && scr_solid(x + sign(hsp), y + 2)
 			y++;
-		if (!scr_solid(x + sign(hsp), y))
+		if !scr_solid(x + sign(hsp), y)
 			x += sign(hsp);
 		else
 		{
@@ -25,7 +25,7 @@ function scr_collide()
 			break;
 		}
 	}
-	if (vsp < 10)
+	if vsp < 10
 		vsp += grav;
 	grounded = scr_solid(x, y + 1);
 }

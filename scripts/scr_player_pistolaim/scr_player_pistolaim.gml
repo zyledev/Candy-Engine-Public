@@ -4,8 +4,8 @@ function scr_player_pistolaim()
 	move = key_left + key_right;
 	jumpAnim = 1;
 	dashAnim = 1;
-	landAnim = 0;
-	moveAnim = 1;
+	landAnim = false;
+	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
 	crouchAnim = 1;

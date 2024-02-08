@@ -20,7 +20,7 @@ function scr_player_barrelnormal()
 	{
 		movespeed = 0;
 		state = states.barrelmach1;
-		landAnim = 0;
+		landAnim = false;
 	}
 	if (place_meeting(x, y, obj_water2))
 		vsp -= 1;
