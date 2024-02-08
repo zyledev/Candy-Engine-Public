@@ -20,10 +20,10 @@ function scr_player_charge()
 	move2 = key_right2 + key_left2;
 	move = (key_right + key_left);
 	crouchslideAnim = 1;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+	if (!key_jump2 && !jumpstop && vsp < 0.5)
 	{
 		vsp /= 2;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (movespeed <= 0)
 		state = states.grab;
@@ -36,7 +36,7 @@ function scr_player_charge()
 		movespeed = 0;
 	}
 	if (grounded && vsp > 0)
-		jumpstop = 0;
+		jumpstop = false;
 	if (input_buffer_jump < 8 && grounded)
 	{
 		scr_sound(sound_jump);

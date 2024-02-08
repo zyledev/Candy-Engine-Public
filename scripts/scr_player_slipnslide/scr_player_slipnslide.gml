@@ -1,14 +1,14 @@
 function scr_player_slipnslide()
 {
 	mach2 = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 0;
-	machhitAnim = 0;
+	crouchAnim = false;
+	machhitAnim = false;
 	hsp = xscale * movespeed;
 	if (!place_meeting(x, y + 1, obj_slope))
 	{
@@ -17,7 +17,7 @@ function scr_player_slipnslide()
 	}
 	else
 		movespeed += 0.2;
-	machhitAnim = 0;
+	machhitAnim = false;
 	crouchslideAnim = 1;
 	if (movespeed == 0 && !scr_slope())
 	{

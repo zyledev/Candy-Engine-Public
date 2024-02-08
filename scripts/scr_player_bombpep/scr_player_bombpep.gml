@@ -8,13 +8,13 @@ function scr_player_bombpep()
 		bombpeptimer = 0;
 	if (key_jump)
 		input_buffer_jump = 0;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
 	{
 		vsp /= 2;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (grounded && vsp > 0)
-		jumpstop = 0;
+		jumpstop = false;
 	mach2 = 0;
 	landAnim = false;
 	scr_getinput();

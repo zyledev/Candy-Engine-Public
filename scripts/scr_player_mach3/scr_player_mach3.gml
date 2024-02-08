@@ -24,13 +24,13 @@ function scr_player_mach3()
 			else if (movespeed > 12 && move != xscale)
 				movespeed -= 0.05;
 			crouchslideAnim = 1;
-			if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+			if (!key_jump2 && !jumpstop && vsp < 0.5)
 			{
 				vsp /= 2;
-				jumpstop = 1;
+				jumpstop = true;
 			}
 			if (grounded && vsp > 0)
-				jumpstop = 0;
+				jumpstop = false;
 			if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && key_attack)
 			{
 				scr_sound(sound_jump);
@@ -134,13 +134,13 @@ function scr_player_mach3()
 				if (scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + 1, y, obj_destructibles))
 				{
 					wallspeed = movespeed;
-					machhitAnim = 0;
+					machhitAnim = false;
 					state = states.climbwall;
 				}
 				else if (scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x - 1, y, obj_destructibles))
 				{
 					wallspeed = movespeed;
-					machhitAnim = 0;
+					machhitAnim = false;
 					state = states.climbwall;
 				}
 			}

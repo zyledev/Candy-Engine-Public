@@ -20,7 +20,7 @@ function scr_player_mach1()
 			}
 			if (movespeed <= 8)
 				movespeed += 0.25;
-			machhitAnim = 0;
+			machhitAnim = false;
 			crouchslideAnim = 1;
 			if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
 				hsp = xscale * movespeed;
@@ -61,7 +61,7 @@ function scr_player_mach1()
 				sprite_index = spr_airdash1;
 				momemtum = 1;
 				state = states.jump;
-				jumpAnim = 0;
+				jumpAnim = false;
 				image_index = 0;
 			}
 			if (!key_attack && grounded)
@@ -86,7 +86,7 @@ function scr_player_mach1()
 				vsp = -11;
 				movespeed += 2;
 				state = states.jump;
-				jumpAnim = 1;
+				jumpAnim = true;
 				image_index = 0;
 			}
 			if (!instance_exists(obj_dashcloud) && grounded)

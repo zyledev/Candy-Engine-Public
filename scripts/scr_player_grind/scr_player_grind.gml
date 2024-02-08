@@ -1,7 +1,7 @@
 function scr_player_grind()
 {
 	vsp = 0;
-	machhitAnim = 0;
+	machhitAnim = false;
 	crouchslideAnim = 1;
 	hsp = xscale * movespeed;
 	if (!grinding)

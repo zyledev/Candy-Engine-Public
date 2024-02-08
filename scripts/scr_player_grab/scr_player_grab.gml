@@ -10,7 +10,7 @@ function scr_player_grab()
 			movespeed = 2;
 			facehurt = 0;
 		}
-		jumpstop = 0;
+		jumpstop = false;
 		anger = 100;
 		if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
 			hsp = move * movespeed;
@@ -79,17 +79,17 @@ function scr_player_grab()
 			momemtum = 0;
 		}
 		landAnim = true;
-		if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+		if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
 		{
 			vsp /= 10;
-			jumpstop = 1;
+			jumpstop = true;
 		}
 		if (ladderbuffer > 0)
 			ladderbuffer--;
-		if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)
+		if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
 		{
 			vsp = grav;
-			jumpstop = 1;
+			jumpstop = true;
 		}
 		if (move != 0 && sprite_index != spr_player_swingding)
 			xscale = move;
@@ -162,7 +162,7 @@ function scr_player_grab()
 	{
 		state = states.crouch;
 		landAnim = false;
-		crouchAnim = 1;
+		crouchAnim = true;
 		image_index = 0;
 		idle = 0;
 	}

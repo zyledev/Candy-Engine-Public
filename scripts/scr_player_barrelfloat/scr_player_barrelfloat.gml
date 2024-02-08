@@ -6,8 +6,8 @@ function scr_player_barrelfloat()
 	vsp = 0;
 	if (key_jump)
 	{
-		jumpstop = 1;
-		jumpAnim = 1;
+		jumpstop = true;
+		jumpAnim = true;
 		state = states.jump;
 		landAnim = false;
 		vsp = -7;

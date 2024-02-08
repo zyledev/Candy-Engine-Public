@@ -1,7 +1,7 @@
 function scr_player_facestomp()
 {
 	move = key_left + key_right;
-	jumpAnim = 0;
+	jumpAnim = false;
 	hsp = move * movespeed;
 	if ((scr_solid(x + 1, y) && xscale == 1) || (scr_solid(x - 1, y) && xscale == -1))
 		movespeed = 0;
@@ -29,8 +29,8 @@ function scr_player_facestomp()
 	{
 		scr_sound(sfx_facestomp);
 		state = states.freefallland;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);
@@ -56,8 +56,8 @@ function scr_player_facestomp()
 		stompAnim = 0;
 		hsp = 0;
 		state = states.handstandjump;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);

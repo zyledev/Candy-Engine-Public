@@ -9,18 +9,18 @@ function scr_player_hurt()
 	combo = 0;
 	mach2 = 0;
 	bounce = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	if (grounded)
 		landAnim = false;
 	else
 		landAnim = true;
-	jumpstop = 0;
+	jumpstop = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 0;
-	machhitAnim = 0;
+	crouchAnim = false;
+	machhitAnim = false;
 	hurted = true;
 	turning = false;
 	alarm[5] = 2;

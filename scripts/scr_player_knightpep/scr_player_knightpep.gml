@@ -15,13 +15,13 @@ function scr_player_knightpep()
 	}
 	if (key_jump)
 		input_buffer_jump = 0;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
 	{
 		vsp /= 2;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (grounded && vsp > 0)
-		jumpstop = 0;
+		jumpstop = false;
 	if ((sprite_index == spr_knightpep_idle || sprite_index == spr_knightpep_walk) && key_slap2)
 	{
 		scr_sound(sound_dash2);

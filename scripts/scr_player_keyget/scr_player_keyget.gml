@@ -5,14 +5,14 @@ function scr_player_keyget()
 	image_speed = 0.35;
 	movespeed = 0;
 	mach2 = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
-	machhitAnim = 0;
+	crouchAnim = true;
+	machhitAnim = false;
 	sprite_index = spr_keyget;
 	if (floor(image_index) == (image_number - 1))
 	{

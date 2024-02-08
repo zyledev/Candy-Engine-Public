@@ -44,14 +44,14 @@ function scr_player_Sjumpprep()
 	}
 	start_running = 1;
 	alarm[4] = 14;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
+	crouchAnim = true;
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_superjumpprep)
 		sprite_index = spr_player_superjumppreplight;
 	if (!key_up && (sprite_index == spr_player_superjumppreplight || sprite_index == spr_player_superjumpleft || sprite_index == spr_player_superjumpright || sprite_index == spr_pizzano_sjumpprep) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))

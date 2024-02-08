@@ -4,18 +4,18 @@ function scr_player_stunned()
 	combo = 0;
 	mach2 = 0;
 	bounce = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	if grounded
 		landAnim = false;
 	else
 		landAnim = true;
-	jumpstop = 0;
+	jumpstop = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 0;
-	machhitAnim = 0;
+	crouchAnim = false;
+	machhitAnim = false;
 	movespeed = 0;
 	hurted = true;
 	turning = false;
@@ -23,7 +23,7 @@ function scr_player_stunned()
 	alarm[7] = 60;
 	sprite_index = spr_player_stunned;
 	image_speed = 0.35;
-	if (floor(image_index) == 53)
+	if floor(image_index) = 53
 	{
 		mask_index = spr_player_mask;
 		state = states.normal;
@@ -31,6 +31,6 @@ function scr_player_stunned()
 		image_index = 0;
 	}
 	audio_sound_gain(sfx_hurt, 0.7, 0);
-	if (!audio_is_playing(sfx_hurt))
+	if !audio_is_playing(sfx_hurt)
 		audio_play_sound(sfx_hurt, 1, false);
 }

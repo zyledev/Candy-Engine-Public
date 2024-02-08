@@ -4,7 +4,7 @@ function scr_player_pizzathrow()
 	mach2 = 0;
 	hsp = 0;
 	xscale = -1;
-	jumpstop = 0;
+	jumpstop = false;
 	if (global.mallowfollow == 0 && global.crackfollow == 0 && global.chocofollow == 0 && global.wormfollow == 0 && global.candyfollow == 0)
 	{
 		state = states.normal;

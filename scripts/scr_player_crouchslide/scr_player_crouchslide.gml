@@ -35,7 +35,7 @@ function scr_player_crouchslide()
 		mach2 = 0;
 		crouchslideAnim = 1;
 		image_index = 0;
-		crouchAnim = 1;
+		crouchAnim = true;
 		start_running = 1;
 		alarm[4] = 14;
 	}
@@ -48,7 +48,7 @@ function scr_player_crouchslide()
 		mach2 = 0;
 		image_index = 0;
 		machslideAnim = 1;
-		machhitAnim = 0;
+		machhitAnim = false;
 		instance_create(x + (xscale * 10), y + (xscale * 10), obj_bumpeffect);
 	}
 	var _xscale = xscale;

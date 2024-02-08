@@ -2,14 +2,14 @@ function scr_player_Sjump()
 {
 	hsp = 0;
 	mach2 = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 0;
-	machhitAnim = 0;
+	crouchAnim = false;
+	machhitAnim = false;
 	if (sprite_index != spr_null && sprite_index != spr_null)
 		move = key_left + key_right;
 	if (move != 0)
@@ -66,7 +66,7 @@ function scr_player_Sjump()
 		}
 		image_index = 0;
 		state = states.Sjumpland;
-		machhitAnim = 0;
+		machhitAnim = false;
 	}
 	if (sprite_index == spr_null && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles))
 	{
@@ -90,7 +90,7 @@ function scr_player_Sjump()
 		}
 		image_index = 0;
 		state = states.Sjumpland;
-		machhitAnim = 0;
+		machhitAnim = false;
 	}
 	if (vsp > -20)
 		vsp = -20;
@@ -101,7 +101,7 @@ function scr_player_Sjump()
 		if (move != 0)
 			xscale = move;
 		movespeed = 10;
-		machhitAnim = 0;
+		machhitAnim = false;
 		state = states.mach2;
 		flash = true;
 		vsp = -12;

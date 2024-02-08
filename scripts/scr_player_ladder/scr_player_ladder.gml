@@ -1,15 +1,15 @@
 function scr_player_ladder()
 {
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 0;
-	machhitAnim = 0;
+	crouchAnim = false;
+	machhitAnim = false;
 	turning = false;
-	jumpstop = 0;
+	jumpstop = false;
 	movespeed = 0;
 	hsp = 0;
 	if (key_up)
@@ -30,18 +30,18 @@ function scr_player_ladder()
 		vsp = 0;
 	}
 	mach2 = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
-	machhitAnim = 0;
+	crouchAnim = true;
+	machhitAnim = false;
 	if (!place_meeting(x, y, obj_ladder))
 	{
 		landAnim = false;
-		jumpAnim = 0;
+		jumpAnim = false;
 		state = states.normal;
 		image_index = 0;
 		vsp = 0;
@@ -51,7 +51,7 @@ function scr_player_ladder()
 		scr_sound(sound_jump);
 		sprite_index = spr_jump;
 		ladderbuffer = 20;
-		jumpAnim = 1;
+		jumpAnim = true;
 		state = states.jump;
 		vsp = -9;
 		image_index = 0;

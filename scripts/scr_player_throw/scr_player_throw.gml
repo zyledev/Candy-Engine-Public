@@ -4,13 +4,13 @@ function scr_player_throw()
 	mach2 = 0;
 	if (grounded)
 		hsp = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
+	crouchAnim = true;
 	sprite_index = spr_punch;
 	if (floor(image_index) == (image_number - 1))
 		state = states.normal;

@@ -4,13 +4,13 @@ function scr_player_grabbing()
 		state = states.normal;
 	move = key_left + key_right;
 	hsp = move * movespeed;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
 	{
 		vsp /= 2;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (grounded && vsp > 0)
-		jumpstop = 0;
+		jumpstop = false;
 	if (((scr_solid(x + 1, y) && xscale == 1) || (scr_solid(x - 1, y) && xscale == -1)) && !scr_solid(x + sign(hsp), y))
 		movespeed = 0;
 	if (xscale == 1 && move == -1)

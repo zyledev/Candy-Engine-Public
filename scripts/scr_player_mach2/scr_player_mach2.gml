@@ -18,16 +18,16 @@ function scr_player_mach2()
 			crouchslideAnim = 1;
 			if (sprite_index != spr_player_machfallback)
 			{
-				if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+				if (!key_jump2 && !jumpstop && vsp < 0.5)
 				{
 					vsp /= 2;
-					jumpstop = 1;
+					jumpstop = true;
 				}
 			}
 			if (sprite_index != spr_player_machfallback)
 			{
 				if (grounded && vsp > 0)
-					jumpstop = 0;
+					jumpstop = false;
 				if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && key_attack)
 				{
 					image_index = 0;
@@ -69,7 +69,7 @@ function scr_player_mach2()
 					mach2 += 1.5;
 				if (mach2 >= 100)
 				{
-					machhitAnim = 0;
+					machhitAnim = false;
 					state = states.mach3;
 					flash = true;
 					sprite_index = spr_player_mach4;
@@ -111,7 +111,7 @@ function scr_player_mach2()
 			{
 				sprite_index = spr_crouchslip;
 				if (character == "P")
-					machhitAnim = 0;
+					machhitAnim = false;
 				state = states.crouchslide;
 			}
 			if ((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope)))

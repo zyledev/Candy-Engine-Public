@@ -2,13 +2,13 @@ function scr_player_punch()
 {
 	movespeed = 0;
 	mach2 = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
+	crouchAnim = true;
 	if (floor(image_index) == (image_number - 1))
 		state = states.normal;
 	sprite_index = spr_punch;

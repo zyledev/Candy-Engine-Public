@@ -150,14 +150,14 @@ function scr_player_normal()
 		movespeed = 0;
 	if (scr_solid(x + sign(hsp), y) && xscale == -1 && move == -1 && !place_meeting(x - 1, y, obj_slope))
 		movespeed = 0;
-	jumpstop = 0;
+	jumpstop = false;
 	if (!grounded && !key_jump)
 	{
 		if (shotgunAnim == 0)
 			sprite_index = spr_fall;
 		else
 			sprite_index = spr_shotgun_fall;
-		jumpAnim = 0;
+		jumpAnim = false;
 		state = states.jump;
 		image_index = 0;
 	}
@@ -168,7 +168,7 @@ function scr_player_normal()
 			mach2 = 0;
 			movespeed = 0;
 			sprite_index = spr_mach1;
-			jumpAnim = 1;
+			jumpAnim = true;
 			state = states.mach1;
 			image_index = 0;
 		}
@@ -192,7 +192,7 @@ function scr_player_normal()
 		vsp = -12;
 		state = states.jump;
 		image_index = 0;
-		jumpAnim = 1;
+		jumpAnim = true;
 	}
 	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0)
 	{
@@ -204,8 +204,8 @@ function scr_player_normal()
 		stompAnim = 0;
 		vsp = -11;
 		state = states.jump;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		freefallstart = 0;
 	}
@@ -213,7 +213,7 @@ function scr_player_normal()
 	{
 		state = states.crouch;
 		landAnim = false;
-		crouchAnim = 1;
+		crouchAnim = true;
 		image_index = 0;
 		idle = 0;
 	}

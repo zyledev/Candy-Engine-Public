@@ -32,8 +32,8 @@ function scr_player_superslam()
 	if ((sprite_index == spr_player_piledriverstart && grounded && !place_meeting(x, y + 1, obj_destructibles) && vsp > 0) || (sprite_index == spr_piledriver && grounded && !place_meeting(x, y + 1, obj_destructibles) && vsp > 0))
 	{
 		sprite_index = spr_piledriverland;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		with (obj_camera)
 		{
@@ -56,14 +56,14 @@ function scr_player_superslam()
 			}
 		}
 	}
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
+	crouchAnim = true;
 	if (sprite_index == spr_piledriverland && floor(image_index) == (image_number - 1))
 	{
 		vsp = -9;

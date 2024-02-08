@@ -2,13 +2,13 @@ function scr_player_pistolaim()
 {
 	mach2 = 0;
 	move = key_left + key_right;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
+	crouchAnim = true;
 	hsp = 0;
 	movespeed = 0;
 	if (!key_up)

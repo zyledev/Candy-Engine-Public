@@ -6,14 +6,14 @@ function scr_player_chainsawpogo()
 	landAnim = true;
 	if (ladderbuffer > 0)
 		ladderbuffer--;
-	if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)
+	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
 	{
 		vsp = grav;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope))
 	{
-		machhitAnim = 0;
+		machhitAnim = false;
 		state = states.chainsawbump;
 		hsp = -2.5;
 		vsp = -3;
@@ -26,7 +26,7 @@ function scr_player_chainsawpogo()
 	}
 	else if (scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope))
 	{
-		machhitAnim = 0;
+		machhitAnim = false;
 		state = states.chainsawbump;
 		hsp = 2.5;
 		vsp = -3;

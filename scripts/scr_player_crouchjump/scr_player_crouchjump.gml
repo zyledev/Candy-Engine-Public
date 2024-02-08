@@ -10,50 +10,50 @@ function scr_player_crouchjump()
 	mask_index = spr_crouchmask;
 	hsp = move * movespeed;
 	movespeed = 4;
-	if (!key_jump2 && jumpstop == 0 && jumpAnim == 1)
+	if (!key_jump2 && !jumpstop && jumpAnim)
 	{
 		vsp /= 2;
-		jumpstop = 1;
+		jumpstop = true;
 	}
-	if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)
+	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
 	{
 		vsp = grav;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (grounded && key_down)
 	{
 		state = states.crouch;
-		jumpAnim = 1;
-		crouchAnim = 1;
+		jumpAnim = true;
+		crouchAnim = true;
 		image_index = 0;
-		jumpstop = 0;
+		jumpstop = false;
 	}
 	if (grounded && !key_down && !scr_solid(x, y - 16))
 	{
 		movespeed = 0;
 		state = states.normal;
-		jumpAnim = 1;
+		jumpAnim = true;
 		landAnim = true;
-		crouchAnim = 1;
+		crouchAnim = true;
 		image_index = 0;
-		jumpstop = 0;
+		jumpstop = false;
 		mask_index = spr_player_mask;
 	}
 	if (grounded)
 	{
 		state = states.crouch;
-		jumpAnim = 1;
-		crouchAnim = 1;
+		jumpAnim = true;
+		crouchAnim = true;
 		image_index = 0;
-		jumpstop = 0;
+		jumpstop = false;
 	}
-	if (jumpAnim == 1)
+	if (jumpAnim)
 	{
 		sprite_index = spr_crouchjump;
 		if (floor(image_index) == (image_number - 1))
-			jumpAnim = 0;
+			jumpAnim = false;
 	}
-	if (jumpAnim == 0)
+	if (!jumpAnim)
 		sprite_index = spr_crouchfall;
 	if (move != 0)
 		xscale = move;

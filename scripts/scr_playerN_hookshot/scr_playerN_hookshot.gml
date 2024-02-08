@@ -12,8 +12,8 @@ function scr_playerN_hookshot()
 		sprite_index = spr_jump;
 		stompAnim = 0;
 		state = states.jump;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		freefallstart = 0;
 	}

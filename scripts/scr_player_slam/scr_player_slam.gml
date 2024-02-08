@@ -15,14 +15,14 @@ function scr_player_slam()
 		movespeed = 0;
 	if (xscale == -1 && move == 1)
 		movespeed = 0;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
+	crouchAnim = true;
 	if (floor(image_index) == 8)
 		state = states.normal;
 	if (move != 0)

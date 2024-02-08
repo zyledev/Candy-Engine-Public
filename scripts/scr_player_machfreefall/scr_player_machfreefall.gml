@@ -17,7 +17,7 @@ function scr_player_machfreefall()
 	sprite_index = spr_player_machfreefall;
 	if (scr_solid(x + 1, y) && image_xscale == 1)
 	{
-		machhitAnim = 0;
+		machhitAnim = false;
 		state = states.bump;
 		hsp = -2.5;
 		vsp = -2.5;
@@ -30,7 +30,7 @@ function scr_player_machfreefall()
 	}
 	else if (scr_solid(x - 1, y) && image_xscale == -1)
 	{
-		machhitAnim = 0;
+		machhitAnim = false;
 		state = states.bump;
 		hsp = 2.5;
 		vsp = -2.5;
@@ -50,7 +50,7 @@ function scr_player_machfreefall()
 		}
 		bounce = 0;
 		state = states.freefallland;
-		jumpstop = 0;
+		jumpstop = false;
 		image_index = 0;
 		with (instance_create(x, y + 35, obj_bangeffect))
 			image_xscale = obj_player.image_xscale;
@@ -80,8 +80,8 @@ function scr_player_machfreefall()
 		stompAnim = 0;
 		hsp = 0;
 		state = states.handstandjump;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);

@@ -16,10 +16,10 @@ function scr_player_shotgunjump()
 	landAnim = true;
 	if (ladderbuffer > 0)
 		ladderbuffer--;
-	if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)
+	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
 	{
 		vsp = grav;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (sprite_index == spr_player_shotgunjump2 && floor(image_index) == (image_number - 1))
 	{
@@ -31,8 +31,8 @@ function scr_player_shotgunjump()
 		stompAnim = 0;
 		vsp = -9;
 		state = states.jump;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);

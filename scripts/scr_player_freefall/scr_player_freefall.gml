@@ -51,8 +51,8 @@ function scr_player_freefall()
 			state = states.jump;
 			vsp = -7;
 		}
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		with (obj_baddie)
 		{
 			if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
@@ -83,7 +83,7 @@ function scr_player_freefall()
 		if (move != 0)
 			xscale = move;
 		movespeed = 10;
-		machhitAnim = 0;
+		machhitAnim = false;
 		state = states.mach2;
 		flash = true;
 		vsp = -2;

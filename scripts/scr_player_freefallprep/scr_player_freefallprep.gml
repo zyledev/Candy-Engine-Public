@@ -5,14 +5,14 @@ function scr_player_freefallprep()
 		movespeed = 0;
 	start_running = 1;
 	alarm[4] = 14;
-	jumpAnim = 1;
-	dashAnim = 1;
+	jumpAnim = true;
+	dashAnim = true;
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
 	stopAnim = 1;
 	crouchslideAnim = 1;
-	crouchAnim = 1;
+	crouchAnim = true;
 	sprite_index = spr_player_bodyslamstart;
 	move = key_left + key_right;
 	if (!grounded)

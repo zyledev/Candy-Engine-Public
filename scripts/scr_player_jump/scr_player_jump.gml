@@ -33,17 +33,17 @@ function scr_player_jump()
 		momemtum = 0;
 	}
 	landAnim = true;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
 	{
 		vsp /= 5;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (ladderbuffer > 0)
 		ladderbuffer--;
-	if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)
+	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
 	{
 		vsp = grav;
-		jumpstop = 1;
+		jumpstop = true;
 	}
 	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && !(sprite_index == spr_player_facestomp || sprite_index == spr_player_freefall))
 	{
@@ -55,8 +55,8 @@ function scr_player_jump()
 		stompAnim = 0;
 		vsp = -11;
 		state = states.jump;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		freefallstart = 0;
 		instance_create_depth(x, y, 0, obj_landcloud);
@@ -66,7 +66,7 @@ function scr_player_jump()
 		mach2 = 0;
 		movespeed = 0;
 		sprite_index = spr_mach1;
-		jumpAnim = 1;
+		jumpAnim = true;
 		state = states.mach1;
 		image_index = 0;
 	}
@@ -75,7 +75,7 @@ function scr_player_jump()
 		mach2 = 0;
 		movespeed = 0;
 		sprite_index = spr_null;
-		jumpAnim = 1;
+		jumpAnim = true;
 		state = states.machpizzano;
 		image_index = 0;
 	}
@@ -85,8 +85,8 @@ function scr_player_jump()
 			landAnim = false;
 		input_buffer_secondjump = 0;
 		state = states.normal;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		freefallstart = 0;
 		instance_create_depth(x, y, 0, obj_landcloud);
@@ -125,12 +125,12 @@ function scr_player_jump()
 	}
 	if (stompAnim == 0)
 	{
-		if (jumpAnim == 1)
+		if (jumpAnim)
 		{
 			if (floor(image_index) == (image_number - 1))
-				jumpAnim = 0;
+				jumpAnim = false;
 		}
-		if (jumpAnim == 0)
+		if (!jumpAnim)
 		{
 			if (sprite_index == spr_airdash1)
 				sprite_index = spr_airdash2;

@@ -32,7 +32,7 @@ function scr_player_handstandjump()
 			{
 				grav = 0.5;
 				sprite_index = spr_crouchslip;
-				machhitAnim = 0;
+				machhitAnim = false;
 				state = states.crouchslide;
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);
@@ -56,7 +56,7 @@ function scr_player_handstandjump()
 				mach2 = 0;
 				image_index = 0;
 				machslideAnim = 1;
-				machhitAnim = 0;
+				machhitAnim = false;
 				instance_create(x + 10, y + 10, obj_bumpeffect);
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);
@@ -71,7 +71,7 @@ function scr_player_handstandjump()
 				mach2 = 0;
 				image_index = 0;
 				machslideAnim = 1;
-				machhitAnim = 0;
+				machhitAnim = false;
 				instance_create(x + 10, y + 10, obj_bumpeffect);
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);

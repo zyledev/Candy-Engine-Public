@@ -41,8 +41,8 @@ function scr_player_uppercut()
 		landAnim = true;
 		input_buffer_secondjump = 0;
 		state = states.normal;
-		jumpAnim = 1;
-		jumpstop = 0;
+		jumpAnim = true;
+		jumpstop = false;
 		image_index = 0;
 		freefallstart = 0;
 		instance_create_depth(x, y, 0, obj_landcloud);
