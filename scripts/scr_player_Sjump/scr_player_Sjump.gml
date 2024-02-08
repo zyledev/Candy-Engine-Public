@@ -6,8 +6,8 @@ function scr_player_Sjump()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = false;
 	machhitAnim = false;
 	if (sprite_index != spr_null && sprite_index != spr_null)
@@ -23,12 +23,12 @@ function scr_player_Sjump()
 		hsp = xscale * a;
 		vsp = 0;
 	}
-	if (sprite_index == spr_pizzano_sjump && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_pizzano_sjump && animation_end())
 	{
 		sprite_index = spr_pizzano_sjump;
 		vsp = -15;
 	}
-	if (sprite_index == spr_null && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_null && animation_end())
 	{
 		sprite_index = spr_null;
 		a = 15;

@@ -6,8 +6,8 @@ function scr_player_pistolaim()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
 	hsp = 0;
 	movespeed = 0;

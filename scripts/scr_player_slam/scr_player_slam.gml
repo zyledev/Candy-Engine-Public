@@ -20,8 +20,8 @@ function scr_player_slam()
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
 	if (floor(image_index) == 8)
 		state = states.normal;

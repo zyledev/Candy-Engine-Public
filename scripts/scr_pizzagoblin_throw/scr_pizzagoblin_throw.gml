@@ -1,7 +1,7 @@
 function scr_pizzagoblin_throw()
 {
 	global.spr_throw[59] = spr_gumball_throw;
-	if (floor(image_index) == (image_number - 1) && grounded)
+	if (animation_end() && grounded)
 	{
 		state = baddiestates.idle;
 		image_index = 0;
@@ -16,7 +16,7 @@ function scr_pizzagoblin_throw()
 		hsp = -5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = 5;
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 	{
 		sprite_index = walkspr;
 		image_index = 0;

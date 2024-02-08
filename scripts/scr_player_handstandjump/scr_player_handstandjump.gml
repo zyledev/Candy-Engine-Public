@@ -22,7 +22,7 @@ function scr_player_handstandjump()
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);
 			}
-			if (floor(image_index) == (image_number - 1))
+			if (animation_end())
 			{
 				state = states.normal;
 				grav = 0.5;
@@ -82,7 +82,7 @@ function scr_player_handstandjump()
 				instance_create(x, y, obj_slidecloud);
 			break;
 	}
-	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_player_bump)
+	if (key_attack && animation_end() && sprite_index != spr_player_bump)
 	{
 		movespeed = 10;
 		mach2 = 20;

@@ -32,5 +32,5 @@ spr_dead = spr_sweddead;
 important = 0;
 heavy = 0;
 depth = 0;
-bushdetection = 0;
+bushdetection = false;
 bombreset = 0;

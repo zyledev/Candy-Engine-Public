@@ -8,7 +8,7 @@ function scr_enemy_cherrywait()
 		image_index = 0;
 		sprite_index = spr_charcherry_popout;
 	}
-	if (sprite_index == spr_charcherry_popout && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_charcherry_popout && animation_end())
 	{
 		state = baddiestates.cherry;
 		sprite_index = spr_charcherry_run;

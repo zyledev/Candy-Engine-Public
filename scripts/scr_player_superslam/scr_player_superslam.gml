@@ -14,7 +14,7 @@ function scr_player_superslam()
 	else
 		movespeed = 0;
 	mach2 = 0;
-	if (sprite_index == spr_player_piledriverstart && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_player_piledriverstart && animation_end())
 	{
 		sprite_index = spr_piledriver;
 		image_index = 0;
@@ -61,10 +61,10 @@ function scr_player_superslam()
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
-	if (sprite_index == spr_piledriverland && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_piledriverland && animation_end())
 	{
 		vsp = -9;
 		state = states.jump;

@@ -9,12 +9,12 @@ function scr_player_keyget()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
 	machhitAnim = false;
 	sprite_index = spr_keyget;
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 	{
 		global.keyget = 0;
 		state = states.normal;

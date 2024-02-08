@@ -15,7 +15,7 @@ function scr_player_mach2()
 				hsp = (xscale * movespeed) + 5;
 			move2 = key_right2 + key_left2;
 			move = (key_right + key_left);
-			crouchslideAnim = 1;
+			crouchslideAnim = true;
 			if (sprite_index != spr_player_machfallback)
 			{
 				if (!key_jump2 && !jumpstop && vsp < 0.5)
@@ -49,12 +49,12 @@ function scr_player_mach2()
 						sprite_index = spr_machpunch1;
 					if (punch == 1)
 						sprite_index = spr_machpunch2;
-					if (floor(image_index) == (image_number - 1) && sprite_index == spr_machpunch1)
+					if (animation_end() && sprite_index == spr_machpunch1)
 					{
 						punch = 1;
 						machpunchAnim = 0;
 					}
-					if (floor(image_index) == (image_number - 1) && sprite_index == spr_machpunch2)
+					if (animation_end() && sprite_index == spr_machpunch2)
 					{
 						punch = 0;
 						machpunchAnim = 0;
@@ -128,9 +128,9 @@ function scr_player_mach2()
 				instance_create(x, y, obj_dashcloud);
 			if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_player_machfallback && sprite_index != spr_player_bump)
 				sprite_index = spr_secondjump1;
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_secondjump1)
+			if (animation_end() && sprite_index == spr_secondjump1)
 				sprite_index = spr_secondjump2;
-			if (grounded && (floor(image_index) == (image_number - 1) && sprite_index == spr_player_rollgetup))
+			if (grounded && (animation_end() && sprite_index == spr_player_rollgetup))
 				sprite_index = spr_mach;
 			if (sprite_index == spr_player_machfallback)
 			{
@@ -139,7 +139,7 @@ function scr_player_mach2()
 				image_speed = 0.01;
 				vsp += 0.2;
 			}
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_machfallback)
+			if (animation_end() && sprite_index == spr_player_machfallback)
 			{
 				movespeed = 12;
 				mach2 = 80;

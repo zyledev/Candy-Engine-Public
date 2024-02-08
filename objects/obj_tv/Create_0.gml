@@ -1,7 +1,7 @@
 image_speed = 0.35;
 chose = 0;
 message = "";
-showtext = 0;
+showtext = false;
 tvsprite = spr_tvoff;
 noisesprite = spr_player_superjump;
 xi = 500;

@@ -33,7 +33,7 @@ function scr_player_jump()
 		momemtum = 0;
 	}
 	landAnim = true;
-	if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
 		vsp /= 5;
 		jumpstop = true;
@@ -52,7 +52,7 @@ function scr_player_jump()
 		if (shotgunAnim == 1)
 			sprite_index = spr_shotgun_jump;
 		instance_create_depth(x, y, -6, obj_highjumpcloud2);
-		stompAnim = 0;
+		stompAnim = false;
 		vsp = -11;
 		state = states.jump;
 		jumpAnim = true;
@@ -123,11 +123,11 @@ function scr_player_jump()
 		if (fallinganimation >= 80)
 			sprite_index = spr_player_freefall2;
 	}
-	if (stompAnim == 0)
+	if (!stompAnim)
 	{
 		if (jumpAnim)
 		{
-			if (floor(image_index) == (image_number - 1))
+			if (animation_end())
 				jumpAnim = false;
 		}
 		if (!jumpAnim)
@@ -138,14 +138,14 @@ function scr_player_jump()
 				sprite_index = spr_fall;
 		}
 	}
-	if (stompAnim == 1)
+	if (stompAnim)
 	{
-		if (sprite_index == spr_stompprep && floor(image_index) == (image_number - 1))
+		if (sprite_index == spr_stompprep && animation_end())
 			sprite_index = spr_stomp;
 	}
 	if (character == "P" && (key_attack && sprite_index != spr_airdash2 && sprite_index != spr_airdash1 && fallinganimation < 40 && sprite_index != spr_playerN_glide))
 	{
-		stompAnim = 0;
+		stompAnim = false;
 		sprite_index = spr_airdash1;
 		image_index = 0;
 	}

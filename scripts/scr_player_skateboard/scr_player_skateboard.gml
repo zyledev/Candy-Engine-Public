@@ -1,7 +1,7 @@
 function scr_player_skateboard()
 {
 	machhitAnim = false;
-	crouchslideAnim = 1;
+	crouchslideAnim = true;
 	hsp = xscale * movespeed;
 	if (key_jump)
 	{

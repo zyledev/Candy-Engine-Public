@@ -4,9 +4,9 @@ function scr_player_chainsawbump()
 	mach2 = 0;
 	start_running = 1;
 	alarm[4] = 14;
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 		hsp = 0;
-	if (floor(image_index) == 6)
+	if floor(image_index) = 6
 		state = states.normal;
 	sprite_index = spr_player_chainsawbump;
 	image_speed = 0.35;

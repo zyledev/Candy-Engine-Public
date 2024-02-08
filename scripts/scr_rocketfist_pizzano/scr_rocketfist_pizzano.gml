@@ -5,7 +5,7 @@ function scr_rocketfist_pizzano()
 		vsp = 0;
 		hsp = 0;
 		move = 0;
-		if (sprite_index == spr_pizzano_sjumpprepside && floor(image_index) == (image_number - 1))
+		if (sprite_index == spr_pizzano_sjumpprepside && animation_end())
 		{
 			image_index = 0;
 			sprite_index = spr_pizzano_sjumpside;

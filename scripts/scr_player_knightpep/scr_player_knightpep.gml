@@ -15,7 +15,7 @@ function scr_player_knightpep()
 	}
 	if (key_jump)
 		input_buffer_jump = 0;
-	if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
 		vsp /= 2;
 		jumpstop = true;
@@ -46,7 +46,7 @@ function scr_player_knightpep()
 		image_index = 0;
 		sprite_index = spr_knightpep_jumpstart;
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_knightpep_jumpstart)
+	if (animation_end() && sprite_index == spr_knightpep_jumpstart)
 	{
 		vsp = -11;
 		if (key_right)
@@ -55,7 +55,7 @@ function scr_player_knightpep()
 			hsp = -4;
 		sprite_index = spr_knightpep_jump;
 	}
-	if ((floor(image_index) == (image_number - 1) && sprite_index == spr_knightpep_jump) || (!grounded && sprite_index != spr_knightpep_jump))
+	if ((animation_end() && sprite_index == spr_knightpep_jump) || (!grounded && sprite_index != spr_knightpep_jump))
 		sprite_index = spr_knightpep_fall;
 	if (sprite_index == spr_knightpep_fall && grounded)
 	{
@@ -81,7 +81,7 @@ function scr_player_knightpep()
 		instance_create(x, y, obj_landcloud);
 		sprite_index = spr_knightpep_land;
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_knightpep_land)
+	if (animation_end() && sprite_index == spr_knightpep_land)
 		sprite_index = spr_knightpep_idle;
 	if (move != 0)
 		xscale = move;
@@ -107,15 +107,15 @@ function scr_player_knightpep()
 		image_speed = 0.35;
 	if (floor(image_index) == 4 && sprite_index == spr_knightpep_start)
 		instance_create(x, y - 600, obj_thunder);
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_knightpep_thunder)
+	if (animation_end() && sprite_index == spr_knightpep_thunder)
 		sprite_index = spr_knightpep_idle;
 	if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))
 		instance_create(x, y + 43, obj_cloudeffect);
-	if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == 0)
+	if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && !steppy)
 	{
 		scr_sound(7); // this does NOT look like an mu_mineshaft moment
-		steppy = 1;
+		steppy = true;
 	}
 	if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)
-		steppy = 0;
+		steppy = false;
 }

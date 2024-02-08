@@ -19,7 +19,7 @@ function scr_player_timesup()
 		obj_player.x = 480;
 		obj_player.y = 270;
 	}
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 		image_speed = 0;
 	else
 		image_speed = 0.35;

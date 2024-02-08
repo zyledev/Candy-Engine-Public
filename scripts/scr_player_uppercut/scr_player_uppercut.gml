@@ -3,7 +3,7 @@ function scr_player_uppercut()
 	if (!instance_exists(obj_mach3effect))
 		instance_create(x, y, obj_mach3effect);
 	image_speed = 0.35;
-	if (sprite_index == spr_player_uppercutbegin && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_player_uppercutbegin && animation_end())
 	{
 		sprite_index = spr_player_uppercutend;
 		image_index = 0;

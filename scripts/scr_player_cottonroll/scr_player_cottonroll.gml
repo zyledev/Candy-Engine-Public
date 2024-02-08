@@ -7,7 +7,7 @@ function scr_player_cottonroll()
 		movespeed = 0;
 	}
 	hsp = xscale * movespeed;
-	if (sprite_index == spr_cotton_run && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_cotton_run && animation_end())
 	{
 		sprite_index = spr_cotton_maxrun;
 		flash = true;
@@ -54,7 +54,7 @@ function scr_player_cottonroll()
 		vsp = -10;
 	if (grounded && sprite_index == spr_cotton_run && key_jump)
 		vsp = -8;
-	if (key_down2 && !grounded && drill == 1 && sprite_index == spr_cotton_maxrun)
+	if (key_down2 && !grounded && drill && sprite_index == spr_cotton_maxrun)
 	{
 		vsp = 9;
 		state = states.cottondrill;
@@ -62,7 +62,7 @@ function scr_player_cottonroll()
 		image_index = 0;
 		scr_sound(sound_suplex1);
 		flash = true;
-		drill = 0;
+		drill = false;
 		with (instance_create(x, y, obj_afterimageoutward))
 			hspeed = 7;
 		with (instance_create(x, y, obj_afterimageoutward))

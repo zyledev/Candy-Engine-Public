@@ -21,7 +21,7 @@ function scr_player_normal()
 		{
 			if (idle < 400)
 				idle++;
-			if (idle >= 300 && floor(image_index) == (image_number - 1))
+			if (idle >= 300 && animation_end())
 			{
 				shotgunAnim = 0;
 				facehurt = 0;
@@ -67,7 +67,7 @@ function scr_player_normal()
 						windingAnim = 0;
 						if (sprite_index != spr_player_facehurtup && sprite_index != spr_player_facehurt)
 							sprite_index = spr_player_facehurtup;
-						if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_facehurtup)
+						if (animation_end() && sprite_index == spr_player_facehurtup)
 							sprite_index = spr_player_facehurt;
 					}
 				}
@@ -100,13 +100,13 @@ function scr_player_normal()
 			{
 				movespeed = 0;
 				sprite_index = spr_land;
-				if (floor(image_index) == (image_number - 1))
+				if (animation_end())
 					landAnim = false;
 			}
 			if (move != 0)
 			{
 				sprite_index = spr_land2;
-				if (floor(image_index) == (image_number - 1))
+				if (animation_end())
 				{
 					landAnim = false;
 					if (global.cane == 0)
@@ -120,7 +120,7 @@ function scr_player_normal()
 		if (shotgunAnim == 1)
 		{
 			sprite_index = spr_shotgun_land;
-			if (floor(image_index) == (image_number - 1))
+			if (animation_end())
 			{
 				landAnim = false;
 				if (global.cane == 0)
@@ -134,10 +134,10 @@ function scr_player_normal()
 	if (machslideAnim == 1)
 	{
 		sprite_index = spr_machslideend;
-		if (floor(image_index) == (image_number - 1) && sprite_index == spr_machslideend)
+		if (animation_end() && sprite_index == spr_machslideend)
 			machslideAnim = 0;
 	}
-	if (sprite_index == spr_player_shotgun && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_player_shotgun && animation_end())
 		sprite_index = spr_shotgun_idle;
 	if (!landAnim)
 	{
@@ -201,7 +201,7 @@ function scr_player_normal()
 		if (shotgunAnim == 1)
 			sprite_index = spr_shotgun_jump;
 		instance_create(x, y, obj_highjumpcloud2);
-		stompAnim = 0;
+		stompAnim = false;
 		vsp = -11;
 		state = states.jump;
 		jumpAnim = true;

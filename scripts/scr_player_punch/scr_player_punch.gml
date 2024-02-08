@@ -6,10 +6,10 @@ function scr_player_punch()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 		state = states.normal;
 	sprite_index = spr_punch;
 	image_speed = 0.35;

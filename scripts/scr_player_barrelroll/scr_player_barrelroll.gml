@@ -4,13 +4,13 @@ function scr_player_barrelroll()
 	hsp = image_xscale * movespeed;
 	movespeed = 10;
 	mach2 = 35;
-	if (vsp < 12)
+	if vsp < 12
 		vsp += grav;
 	if (input_buffer_jump < 5 && grounded)
 		vsp = -5;
-	if (key_jump)
+	if key_jump
 		input_buffer_jump = 0;
-	if (scr_solid(x + 1, y) && image_xscale == 1)
+	if scr_solid(x + 1, y) && image_xscale = 1
 	{
 		barrel = 0;
 		mask_index = spr_player_mask;
@@ -31,7 +31,7 @@ function scr_player_barrelroll()
 		instance_create(x + random_range(15, -15), y + random_range(15, -15), obj_wooddebris);
 		instance_create(x + random_range(15, -15), y + random_range(15, -15), obj_wooddebris);
 	}
-	if (scr_solid(x - 1, y) && image_xscale == -1)
+	if scr_solid(x - 1, y) && image_xscale = -1
 	{
 		barrel = 0;
 		mask_index = spr_player_mask;

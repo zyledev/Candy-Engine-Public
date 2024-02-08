@@ -13,7 +13,7 @@ function scr_player_machslide()
 		sprite_index = spr_player_crouchslide;
 	if (sprite_index == spr_player_crouchslide && movespeed <= 0)
 		state = states.normal;
-	if (sprite_index == spr_machslidestart && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_machslidestart && animation_end())
 		sprite_index = spr_machslide;
 	image_speed = 0.35;
 	landAnim = false;
@@ -26,7 +26,7 @@ function scr_player_machslide()
 		state = states.normal;
 		movespeed = 4;
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_machslideboost && mach2 != 0)
+	if (animation_end() && sprite_index == spr_machslideboost && mach2 != 0)
 	{
 		movespeed = 10;
 		momemtum = 1;
@@ -35,7 +35,7 @@ function scr_player_machslide()
 		xscale *= -1;
 		instance_create(x, y, obj_jumpdust);
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_machslideboost3 && mach2 != 0)
+	if (animation_end() && sprite_index == spr_player_machslideboost3 && mach2 != 0)
 	{
 		movespeed = 12;
 		sprite_index = spr_player_mach4;

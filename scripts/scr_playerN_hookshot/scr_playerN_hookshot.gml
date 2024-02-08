@@ -10,7 +10,7 @@ function scr_playerN_hookshot()
 		instance_create(x, y, obj_washingmachine);
 		scr_sound(sound_step2);
 		sprite_index = spr_jump;
-		stompAnim = 0;
+		stompAnim = false;
 		state = states.jump;
 		jumpAnim = true;
 		jumpstop = false;
@@ -44,7 +44,7 @@ function scr_playerN_hookshot()
 			}
 		}
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerN_hookshot1)
+	if (animation_end() && sprite_index == spr_playerN_hookshot1)
 		sprite_index = spr_playerN_hookshot2;
 	if (move != 0)
 	{

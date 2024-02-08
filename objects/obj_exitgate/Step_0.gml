@@ -13,7 +13,7 @@ if (place_meeting(x, y, obj_player) && obj_player.state != states.comingoutdoor 
 	obj_player.image_index = 0;
 	obj_player.sprite_index = obj_player.spr_Timesup;
 }
-if (sprite_index == spr_exitgateclosing && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_exitgateclosing && animation_end())
 	sprite_index = spr_exitgateclosed;
 if (global.starrmode)
 	image_alpha -= 0.1;

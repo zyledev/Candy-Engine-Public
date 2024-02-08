@@ -142,10 +142,10 @@ function scr_player_minecart()
 		image_index = 0;
 		sprite_index = spr_player_minecartjump;
 	}
-	if (sprite_index == spr_player_minecartjump && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_player_minecartjump && animation_end())
 		sprite_index = spr_player_minecartfall;
-	if (sprite_index == spr_player_minecartland && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_player_minecartland && animation_end())
 		sprite_index = spr_player_minecart;
-	if (sprite_index == spr_player_minecartfastland && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_player_minecartfastland && animation_end())
 		sprite_index = spr_player_minecartfast;
 }

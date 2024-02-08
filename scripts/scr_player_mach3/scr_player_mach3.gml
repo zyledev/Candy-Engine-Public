@@ -23,7 +23,7 @@ function scr_player_mach3()
 			}
 			else if (movespeed > 12 && move != xscale)
 				movespeed -= 0.05;
-			crouchslideAnim = 1;
+			crouchslideAnim = true;
 			if (!key_jump2 && !jumpstop && vsp < 0.5)
 			{
 				vsp /= 2;
@@ -38,9 +38,9 @@ function scr_player_mach3()
 				sprite_index = spr_player_mach3jump;
 				vsp = -9;
 			}
-			if (sprite_index == spr_player_mach3jump && floor(image_index) == (image_number - 1))
+			if (sprite_index == spr_player_mach3jump && animation_end())
 				sprite_index = spr_player_mach4;
-			if (floor(image_index) == (image_number - 1) && (sprite_index == spr_player_rollgetup || sprite_index == spr_player_parry || sprite_index == spr_player_dashpad))
+			if (animation_end() && (sprite_index == spr_player_rollgetup || sprite_index == spr_player_parry || sprite_index == spr_player_dashpad))
 				sprite_index = spr_player_mach4;
 			if ((movespeed > 20 && sprite_index != spr_player_crazyrun) && sprite_index != spr_player_dive && sprite_index != spr_player_rollgetup)
 			{

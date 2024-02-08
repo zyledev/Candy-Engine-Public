@@ -46,7 +46,7 @@ function scr_player_slap()
 	landAnim = false;
 	if (key_slap)
 		slapbuffer = 0;
-	if (floor(image_index) == (image_number - 1) && slapbuffer < 8)
+	if (animation_end() && slapbuffer < 8)
 	{
 		if (grounded && move == 0)
 		{
@@ -113,7 +113,7 @@ function scr_player_slap()
 	}
 	if (floor(image_index) == 1 && !instance_exists(obj_slaphitbox2))
 		instance_create(x, y, obj_slaphitbox2);
-	if (floor(image_index) == (image_number - 1) && slapbuffer == 8)
+	if (animation_end() && slapbuffer == 8)
 	{
 		if (grounded)
 			state = states.normal;

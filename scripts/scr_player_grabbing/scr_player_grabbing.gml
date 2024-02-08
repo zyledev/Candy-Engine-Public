@@ -4,7 +4,7 @@ function scr_player_grabbing()
 		state = states.normal;
 	move = key_left + key_right;
 	hsp = move * movespeed;
-	if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
 		vsp /= 2;
 		jumpstop = true;

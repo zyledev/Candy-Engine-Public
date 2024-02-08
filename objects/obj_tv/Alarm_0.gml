@@ -1,2 +1,2 @@
-showtext = 0;
+showtext = false;
 imageindexstore = 0;

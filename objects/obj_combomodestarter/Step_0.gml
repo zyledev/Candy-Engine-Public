@@ -13,7 +13,7 @@ if (place_meeting(x + obj_player.hsp, y, obj_player) && obj_player.state == stat
 		with (obj_tv)
 		{
 			message = "NON STOP COMBO MODE ACTIVATED";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 200;
 		}
 	}
@@ -33,7 +33,7 @@ if (place_meeting(x + obj_player.hsp, y, obj_player) && obj_player.state == stat
 		with (obj_tv)
 		{
 			message = "NORMAL COMBO MODE ACTIVATED";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 200;
 		}
 	}

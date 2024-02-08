@@ -4,8 +4,8 @@ function scr_player_ladder()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = false;
 	machhitAnim = false;
 	turning = false;
@@ -34,8 +34,8 @@ function scr_player_ladder()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
 	machhitAnim = false;
 	if (!place_meeting(x, y, obj_ladder))

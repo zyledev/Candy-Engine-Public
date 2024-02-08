@@ -8,7 +8,7 @@ function scr_player_tumble()
 		movespeed = 14;
 	if (!scr_slope() && sprite_index == spr_tumblestart && floor(image_index) < 11)
 		image_index = 11;
-	if (sprite_index == spr_tumblestart && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_tumblestart && animation_end())
 		sprite_index = spr_tumble;
 	if (place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles))
 	{
@@ -21,7 +21,7 @@ function scr_player_tumble()
 	}
 	if (key_jump)
 		input_buffer_jump = 0;
-	if (!key_jump2 && !jumpstop && vsp < 0.5 && stompAnim == 0)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
 		vsp /= 2;
 		jumpstop = true;

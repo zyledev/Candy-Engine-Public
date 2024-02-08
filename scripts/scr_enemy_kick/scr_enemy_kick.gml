@@ -12,7 +12,7 @@ function scr_enemy_kick()
 		if (!audio_is_playing(sound_enemythrow))
 			scr_sound(sound_enemythrow);
 	}
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 	{
 		state = baddiestates.walk;
 		sprite_index = spr_crackerkicker_walk;

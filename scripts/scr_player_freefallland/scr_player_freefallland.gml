@@ -5,8 +5,8 @@ function scr_player_freefallland()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = false;
 	machhitAnim = false;
 	movespeed = 0;
@@ -15,7 +15,7 @@ function scr_player_freefallland()
 	alarm[4] = 14;
 	vsp = 0;
 	hsp = 0;
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 	{
 		state = states.normal;
 		sprite_index = spr_idle;

@@ -1,8 +1,8 @@
 function scr_gumbob_mixnbrew()
 {
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_gumbob_brew_pulloutdrink)
+	if (animation_end() && sprite_index == spr_gumbob_brew_pulloutdrink)
 		sprite_index = spr_gumbob_brew_shake;
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_gumbob_brew_shake)
+	if (animation_end() && sprite_index == spr_gumbob_brew_shake)
 		state = states.normal;
 	if (sprite_index == spr_gumbob_brew_shake && key_up)
 	{
@@ -19,7 +19,7 @@ function scr_gumbob_mixnbrew()
 				hsp = -2;
 		}
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_gumbob_brew_up)
+	if (animation_end() && sprite_index == spr_gumbob_brew_up)
 	{
 		state = states.normal;
 		sprite_index = spr_gumbob_idle;

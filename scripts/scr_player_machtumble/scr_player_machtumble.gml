@@ -7,7 +7,7 @@ function scr_player_machtumble()
 		image_speed = 0.5;
 		vsp += 0.2;
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_machfallback)
+	if (animation_end() && sprite_index == spr_player_machfallback)
 	{
 		movespeed = 12;
 		state = states.mach3;

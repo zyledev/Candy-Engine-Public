@@ -17,8 +17,8 @@ function scr_player_hurt()
 		landAnim = true;
 	jumpstop = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = false;
 	machhitAnim = false;
 	hurted = true;

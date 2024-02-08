@@ -4,7 +4,7 @@ function scr_enemy_land()
 		hsp = 0;
 	sprite_index = landspr;
 	image_speed = 0.35;
-	if floor(image_index) == (image_number - 1)
+	if animation_end()
 	{
 		sprite_index = idlespr;
 		state = baddiestates.idle;

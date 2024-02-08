@@ -34,21 +34,21 @@ else
 if (global.collect > global.arank && !shownranka)
 {
 	message = "YOU GOT ENOUGH FOR RANK A";
-	showtext = 1;
+	showtext = true;
 	alarm[0] = 200;
 	shownranka = 1;
 }
 else if (global.collect > global.brank && !shownrankb)
 {
 	message = "YOU GOT ENOUGH FOR RANK B";
-	showtext = 1;
+	showtext = true;
 	alarm[0] = 200;
 	shownrankb = 1;
 }
 else if (global.collect > global.crank && !shownrankc)
 {
 	message = "YOU GOT ENOUGH FOR RANK C";
-	showtext = 1;
+	showtext = true;
 	alarm[0] = 200;
 	shownrankc = 1;
 }
@@ -64,7 +64,7 @@ if (global.hurtcounter >= global.hurtmilestone)
 }
 if (obj_player.state = states.keyget)
 {
-	showtext = 1;
+	showtext = true;
 	message = "KEY OBTAINED!";
 	alarm[0] = 50;
 }

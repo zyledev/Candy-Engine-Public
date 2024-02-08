@@ -6,8 +6,8 @@ function scr_player_victory()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
 	machhitAnim = false;
 	if (place_meeting(x, y, obj_keydoor))
@@ -16,7 +16,7 @@ function scr_player_victory()
 		sprite_index = spr_player_enterkey;
 	if (place_meeting(x, y, obj_startgate))
 		sprite_index = spr_entergate;
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 		image_speed = 0;
 	else
 		image_speed = 0.35;

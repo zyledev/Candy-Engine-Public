@@ -6,7 +6,7 @@ with (obj_player)
 	if (room == realtitlescreen || room == scootercutsceneidk)
 		state = states.titlescreen;
 	if (grounded)
-		groundedcot = 1;
+		groundedcot = true;
 	if (state != states.gameover && y > (room_height * 1.1) && room != outer_room2)
 	{
 		x = roomstartx;
@@ -138,7 +138,7 @@ with (obj_player)
 	if (state != states.jump)
 		ladderbuffer = 0;
 	if (state != states.jump)
-		stompAnim = 0;
+		stompAnim = false;
 	if (toomuchalarm1 > 0)
 		toomuchalarm1 -= 1;
 	if (toomuchalarm1 <= 0 && (state = states.mach3 || state = states.Nhookshot || state = states.mach2 || state = states.charge || (state = states.machslide && mach2 >= 100) || state = states.machroll || state = states.handstandjump || state = states.cottondrill || state = states.cottonroll || state = states.minecart || (state = states.chainsaw && mach2 >= 100)))
@@ -173,7 +173,7 @@ if (state != states.titlescreen && state != states.door && state != states.Sjump
 if (state = states.boulder)
 	scr_collide_player();
 if (state != states.bushdisguise)
-	bushdetection = 0;
+	bushdetection = false;
 if (state != states.crouch)
 	crouchjumptimer = 0;
 if (global.combomode)
@@ -210,7 +210,7 @@ else if (!place_meeting(x, y, obj_molasseswater))
 	grav = 0.5;
 if (Dashpad_buffer > 0)
 	Dashpad_buffer = max(Dashpad_buffer - 1, 0);
-if (sprite_index == spr_player_machpunch1 && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_player_machpunch1 && animation_end())
 	sprite_index = spr_mach;
-if (sprite_index == spr_player_machpunch2 && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_player_machpunch2 && animation_end())
 	sprite_index = spr_mach;

@@ -21,7 +21,7 @@ function scr_player_mach1()
 			if (movespeed <= 8)
 				movespeed += 0.25;
 			machhitAnim = false;
-			crouchslideAnim = 1;
+			crouchslideAnim = true;
 			if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
 				hsp = xscale * movespeed;
 			else if (place_meeting(x, y + 1, obj_railh))

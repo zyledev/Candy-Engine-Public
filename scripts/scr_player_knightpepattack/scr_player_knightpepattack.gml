@@ -12,7 +12,7 @@ function scr_player_knightpepattack()
 	}
 	if (movespeed >= 0)
 		movespeed -= 0.2;
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 	{
 		image_index = 0;
 		sprite_index = spr_knightpep_idle;

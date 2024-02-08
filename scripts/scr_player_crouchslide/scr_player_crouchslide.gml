@@ -33,7 +33,7 @@ function scr_player_crouchslide()
 		state = states.normal;
 		movespeed = 0;
 		mach2 = 0;
-		crouchslideAnim = 1;
+		crouchslideAnim = true;
 		image_index = 0;
 		crouchAnim = true;
 		start_running = 1;

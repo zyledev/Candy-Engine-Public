@@ -5,8 +5,8 @@ function scr_player_slipnslide()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = false;
 	machhitAnim = false;
 	hsp = xscale * movespeed;
@@ -18,7 +18,7 @@ function scr_player_slipnslide()
 	else
 		movespeed += 0.2;
 	machhitAnim = false;
-	crouchslideAnim = 1;
+	crouchslideAnim = true;
 	if (movespeed == 0 && !scr_slope())
 	{
 		state = states.normal;

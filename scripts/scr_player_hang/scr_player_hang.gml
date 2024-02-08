@@ -7,8 +7,8 @@ function scr_player_hang()
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
 	machhitAnim = false;
 	start_running = 1;

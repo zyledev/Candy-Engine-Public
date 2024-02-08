@@ -52,7 +52,7 @@ function scr_playerreset()
 		vsp = 0;
 		xscale = 1;
 		yscale = 1;
-		steppy = 0;
+		steppy = false;
 		movespeedmax = 5;
 		jumpstop = false;
 		start_running = 1;
@@ -63,11 +63,11 @@ function scr_playerreset()
 		landAnim = false;
 		machslideAnim = 0;
 		moveAnim = true;
-		stopAnim = 1;
-		crouchslideAnim = 1;
+		stopAnim = true;
+		crouchslideAnim = true;
 		crouchAnim = true;
 		machhitAnim = false;
-		stompAnim = 0;
+		stompAnim = false;
 		inv_frames = 0;
 		turning = false;
 		hurtbounce = false;
@@ -105,7 +105,7 @@ function scr_playerreset()
 		shoot = 1;
 		instakillmove = 0;
 		windingAnim = 0;
-		facestompAnim = 0;
+		facestompAnim = false;
 		ladderbuffer = 0;
 		chainsaw = 50;
 		toomuchalarm1 = 0;

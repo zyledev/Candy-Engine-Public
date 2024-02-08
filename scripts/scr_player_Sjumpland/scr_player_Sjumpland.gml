@@ -6,8 +6,8 @@ function scr_player_Sjumpland()
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = false;
 	machhitAnim = false;
 	movespeed = 0;

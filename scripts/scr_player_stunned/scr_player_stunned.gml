@@ -12,8 +12,8 @@ function scr_player_stunned()
 		landAnim = true;
 	jumpstop = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = false;
 	machhitAnim = false;
 	movespeed = 0;

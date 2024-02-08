@@ -2,7 +2,7 @@ function scr_player_grind()
 {
 	vsp = 0;
 	machhitAnim = false;
-	crouchslideAnim = 1;
+	crouchslideAnim = true;
 	hsp = xscale * movespeed;
 	if (!grinding)
 		state = states.mach2;

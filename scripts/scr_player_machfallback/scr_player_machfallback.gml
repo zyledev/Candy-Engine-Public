@@ -1,6 +1,6 @@
 function scr_player_machfallback()
 {
-	if (sprite_index == (534 && floor(image_index) == (image_number - 1)))
+	if (sprite_index == (534 && animation_end()))
 	{
 		if (movespeed < 12)
 		{

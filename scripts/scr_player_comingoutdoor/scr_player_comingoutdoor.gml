@@ -5,12 +5,12 @@ function scr_player_comingoutdoor()
 	dashAnim = true;
 	landAnim = false;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
 	machhitAnim = false;
 	hsp = 0;
-	if (animation_end() || (!place_meeting(x, y, obj_door) && !place_meeting(x, y, obj_keydoorclock) && !place_meeting(x, y, obj_keydoor) && !place_meeting(x, y, obj_exitgate)))
+	if animation_end() || !place_meeting(x, y, obj_door) && !place_meeting(x, y, obj_keydoorclock) && !place_meeting(x, y, obj_keydoor) && !place_meeting(x, y, obj_exitgate)
 	{
 		start_running = 1;
 		movespeed = 0;

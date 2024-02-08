@@ -5,7 +5,7 @@ if (level = "placeholder")
 		with (obj_tv)
 		{
 			message = "PLACEHOLDER";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}
@@ -17,7 +17,7 @@ else if (level = "entryway")
 		with (obj_tv)
 		{
 			message = "ENTRYWAY";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}
@@ -29,7 +29,7 @@ else if (level = "steamy")
 		with (obj_tv)
 		{
 			message = "COTTONTOWN";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}
@@ -41,7 +41,7 @@ else if (level = "stormy")
 		with (obj_tv)
 		{
 			message = "COTTONSTORM";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}
@@ -53,7 +53,7 @@ else if (level = "mines")
 		with (obj_tv)
 		{
 			message = "SUGARSHACK MINES";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}
@@ -65,7 +65,7 @@ else if (level = "tutorial")
 		with (obj_tv)
 		{
 			message = "TUTORIAL";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}
@@ -77,7 +77,7 @@ else if (level = "molasses")
 		with (obj_tv)
 		{
 			message = "MOLASSES SWAMP";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}
@@ -89,7 +89,7 @@ else if (level = "wipsorry")
 		with (obj_tv)
 		{
 			message = "WORK IN PROGRESS";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}
@@ -101,7 +101,7 @@ else if (level = "mechanical")
 		with (obj_tv)
 		{
 			message = "MECHANICAL MADNESS";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 2;
 		}
 	}

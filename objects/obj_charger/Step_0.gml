@@ -83,7 +83,7 @@ if (x != targetplayer.x && grounded)
 		}
 	}
 }
-if (sprite_index == spr_banana_chargestart && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_banana_chargestart && animation_end())
 	sprite_index = spr_banana_charge;
 if (!hitboxcreate && state = baddiestates.charge && sprite_index = spr_banana_charge)
 {

@@ -40,7 +40,7 @@ function scr_player_handstand()
 		if (bounced == 0)
 			bounced = 1;
 	}
-	if (sprite_index == spr_null && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_null && animation_end())
 		sprite_index = spr_null;
 	if (!key_attack)
 		state = states.normal;

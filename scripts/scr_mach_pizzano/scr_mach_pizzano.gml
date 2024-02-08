@@ -22,7 +22,7 @@ function scr_mach_pizzano()
 	if (grounded)
 		sprite_index = spr_pizzano_pogo_land;
 	stop = 1;
-	if (sprite_index == spr_pizzano_pogo_land && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_pizzano_pogo_land && animation_end())
 		sprite_index = spr_pizzano_pogo_air;
 	if (!key_attack)
 		state = states.normal;

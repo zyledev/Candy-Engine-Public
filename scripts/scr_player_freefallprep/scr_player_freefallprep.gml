@@ -10,8 +10,8 @@ function scr_player_freefallprep()
 	landAnim = false;
 	machslideAnim = 1;
 	moveAnim = true;
-	stopAnim = 1;
-	crouchslideAnim = 1;
+	stopAnim = true;
+	crouchslideAnim = true;
 	crouchAnim = true;
 	sprite_index = spr_player_bodyslamstart;
 	move = key_left + key_right;
@@ -49,7 +49,7 @@ function scr_player_freefallprep()
 			xscale = move;
 	}
 	image_speed = 0.5;
-	if (floor(image_index) == (image_number - 1))
+	if (animation_end())
 	{
 		vsp += 14;
 		state = states.freefall;

@@ -1,16 +1,16 @@
 function scr_player_barrelfall()
 {
 	mask_index = spr_player_mask;
-	if (vsp < 12)
+	if vsp < 12
 		vsp += grav;
-	if (place_meeting(x, y, obj_water2))
+	if place_meeting(x, y, obj_water2)
 		vsp -= 1;
-	if (grounded)
+	if grounded
 	{
 		state = states.barrelcrouch;
 		image_index = 0;
 	}
-	if (place_meeting(x, y, obj_water2))
+	if place_meeting(x, y, obj_water2)
 	{
 		state = states.barrelfloat;
 		image_index = 0;

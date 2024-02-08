@@ -42,7 +42,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 						other.baddieID.hsp = -other.baddieID.image_xscale * 3;
 						instance_create(x, y + 50, obj_stompeffect);
 						other.baddieID.state = baddiestates.stun;
-						stompAnim = 1;
+						stompAnim = true;
 						other.baddieID.image_index = 0;
 						vsp = -14;
 						sprite_index = spr_stompprep;
@@ -53,7 +53,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 						other.baddieID.hsp = -other.baddieID.image_xscale * 3;
 						instance_create(x, y + 50, obj_stompeffect);
 						other.baddieID.state = baddiestates.stun;
-						stompAnim = 1;
+						stompAnim = true;
 						other.baddieID.image_index = 0;
 						vsp = -9;
 						sprite_index = spr_stompprep;

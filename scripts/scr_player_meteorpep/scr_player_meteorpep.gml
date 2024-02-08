@@ -3,7 +3,7 @@ function scr_player_meteorpep()
 	mach2 = 0;
 	landAnim = true;
 	vsp = 0;
-	if (sprite_index == spr_meteorpep_impact && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_meteorpep_impact && animation_end())
 		sprite_index = spr_meteorpep_flying;
 	if (sprite_index == spr_meteorpep_flying)
 	{
@@ -48,7 +48,7 @@ function scr_player_meteorpep()
 		image_index = 0;
 		sprite_index = spr_meteorpep_land;
 	}
-	if (sprite_index == spr_meteorpep_land && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_meteorpep_land && animation_end())
 		state = states.normal;
 	image_speed = 0.35;
 }

@@ -20,7 +20,7 @@ if (position_meeting(mouse_x, mouse_y, id) && mouse_check_button_pressed(1))
 		with (obj_tv)
 		{
 			message = "USER AND PASSWORD INCORRECT!";
-			showtext = 1;
+			showtext = true;
 			alarm[0] = 200;
 		}
 	}
