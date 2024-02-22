@@ -3,7 +3,7 @@ function scr_player_stunned()
 	hsp = 0;
 	combo = 0;
 	mach2 = 0;
-	bounce = 0;
+	bounce = false;
 	jumpAnim = true;
 	dashAnim = true;
 	if grounded

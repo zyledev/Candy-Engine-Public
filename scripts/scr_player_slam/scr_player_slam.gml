@@ -18,7 +18,7 @@ function scr_player_slam()
 	jumpAnim = true;
 	dashAnim = true;
 	landAnim = false;
-	machslideAnim = 1;
+	machslideAnim = true;
 	moveAnim = true;
 	stopAnim = true;
 	crouchslideAnim = true;

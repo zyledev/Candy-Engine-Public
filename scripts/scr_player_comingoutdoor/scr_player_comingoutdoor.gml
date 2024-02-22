@@ -12,7 +12,7 @@ function scr_player_comingoutdoor()
 	hsp = 0;
 	if animation_end() || !place_meeting(x, y, obj_door) && !place_meeting(x, y, obj_keydoorclock) && !place_meeting(x, y, obj_keydoor) && !place_meeting(x, y, obj_exitgate)
 	{
-		start_running = 1;
+		start_running = true;
 		movespeed = 0;
 		state = states.normal;
 		image_alpha = 1;

@@ -1,11 +1,11 @@
 function scr_player_secondjump()
 {
 	move = key_left + key_right;
-	if (momemtum == 0)
+	if (!momemtum)
 		hsp = move * movespeed;
 	else
 		hsp = xscale * movespeed;
-	if (move == 0 && momemtum == 0)
+	if (move == 0 && !momemtum)
 		movespeed = 0;
 	if (move != 0 && movespeed < 6)
 		movespeed += 0.5;
@@ -39,7 +39,7 @@ function scr_player_secondjump()
 		image_index = 0;
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);
-		freefallstart = 0;
+		freefallstart = false;
 		audio_sound_gain(sfx_jump, 0.7, 0);
 		if (!audio_is_playing(sfx_jump))
 			audio_play_sound(sfx_jump, 1, false);
@@ -55,7 +55,7 @@ function scr_player_secondjump()
 		image_index = 0;
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);
-		freefallstart = 0;
+		freefallstart = false;
 		audio_sound_gain(sfx_land, 0.7, 0);
 		if (!audio_is_playing(sfx_land))
 			audio_play_sound(sfx_land, 1, false);

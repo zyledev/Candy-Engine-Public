@@ -16,7 +16,7 @@ function scr_solid_player(argument0, argument1, argument2) //scr_solid_player
     if place_meeting(x, y, obj_platform)
     {
         platform = instance_place(x, y, obj_platform)
-        if (y > old_y)
+        if y > old_y
         {
             var _list = ds_list_create()
             var _platforms = instance_place_list(x, y, obj_platform, _list, 0)
@@ -28,8 +28,10 @@ function scr_solid_player(argument0, argument1, argument2) //scr_solid_player
                     platform = ds_list_find_value(_list, i)
 
                     var _can_collide = platform.can_collide(platform)
-					if platform.object_index = obj_cottonplatform || platform.object_index = obj_cottonplatform_tiled && state != states.cotton && state != states.cottonroll
+					if (platform.object_index = obj_cottonplatform || platform.object_index = obj_cottonplatform_tiled) && state != states.cotton && state != states.cottonroll
+					{
 						_can_collide = false
+					}
                     if _can_collide && place_meeting(x, y, platform) && !place_meeting(x, old_y, platform)
                         collided = true
                 }
@@ -43,7 +45,7 @@ function scr_solid_player(argument0, argument1, argument2) //scr_solid_player
             }
         }
     }
-    if y > old_y && !place_meeting(x, old_y, obj_minecartrail) && place_meeting(x, y, obj_minecartrail) && state = states.minecart
+    if y > old_y && !place_meeting(x, old_y, obj_minecartrail) && place_meeting(x, y, obj_minecartrail) && state == states.minecart
     {
         if state = states.minecart
         {
@@ -72,7 +74,7 @@ function scr_solid_player(argument0, argument1, argument2) //scr_solid_player
                 slope_start = bbox_top
                 slope_end = bbox_bottom
             }
-            var m = sign(image_xscale) * (bbox_bottom - bbox_top) / (bbox_right - bbox_left)
+            var m = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left)
             slope = slope_start - round(m * (object_side - bbox_left))
             if other.bbox_bottom >= slope
             {
@@ -86,4 +88,3 @@ function scr_solid_player(argument0, argument1, argument2) //scr_solid_player
     y = old_y
     return false;
 }
-

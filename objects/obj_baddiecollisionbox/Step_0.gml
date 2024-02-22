@@ -20,14 +20,14 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				global.combotime = 60;
 				if (!grounded && state != states.freefall && key_jump2)
 				{
-					suplexmove = 0;
+					suplexmove = false;
 					vsp = -11;
 				}
 			}
 			if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == 0 && state == states.jump && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
 			{
 				scr_sound(sound_enemyslap);
-				suplexmove = 0;
+				suplexmove = false;
 				if (other.baddieID.object_index == obj_pizzaball)
 					global.golfhit += 1;
 				if (vsp > 0)
@@ -98,7 +98,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				other.baddieID.hsp = -other.baddieID.image_xscale * 5;
 				hsp = -xscale * 4;
 				vsp = -4;
-				machpunchAnim = 1;
+				machpunchAnim = true;
 				if (x != other.baddieID.x)
 					other.baddieID.image_xscale = -sign(other.baddieID.x - x);
 				other.baddieID.state = baddiestates.stun;
@@ -135,11 +135,11 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				if (sprite_index != spr_player_machfallback)
 				{
 					image_index = 0;
-					machpunchAnim = 1;
+					machpunchAnim = true;
 				}
 				if (!grounded && state != states.freefall && key_jump2)
 				{
-					suplexmove = 0;
+					suplexmove = false;
 					sprite_index = spr_mach2jump;
 					vsp = -11;
 				}

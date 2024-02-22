@@ -29,5 +29,5 @@ global.playseconds = 0;
 global.playminutes = 0;
 global.login = 0;
 global.debugmode = 0;
-global.starrmode = 0;
+global.starrmode = false;
 global.switchactivated = 0;

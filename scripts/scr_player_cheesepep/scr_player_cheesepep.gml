@@ -81,8 +81,8 @@ function scr_player_cheesepep()
 	{
 		image_index = 0;
 		instance_create(x, y, obj_landcloud);
-		freefallstart = 0;
-		momemtum = 0;
+		freefallstart = false;
+		momemtum = false;
 		instance_create(x, y, obj_landcloud);
 		sprite_index = spr_cheesepep_land;
 	}

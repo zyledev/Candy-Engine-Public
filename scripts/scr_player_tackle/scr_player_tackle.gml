@@ -3,7 +3,7 @@ function scr_player_tackle()
 	combo = 0;
 	movespeed = 0;
 	mach2 = 0;
-	start_running = 1;
+	start_running = true;
 	if (grounded && vsp > 0)
 		hsp = 0;
 	jumpAnim = true;

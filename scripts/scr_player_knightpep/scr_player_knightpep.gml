@@ -3,26 +3,26 @@ function scr_player_knightpep()
 	alarm[5] = 2;
 	alarm[7] = 60;
 	hurted = true;
-	if (sprite_index == spr_knightpep_walk || sprite_index == spr_knightpep_jump || sprite_index == spr_knightpep_fall || sprite_index == spr_knightpep_idle)
+	if sprite_index = spr_knightpep_walk || sprite_index = spr_knightpep_jump || sprite_index = spr_knightpep_fall || sprite_index = spr_knightpep_idle
 	{
 		move = key_left + key_right;
 		hsp = move * movespeed;
 	}
-	else if (grounded)
+	else if grounded
 	{
 		hsp = 0;
 		move = 0;
 	}
-	if (key_jump)
+	if key_jump
 		input_buffer_jump = 0;
-	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
+	if !key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim
 	{
 		vsp /= 2;
 		jumpstop = true;
 	}
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 		jumpstop = false;
-	if ((sprite_index == spr_knightpep_idle || sprite_index == spr_knightpep_walk) && key_slap2)
+	if (sprite_index = spr_knightpep_idle || sprite_index = spr_knightpep_walk) && key_slap2
 	{
 		scr_sound(sound_dash2);
 		instance_create(x, y, obj_swordhitbox);
@@ -31,91 +31,91 @@ function scr_player_knightpep()
 		image_index = 0;
 		state = states.knightpepattack;
 	}
-	if (dir != xscale)
+	if dir != xscale
 	{
 		dir = xscale;
 		movespeed = 0;
 	}
-	if (grounded && move != 0 && sprite_index == spr_knightpep_idle)
+	if grounded && move != 0 && sprite_index == spr_knightpep_idle
 		sprite_index = spr_knightpep_walk;
-	else if (grounded && move == 0 && sprite_index == spr_knightpep_walk)
+	else if grounded && move = 0 && sprite_index = spr_knightpep_walk
 		sprite_index = spr_knightpep_idle;
-	if (input_buffer_jump < 8 && vsp > 0 && grounded && (sprite_index == spr_knightpep_idle || sprite_index == spr_knightpep_walk))
+	if input_buffer_jump < 8 && vsp > 0 && grounded && (sprite_index = spr_knightpep_idle || sprite_index = spr_knightpep_walk)
 	{
 		scr_sound(sound_step2);
 		image_index = 0;
 		sprite_index = spr_knightpep_jumpstart;
 	}
-	if (animation_end() && sprite_index == spr_knightpep_jumpstart)
+	if animation_end() && sprite_index = spr_knightpep_jumpstart
 	{
 		vsp = -11;
-		if (key_right)
+		if key_right
 			hsp = 4;
-		if (-key_left)
+		if -key_left
 			hsp = -4;
 		sprite_index = spr_knightpep_jump;
 	}
-	if ((animation_end() && sprite_index == spr_knightpep_jump) || (!grounded && sprite_index != spr_knightpep_jump))
+	if (animation_end() && sprite_index = spr_knightpep_jump) || (!grounded && sprite_index != spr_knightpep_jump)
 		sprite_index = spr_knightpep_fall;
-	if (sprite_index == spr_knightpep_fall && grounded)
+	if sprite_index = spr_knightpep_fall && grounded
 	{
-		with (obj_baddie)
+		with obj_baddie
 		{
-			if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
+			if point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0))
 			{
 				vsp = -7;
 				hsp = 0;
 			}
 		}
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 10;
 			shake_mag_acc = 30 / room_speed;
 		}
 		combo = 0;
-		bounce = 0;
+		bounce = false;
 		image_index = 0;
-		freefallstart = 0;
-		momemtum = 0;
+		freefallstart = false;
+		momemtum = false;
 		scr_sound(sound_dash1);
 		instance_create(x, y, obj_landcloud);
 		sprite_index = spr_knightpep_land;
 	}
-	if (animation_end() && sprite_index == spr_knightpep_land)
+	if animation_end() && sprite_index = spr_knightpep_land
 		sprite_index = spr_knightpep_idle;
-	if (move != 0)
+	if move != 0
 		xscale = move;
-	if (move != 0)
+	if move != 0
 	{
-		if (movespeed < 6)
+		if movespeed < 6
 			movespeed += 0.5;
-		else if (movespeed == 6)
+		else if movespeed = 6
 			movespeed = 6;
 	}
 	else
 		movespeed = 0;
-	if (move != 0)
+	if move != 0
 	{
-		if (movespeed < 1)
+		if movespeed < 1
 			image_speed = 0.15;
-		else if (movespeed > 1 && movespeed < 4)
+		else if movespeed > 1 && movespeed < 4
 			image_speed = 0.35;
 		else
 			image_speed = 0.6;
 	}
 	else
 		image_speed = 0.35;
-	if (floor(image_index) == 4 && sprite_index == spr_knightpep_start)
+	if floor(image_index) = 4 && sprite_index = spr_knightpep_start
 		instance_create(x, y - 600, obj_thunder);
-	if (animation_end() && sprite_index == spr_knightpep_thunder)
+	if animation_end() && sprite_index = spr_knightpep_thunder
 		sprite_index = spr_knightpep_idle;
-	if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))
+	if !instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) = 4 || floor(image_index) = 10)
 		instance_create(x, y + 43, obj_cloudeffect);
-	if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && !steppy)
+	if move != 0 && (floor(image_index) = 3 || floor(image_index) = 8) && !steppy
 	{
 		scr_sound(7); // this does NOT look like an mu_mineshaft moment
 		steppy = true;
 	}
-	if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)
+	if move != 0 && floor(image_index) != 3 && floor(image_index) != 8
 		steppy = false;
 }

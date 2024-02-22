@@ -7,7 +7,7 @@ function scr_player_machroll()
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (xscale * movespeed) + 5;
 	mach2 = 100;
-	machslideAnim = 1;
+	machslideAnim = true;
 	move = (key_right + key_left);
 	if (grounded)
 		sprite_index = spr_player_machroll;

@@ -4,9 +4,9 @@ function scr_player_grind()
 	machhitAnim = false;
 	crouchslideAnim = true;
 	hsp = xscale * movespeed;
-	if (!grinding)
+	if !grinding
 		state = states.mach2;
-	if (key_jump)
+	if key_jump
 	{
 		vsp = -6;
 		state = states.mach2;
@@ -14,6 +14,6 @@ function scr_player_grind()
 	}
 	sprite_index = spr_player_grind;
 	image_speed = 0.35;
-	if (!instance_exists(obj_grindeffect))
+	if !instance_exists(obj_grindeffect)
 		instance_create(x, y, obj_grindeffect);
 }

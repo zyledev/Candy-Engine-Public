@@ -126,7 +126,7 @@ with (obj_player)
 		dashdust = false;
 	}
 	if (state != states.mach1 && state != states.jump && state != states.Nhookshot && state != states.handstandjump && state != states.normal && state != states.mach2 && state != states.mach3 && state != states.freefallprep && state != states.knightpep && state != states.shotgun && state != 11)
-		momemtum = 0;
+		momemtum = false;
 	if (state != states.Sjump && state != states.Sjumpprep)
 		a = 0; // oh god
 	if (state != states.facestomp)
@@ -134,7 +134,7 @@ with (obj_player)
 	if (state != states.freefall && state != states.facestomp && state != states.superslam && state != states.freefallland)
 		superslam = 0;
 	if (state != states.mach2)
-		machpunchAnim = 0;
+		machpunchAnim = false;
 	if (state != states.jump)
 		ladderbuffer = 0;
 	if (state != states.jump)

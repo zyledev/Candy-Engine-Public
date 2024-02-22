@@ -10,7 +10,7 @@ function scr_player_slap()
 		}
 	}
 	move = key_left + key_right;
-	if (momemtum == 0)
+	if (!momemtum)
 	{
 		if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
 			hsp = move * movespeed;
@@ -21,11 +21,11 @@ function scr_player_slap()
 	}
 	else
 		hsp = xscale * movespeed;
-	if (move != xscale && momemtum == 1 && movespeed != 0)
+	if (move != xscale && momemtum && movespeed != 0)
 		movespeed -= 0.05;
 	if (movespeed == 0)
-		momemtum = 0;
-	if ((move == 0 && momemtum == 0) || scr_solid(x + hsp, y))
+		momemtum = false;
+	if ((move == 0 && !momemtum) || scr_solid(x + hsp, y))
 		movespeed = 0;
 	if (move != 0 && movespeed < 4)
 		movespeed += 0.25;
@@ -41,7 +41,7 @@ function scr_player_slap()
 	if (move == -xscale)
 	{
 		movespeed = 0;
-		momemtum = 0;
+		momemtum = false;
 	}
 	landAnim = false;
 	if (key_slap)

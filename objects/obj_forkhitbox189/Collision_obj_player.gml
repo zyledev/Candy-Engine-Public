@@ -1,6 +1,6 @@
 with (obj_player)
 {
-	if ((state = states.knightpep || state = states.knightpepattack || state = states.knightpepslopes) && cutscene = 0)
+	if ((state = states.knightpep || state = states.knightpepattack || state = states.knightpepslopes) && !cutscene)
 		exit;	
 	else if (state = states.bombpep && !hurted)
 		exit;

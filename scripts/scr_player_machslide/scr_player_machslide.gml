@@ -21,7 +21,7 @@ function scr_player_machslide()
 	{
 		image_index = 0;
 		if (sprite_index == spr_machslide)
-			machslideAnim = 1;
+			machslideAnim = true;
 		movespeed = 0;
 		state = states.normal;
 		movespeed = 4;
@@ -29,7 +29,7 @@ function scr_player_machslide()
 	if (animation_end() && sprite_index == spr_machslideboost && mach2 != 0)
 	{
 		movespeed = 10;
-		momemtum = 1;
+		momemtum = true;
 		state = states.mach2;
 		image_index = 0;
 		xscale *= -1;
@@ -40,7 +40,7 @@ function scr_player_machslide()
 		movespeed = 12;
 		sprite_index = spr_player_mach4;
 		scr_sound(sound_dash2);
-		momemtum = 1;
+		momemtum = true;
 		state = states.mach3;
 		image_index = 0;
 		xscale *= -1;

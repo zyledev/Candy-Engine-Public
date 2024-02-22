@@ -9,7 +9,7 @@ if (global.panic)
 		global.minutes -= 1;
 	}
 }
-if (global.starrmode == 1)
+if (global.starrmode)
 {
 	global.seconds -= 1;
 	if (global.seconds < 0)

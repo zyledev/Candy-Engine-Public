@@ -19,7 +19,7 @@ function scr_player_runonball()
 		vsp = -7;
 		state = states.jump;
 		image_index = 0;
-		machslideAnim = 1;
+		machslideAnim = true;
 		jumpAnim = true;
 		audio_sound_gain(sfx_jump, 0.7, 0);
 		if (!audio_is_playing(sfx_jump))

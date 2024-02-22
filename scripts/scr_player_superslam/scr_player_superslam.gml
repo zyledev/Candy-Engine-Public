@@ -41,11 +41,11 @@ function scr_player_superslam()
 			shake_mag_acc = 40 / room_speed;
 		}
 		hsp = 0;
-		bounce = 0;
+		bounce = false;
 		with (instance_create(x, y + 35, obj_bangeffect))
 			xscale = obj_player.xscale;
 		instance_create(x, y, obj_landcloud);
-		freefallstart = 0;
+		freefallstart = false;
 		with (obj_baddie)
 		{
 			if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
@@ -59,7 +59,7 @@ function scr_player_superslam()
 	jumpAnim = true;
 	dashAnim = true;
 	landAnim = false;
-	machslideAnim = 1;
+	machslideAnim = true;
 	moveAnim = true;
 	stopAnim = true;
 	crouchslideAnim = true;

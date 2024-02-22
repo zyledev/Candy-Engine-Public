@@ -2,7 +2,7 @@ function scr_player_climbwall()
 {
 	if windingAnim < 200
 		windingAnim++;
-	suplexmove = 0;
+	suplexmove = false;
 	vsp = -wallspeed;
 	if wallspeed > 0
 		wallspeed -= 0.4;

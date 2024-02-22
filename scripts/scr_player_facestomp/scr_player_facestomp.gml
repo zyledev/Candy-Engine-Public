@@ -34,7 +34,7 @@ function scr_player_facestomp()
 		image_index = 0;
 		if !place_meeting(x, y, obj_water2)
 			instance_create(x, y, obj_landcloud);
-		freefallstart = 0;
+		freefallstart = false;
 		audio_sound_gain(sfx_land, 0.7, 0);
 		if !audio_is_playing(sfx_land)
 			audio_play_sound(sfx_land, 1, false);
@@ -61,7 +61,7 @@ function scr_player_facestomp()
 		image_index = 0;
 		if !place_meeting(x, y, obj_water2)
 			instance_create(x, y, obj_landcloud);
-		freefallstart = 0;
+		freefallstart = false;
 	}
 	if key_jump
 		input_buffer_jump = 0;

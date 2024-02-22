@@ -4,14 +4,14 @@ function scr_player_Sjumpland()
 	jumpAnim = true;
 	dashAnim = true;
 	landAnim = false;
-	machslideAnim = 1;
+	machslideAnim = true;
 	moveAnim = true;
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = false;
 	machhitAnim = false;
 	movespeed = 0;
-	start_running = 1;
+	start_running = true;
 	alarm[4] = 14;
 	vsp = 0;
 	hsp = 0;

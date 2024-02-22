@@ -44,7 +44,7 @@ function scr_player_uppercut()
 		jumpAnim = true;
 		jumpstop = false;
 		image_index = 0;
-		freefallstart = 0;
+		freefallstart = false;
 		instance_create_depth(x, y, 0, obj_landcloud);
 	}
 }

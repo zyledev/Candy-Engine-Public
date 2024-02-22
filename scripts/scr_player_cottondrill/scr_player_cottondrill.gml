@@ -1,17 +1,17 @@
 function scr_player_cottondrill()
 {
 	image_speed = 0.35;
-	if (dir != xscale)
+	if dir != xscale
 	{
 		dir = xscale;
 		movespeed = 0;
 	}
 	move = key_left + key_right;
-	if (move != 0)
+	if move != 0
 		xscale = move;
 	hsp = 0;
 	sprite_index = spr_cotton_drill;
-	if (scr_solid(x, y + 1))
+	if scr_solid(x, y + 1)
 	{
 		state = states.cotton;
 		sprite_index = spr_cotton_land;
@@ -19,7 +19,7 @@ function scr_player_cottondrill()
 		movespeed = 0;
 		image_index = 0;
 	}
-	if (key_slap2)
+	if key_slap2
 	{
 		state = states.cotton;
 		vsp = -5;

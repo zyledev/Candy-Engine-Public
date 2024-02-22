@@ -42,12 +42,12 @@ function scr_player_Sjumpprep()
 				sprite_index = spr_player_superjumpright;
 		}
 	}
-	start_running = 1;
+	start_running = true;
 	alarm[4] = 14;
 	jumpAnim = true;
 	dashAnim = true;
 	landAnim = false;
-	machslideAnim = 1;
+	machslideAnim = true;
 	moveAnim = true;
 	stopAnim = true;
 	crouchslideAnim = true;

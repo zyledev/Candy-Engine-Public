@@ -31,7 +31,7 @@ if (state == baddiestates.applejimbash)
 			obj_player.flash = true;
 			state = states.bump;
 		}
-		else if (state != states.hurt && !hurted && cutscene == 0 && state != states.bump)
+		else if (state != states.hurt && !hurted && !cutscene && state != states.bump)
 		{
 			scr_sound(sound_destroyblock2);
 			global.hurtcounter += 1;

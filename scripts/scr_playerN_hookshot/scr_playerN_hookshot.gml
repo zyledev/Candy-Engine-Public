@@ -15,7 +15,7 @@ function scr_playerN_hookshot()
 		jumpAnim = true;
 		jumpstop = false;
 		image_index = 0;
-		freefallstart = 0;
+		freefallstart = false;
 	}
 	if (dir != xscale)
 	{

@@ -12,13 +12,13 @@ function scr_player_ladder()
 	jumpstop = false;
 	movespeed = 0;
 	hsp = 0;
-	if (key_up)
+	if key_up
 	{
 		sprite_index = spr_laddermove;
 		vsp = -6;
 		image_speed = 0.35;
 	}
-	else if (key_down)
+	else if key_down
 	{
 		sprite_index = spr_ladderdown;
 		vsp = 6;
@@ -38,7 +38,7 @@ function scr_player_ladder()
 	crouchslideAnim = true;
 	crouchAnim = true;
 	machhitAnim = false;
-	if (!place_meeting(x, y, obj_ladder))
+	if !place_meeting(x, y, obj_ladder)
 	{
 		landAnim = false;
 		jumpAnim = false;
@@ -46,7 +46,7 @@ function scr_player_ladder()
 		image_index = 0;
 		vsp = 0;
 	}
-	if (key_jump)
+	if key_jump
 	{
 		scr_sound(sound_jump);
 		sprite_index = spr_jump;
@@ -56,7 +56,7 @@ function scr_player_ladder()
 		vsp = -9;
 		image_index = 0;
 	}
-	if (key_down && grounded && !place_meeting(x, y, obj_platform))
+	if key_down && grounded && !place_meeting(x, y, obj_platform)
 	{
 		state = states.normal;
 		image_index = 0;

@@ -5,7 +5,7 @@ function scr_player_normal()
 	{
 		dir = xscale;
 		movespeed = 2;
-		facehurt = 0;
+		facehurt = false;
 	}
 	mach2 = 0;
 	move = key_left + key_right;
@@ -15,7 +15,7 @@ function scr_player_normal()
 		hsp = (move * movespeed) - 5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (move * movespeed) + 5;
-	if (machslideAnim == 0 && !landAnim && shotgunAnim == 0)
+	if (!machslideAnim && !landAnim && !shotgunAnim)
 	{
 		if (move == 0)
 		{
@@ -24,7 +24,7 @@ function scr_player_normal()
 			if (idle >= 300 && animation_end())
 			{
 				shotgunAnim = 0;
-				facehurt = 0;
+				facehurt = false;
 				idle = 0;
 				image_index = 0;
 			}
@@ -44,13 +44,13 @@ function scr_player_normal()
 				}
 				if (idle < 300)
 				{
-					if (facehurt == 0)
+					if (!facehurt)
 					{
 						if (windingAnim < 1800 || angry == 1)
 						{
-							start_running = 1;
+							start_running = true;
 							movespeed = 0;
-							if (global.cane == 1)
+							if (global.cane)
 								sprite_index = spr_caneidle;
 							else
 								sprite_index = spr_idle;
@@ -62,7 +62,7 @@ function scr_player_normal()
 							sprite_index = spr_player_winding;
 						}
 					}
-					else if (facehurt == 1 && character == "P")
+					else if (facehurt && character == "P")
 					{
 						windingAnim = 0;
 						if (sprite_index != spr_player_facehurtup && sprite_index != spr_player_facehurt)
@@ -79,12 +79,12 @@ function scr_player_normal()
 		}
 		if (move != 0)
 		{
-			machslideAnim = 0;
+			machslideAnim = false;
 			idle = 0;
-			facehurt = 0;
+			facehurt = false;
 			if (angry == 1)
 				sprite_index = spr_player_3hpwalk;
-			if (global.cane == 1)
+			if (global.cane)
 				sprite_index = spr_canewalk;
 			else
 				sprite_index = spr_move;
@@ -94,7 +94,7 @@ function scr_player_normal()
 	}
 	if (landAnim)
 	{
-		if (shotgunAnim == 0)
+		if (!shotgunAnim)
 		{
 			if (move == 0)
 			{
@@ -109,7 +109,7 @@ function scr_player_normal()
 				if (animation_end())
 				{
 					landAnim = false;
-					if (global.cane == 0)
+					if (!global.cane)
 						sprite_index = spr_move;
 					else
 						sprite_index = spr_canewalk;
@@ -117,13 +117,13 @@ function scr_player_normal()
 				}
 			}
 		}
-		if (shotgunAnim == 1)
+		if (shotgunAnim)
 		{
 			sprite_index = spr_shotgun_land;
 			if (animation_end())
 			{
 				landAnim = false;
-				if (global.cane == 0)
+				if (!global.cane)
 					sprite_index = spr_move;
 				else
 					sprite_index = spr_canewalk;
@@ -131,19 +131,19 @@ function scr_player_normal()
 			}
 		}
 	}
-	if (machslideAnim == 1)
+	if (machslideAnim)
 	{
 		sprite_index = spr_machslideend;
 		if (animation_end() && sprite_index == spr_machslideend)
-			machslideAnim = 0;
+			machslideAnim = false;
 	}
 	if (sprite_index == spr_player_shotgun && animation_end())
 		sprite_index = spr_shotgun_idle;
 	if (!landAnim)
 	{
-		if (shotgunAnim == 1 && move == 0 && sprite_index != spr_player_shotgun)
+		if (shotgunAnim && move == 0 && sprite_index != spr_player_shotgun)
 			sprite_index = spr_shotgun_idle;
-		else if (shotgunAnim == 1 && sprite_index != spr_player_shotgun)
+		else if (shotgunAnim && sprite_index != spr_player_shotgun)
 			sprite_index = spr_shotgun_walk;
 	}
 	if (scr_solid(x + sign(hsp), y) && xscale == 1 && move == 1 && !place_meeting(x + 1, y, obj_slope))
@@ -153,7 +153,7 @@ function scr_player_normal()
 	jumpstop = false;
 	if (!grounded && !key_jump)
 	{
-		if (shotgunAnim == 0)
+		if (!shotgunAnim)
 			sprite_index = spr_fall;
 		else
 			sprite_index = spr_shotgun_fall;
@@ -186,7 +186,7 @@ function scr_player_normal()
 	{
 		scr_sound(sound_jump);
 		sprite_index = spr_jump;
-		if (shotgunAnim == 1)
+		if (shotgunAnim)
 			sprite_index = spr_shotgun_jump;
 		instance_create(x, y, obj_highjumpcloud2);
 		vsp = -12;
@@ -198,7 +198,7 @@ function scr_player_normal()
 	{
 		scr_sound(sound_jump);
 		sprite_index = spr_jump;
-		if (shotgunAnim == 1)
+		if (shotgunAnim)
 			sprite_index = spr_shotgun_jump;
 		instance_create(x, y, obj_highjumpcloud2);
 		stompAnim = false;
@@ -207,7 +207,7 @@ function scr_player_normal()
 		jumpAnim = true;
 		jumpstop = false;
 		image_index = 0;
-		freefallstart = 0;
+		freefallstart = false;
 	}
 	if ((key_down && grounded) || scr_solid(x, y - 3))
 	{
@@ -228,14 +228,14 @@ function scr_player_normal()
 		movespeed = 0;
 	if (movespeed > 7)
 		movespeed -= 0.1;
-	if (key_slap2 && shotgunAnim == 1 && !instance_exists(obj_cutscene_upstairs))
+	if (key_slap2 && shotgunAnim && !instance_exists(obj_cutscene_upstairs))
 	{
 		global.ammo -= 1;
 		sprite_index = spr_player_shotgun;
 		state = states.shotgun;
 		image_index = 0;
 	}
-	momemtum = 0;
+	momemtum = false;
 	if (move != 0)
 	{
 		xscale = move;
@@ -248,11 +248,11 @@ function scr_player_normal()
 	}
 	else
 		image_speed = 0.35;
-	if (character == "P" && (key_slap2 && !key_down && suplexmove == 0 && shotgunAnim == 0 && global.cane != 1) && obj_player.character != "G" && obj_player.sprite_index != spr_mach1 && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && !key_attack)
+	if (character == "P" && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != 1) && obj_player.character != "G" && obj_player.sprite_index != spr_mach1 && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && !key_attack)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
-		suplexmove = 1;
+		suplexmove = true;
 		vsp = 0;
 		instance_create(x, y, obj_jumpdust);
 		image_index = 0;
@@ -281,7 +281,7 @@ function scr_player_normal()
 		vsp = -15;
 		sprite_index = spr_player_uppercutbegin;
 	}
-	if (global.cane == 1)
+	if (global.cane)
 	{
 		if (scr_solid(x + sign(hsp), y) && (xscale == 1 && (move == 1 && !place_meeting(x + 1, y, obj_slope))))
 			movespeed = 0;
@@ -294,11 +294,11 @@ function scr_player_normal()
 			canrebound = 1;
 			state = states.jump;
 		}
-		if (key_slap2 && !key_down && suplexmove == 0 && shotgunAnim == 0)
+		if (key_slap2 && !key_down && !suplexmove && !shotgunAnim)
 		{
 			scr_sound(sound_suplex1);
 			instance_create(x, y, obj_slaphitbox);
-			suplexmove = 1;
+			suplexmove = true;
 			vsp = 0;
 			instance_create(x, y, obj_jumpdust);
 			image_index = 0;
