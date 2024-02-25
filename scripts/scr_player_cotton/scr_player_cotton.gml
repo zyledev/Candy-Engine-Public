@@ -103,7 +103,7 @@ function scr_player_cotton()
 		grav = 0.5;
 	if sprite_index = spr_cotton_slam
 		grav = 0.2;
-	if sprite_index = spr_cotton_fall || sprite_index = spr_cotton_doublefall || sprite_index = spr_cotton_jump || sprite_index = spr_cotton_doublejump && grounded && vsp >= 0
+	if (sprite_index = spr_cotton_fall || sprite_index = spr_cotton_doublefall || sprite_index = spr_cotton_jump || sprite_index = spr_cotton_doublejump) && grounded && vsp >= 0
 	{
 		image_index = 0;
 		sprite_index = spr_cotton_land;
