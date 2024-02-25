@@ -21,7 +21,7 @@ with (obj_player)
 	if (character == "P")
 	{
 		if (anger = 0)
-			angry = 0;
+			angry = false;
 		if (anger > 0)
 		{
 			angry = true;

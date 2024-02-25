@@ -3,28 +3,28 @@ function scr_player_meteorpep()
 	mach2 = 0;
 	landAnim = true;
 	vsp = 0;
-	if (sprite_index == spr_meteorpep_impact && animation_end())
+	if sprite_index = spr_meteorpep_impact && animation_end()
 		sprite_index = spr_meteorpep_flying;
-	if (sprite_index == spr_meteorpep_flying)
+	if sprite_index = spr_meteorpep_flying
 	{
-		if (movespeed <= 20)
+		if movespeed <= 20
 			movespeed += 1;
 		hsp = floor(-xscale * movespeed);
 	}
 	else
 		hsp = 0;
-	if (scr_solid(x - 1, y) && xscale == 1 && hsp != 0)
+	if scr_solid(x - 1, y) && xscale = 1 && hsp != 0
 	{
 		movespeed = 0;
-		with (obj_baddie)
+		with obj_baddie
 		{
-			if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
+			if point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0))
 			{
 				vsp = -7;
 				hsp = 0;
 			}
 		}
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 10;
 			shake_mag_acc = 30 / room_speed;
@@ -32,15 +32,15 @@ function scr_player_meteorpep()
 		image_index = 0;
 		sprite_index = spr_meteorpep_land;
 	}
-	if (scr_solid(x + 1, y) && xscale == -1 && hsp != 0)
+	if scr_solid(x + 1, y) && xscale == -1 && hsp != 0
 	{
 		movespeed = 0;
-		if (point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0)))
+		if point_in_rectangle(x, y, __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0), __view_get(e__VW.XView, 0) + __view_get(e__VW.WView, 0), __view_get(e__VW.YView, 0) + __view_get(e__VW.HView, 0))
 		{
 			vsp = -7;
 			hsp = 0;
 		}
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 10;
 			shake_mag_acc = 30 / room_speed;
@@ -48,7 +48,7 @@ function scr_player_meteorpep()
 		image_index = 0;
 		sprite_index = spr_meteorpep_land;
 	}
-	if (sprite_index == spr_meteorpep_land && animation_end())
+	if sprite_index = spr_meteorpep_land && animation_end()
 		state = states.normal;
 	image_speed = 0.35;
 }

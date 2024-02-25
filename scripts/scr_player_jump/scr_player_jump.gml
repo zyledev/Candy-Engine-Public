@@ -201,7 +201,7 @@ function scr_player_jump()
 	if global.cane
 	{
 		if !grounded
-			canrebound = 0;
+			canrebound = false;
 		if key_down2
 		{
 			image_index = 0;

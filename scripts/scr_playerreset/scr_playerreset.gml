@@ -129,7 +129,7 @@ function scr_playerreset()
 		suplexhavetomash = 0;
 		timeuntilhpback = 300;
 		anger = 0;
-		angry = 0;
+		angry = false;
 	}
 	with (obj_tv)
 	{
