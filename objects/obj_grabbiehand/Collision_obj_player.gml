@@ -31,7 +31,7 @@ if (sprite_index == spr_grabbiehand_fall)
 	}
 	grav = 0;
 	vsp = 0;
-	grabbing = 1;
+	grabbing = true;
 	sprite_index = spr_grabbiehand_catch;
 	other.image_index = 0;
 	obj_player.sprite_index = spr_player_catched;
@@ -53,7 +53,7 @@ if (sprite_index == spr_grabbiehand_catch)
 }
 if (obj_player.state == states.grabbing)
 {
-	if (thumbingup == 0 && ((x <= (xstarte + 5) && x >= (xstarte - 5)) && ((y <= (ystarte + 5) && y >= (ystarte - 5)) && grabbing == 0)))
+	if (thumbingup == 0 && ((x <= (xstarte + 5) && x >= (xstarte - 5)) && ((y <= (ystarte + 5) && y >= (ystarte - 5)) && !grabbing)))
 	{
 		scr_sound(sound_destroyblock1);
 		delay = 5;

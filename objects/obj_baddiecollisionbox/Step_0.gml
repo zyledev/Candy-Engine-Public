@@ -24,7 +24,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					vsp = -11;
 				}
 			}
-			if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == 0 && state == states.jump && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
+			if (instance_exists(other.baddieID) && y < other.baddieID.y && !attacking && state == states.jump && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
 			{
 				scr_sound(sound_enemyslap);
 				suplexmove = false;

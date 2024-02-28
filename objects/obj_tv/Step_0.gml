@@ -36,21 +36,21 @@ if (global.collect > global.arank && !shownranka)
 	message = "YOU GOT ENOUGH FOR RANK A";
 	showtext = true;
 	alarm[0] = 200;
-	shownranka = 1;
+	shownranka = true;
 }
 else if (global.collect > global.brank && !shownrankb)
 {
 	message = "YOU GOT ENOUGH FOR RANK B";
 	showtext = true;
 	alarm[0] = 200;
-	shownrankb = 1;
+	shownrankb = true;
 }
 else if (global.collect > global.crank && !shownrankc)
 {
 	message = "YOU GOT ENOUGH FOR RANK C";
 	showtext = true;
 	alarm[0] = 200;
-	shownrankc = 1;
+	shownrankc = true;
 }
 if (global.hurtcounter >= global.hurtmilestone)
 {

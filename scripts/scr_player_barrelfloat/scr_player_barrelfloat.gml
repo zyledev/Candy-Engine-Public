@@ -14,7 +14,7 @@ function scr_player_barrelfloat()
 		with instance_create(x, y, obj_barrelfloat)
 			image_xscale = other.image_xscale;
 		image_index = 0;
-		barrel = 0;
+		barrel = false;
 	}
 	movespeed = 2.5;
 	if move != 0

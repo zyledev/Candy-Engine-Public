@@ -1,6 +1,6 @@
 function scr_player_cheesepep()
 {
-	key_particles = 0;
+	key_particles = false;
 	mach2 = 0;
 	alarm[5] = 2;
 	alarm[7] = 60;

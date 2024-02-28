@@ -1,7 +1,7 @@
 function scr_player_boxxedpep()
 {
 	mask_index = spr_crouchmask;
-	key_particles = 0;
+	key_particles = false;
 	alarm[5] = 2;
 	alarm[7] = 60;
 	hurted = true;

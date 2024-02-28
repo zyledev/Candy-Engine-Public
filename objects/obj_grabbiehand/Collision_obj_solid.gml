@@ -1,2 +1,2 @@
-if (grabbing == 0)
+if (!grabbing)
 	movingupwards = 1;

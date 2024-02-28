@@ -79,48 +79,48 @@ function scr_playerreset()
 		input_buffer_highjump = 8;
 		targetRoom = 0;
 		flash = false;
-		global.key_inv = 0;
+		global.key_inv = false;
 		global.keyget = false;
 		global.collect = 0;
 		global.ammo = 0;
-		global.treasure = 0;
+		global.treasure = false;
 		global.combo = 0;
 		global.combotime = 0;
 		global.pizzacoin = 0;
 		global.roomsave = false;
 		global.toppintotal = 1;
 		global.hit = 0;
-		in_water = 0;
-		key_particles = 0;
-		barrel = 0;
+		in_water = false;
+		key_particles = false;
+		barrel = false;
 		bounce = false;
 		a = 0;
 		idle = 0;
-		attacking = 0;
+		attacking = false;
 		slamming = false;
 		superslam = 0;
 		machpunchAnim = false;
 		punch = false;
 		machfreefall = 0;
 		shoot = true;
-		instakillmove = 0;
+		instakillmove = false;
 		windingAnim = 0;
 		facestompAnim = false;
 		ladderbuffer = 0;
 		chainsaw = 50;
 		toomuchalarm1 = 0;
 		toomuchalarm2 = 0;
-		dashdust = 0;
+		dashdust = false;
 		throwforce = 0;
-		hurtsound = mu_rankd;
+		hurtsound = 0;
 		idleanim = 0;
 		momemtum = false;
 		cutscene = false;
-		grabbing = 0;
+		grabbing = false;
 		dir = xscale;
 		shotgunAnim = 0;
-		goingdownslope = 0;
-		goingupslope = 0;
+		goingdownslope = false;
+		goingupslope = false;
 		fallinganimation = 0;
 		bombpeptimer = 100;
 		slapbuffer = 0;
@@ -131,11 +131,11 @@ function scr_playerreset()
 		anger = 0;
 		angry = false;
 	}
-	with (obj_tv)
+	with obj_tv
 	{
-		shownranka = 0;
-		shownrankb = 0;
-		shownrankc = 0;
+		shownranka = false;
+		shownrankb = false;
+		shownrankc = false;
 	}
 	with obj_music {
 		audio_stop_all();

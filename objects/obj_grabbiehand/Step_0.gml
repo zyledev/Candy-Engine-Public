@@ -36,14 +36,14 @@ if (sprite_index == spr_grabbiehand_catch && (!released && grabbing))
 	if (dropspoty < y)
 		y -= 4;
 }
-if ((x <= (dropspotx + 5) && x >= (dropspotx - 5)) && ((y <= (dropspoty + 5) && y >= (dropspoty - 5)) && (released == 0 && grabbing == 1)))
+if ((x <= (dropspotx + 5) && x >= (dropspotx - 5)) && ((y <= (dropspoty + 5) && y >= (dropspoty - 5)) && (released == 0 && grabbing)))
 {
 	obj_player.state = states.normal;
 	image_index = 0;
 	sprite_index = spr_grabbiehand_release;
 	released = true;
 }
-if (sprite_index == spr_grabbiehand_release && (animation_end() && (released == 1 && grabbing == 1)))
+if (sprite_index == spr_grabbiehand_release && (animation_end() && (released == 1 && grabbing)))
 	sprite_index = spr_grabbiehand_idle;
 if (sprite_index == spr_grabbiehand_idle && (released && grabbing))
 {
@@ -56,7 +56,7 @@ if (sprite_index == spr_grabbiehand_idle && (released && grabbing))
 	if (ystarte < y)
 		y -= 4;
 }
-if ((x <= (xstarte + 6) && x >= (xstarte - 6)) && ((y <= (ystarte + 6) && y >= (ystarte - 6)) && (grabbing == 1 && sprite_index == spr_grabbiehand_idle)))
+if ((x <= (xstarte + 6) && x >= (xstarte - 6)) && ((y <= (ystarte + 6) && y >= (ystarte - 6)) && (grabbing && sprite_index == spr_grabbiehand_idle)))
 {
 	grabbing = false;
 	released = false;

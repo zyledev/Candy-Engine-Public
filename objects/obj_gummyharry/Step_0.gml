@@ -34,7 +34,7 @@ with (obj_player)
 			movespeed = 0;
 		}
 	}
-	if (place_meeting(x + hsp, y, other.id) && instakillmove == 1)
+	if (place_meeting(x + hsp, y, other.id) && instakillmove)
 	{
 		instance_destroy(other.id);
 		scr_sound(sound_combo1);

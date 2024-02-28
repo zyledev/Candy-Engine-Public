@@ -9,7 +9,7 @@ if (obj_player.state == states.normal && obj_player.key_up && obj_player.grounde
 	sprite_index = spr_clockdoor;
 	image_speed = 0.35;
 	instance_create(x, y, obj_lock);
-	global.key_inv = 0;
+	global.key_inv = false;
 	global.roomsave = false;
 }
 with (obj_player)
