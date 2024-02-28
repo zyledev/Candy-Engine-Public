@@ -97,12 +97,12 @@ function scr_playerreset()
 		a = 0;
 		idle = 0;
 		attacking = 0;
-		slamming = 0;
+		slamming = false;
 		superslam = 0;
 		machpunchAnim = false;
 		punch = false;
 		machfreefall = 0;
-		shoot = 1;
+		shoot = true;
 		instakillmove = 0;
 		windingAnim = 0;
 		facestompAnim = false;

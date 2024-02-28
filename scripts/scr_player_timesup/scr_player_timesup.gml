@@ -6,7 +6,7 @@ function scr_player_timesup()
 	alarm[7] = -1;
 	alarm[8] = -1;
 	alarm[5] = -1;
-	if (place_meeting(x, y, obj_timesup))
+	if place_meeting(x, y, obj_timesup)
 	{
 		state = states.gameover;
 		sprite_index = spr_deathend;
@@ -14,12 +14,12 @@ function scr_player_timesup()
 		vsp = -8;
 		hsp = -4;
 	}
-	if (room == timesuproom)
+	if room = timesuproom
 	{
 		obj_player.x = 480;
 		obj_player.y = 270;
 	}
-	if (animation_end())
+	if animation_end()
 		image_speed = 0;
 	else
 		image_speed = 0.35;

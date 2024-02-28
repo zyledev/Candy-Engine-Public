@@ -9,7 +9,7 @@ function scr_player_punch()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	if (animation_end())
+	if animation_end()
 		state = states.normal;
 	sprite_index = spr_punch;
 	image_speed = 0.35;

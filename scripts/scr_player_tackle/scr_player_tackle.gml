@@ -4,7 +4,7 @@ function scr_player_tackle()
 	movespeed = 0;
 	mach2 = 0;
 	start_running = true;
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 		hsp = 0;
 	jumpAnim = true;
 	dashAnim = true;
@@ -13,7 +13,7 @@ function scr_player_tackle()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	if (animation_end())
+	if animation_end()
 		state = states.normal;
 	image_speed = 0.35;
 }
