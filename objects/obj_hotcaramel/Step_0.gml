@@ -9,6 +9,6 @@ if (place_meeting(x, y - 1, obj_player))
 		audio_stop_sound(sound_fireass);
 		scr_sound(sound_fireass);
 	}
-	if (obj_player.state = states.cotton || obj_player.state = states.cottondrill)
+	if (obj_player.state == states.cotton || obj_player.state = states.cottondrill)
 		instance_create(x, y, obj_poofeffect);
 }

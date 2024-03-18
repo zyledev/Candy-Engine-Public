@@ -13,22 +13,22 @@ function scr_player_handstand()
 	hsp = (move * movespeed) + bouncespeed;
 	if move != 0
 		bouncespeed += 0.05 * move;
-	if move = 0
+	if move == 0
 		bouncespeed = 0;
-	if sprite_index = spr_null && scr_solid(x, y + 1)
+	if sprite_index == spr_null && scr_solid(x, y + 1)
 	{
 		sprite_index = spr_null;
 		movespeed = 0;
 		vsp = 0;
 		image_index = 0;
 	}
-	if sprite_index = spr_null && floor(image_index) < 4 && grounded
+	if sprite_index == spr_null && floor(image_index) < 4 && grounded
 	{
 		vsp = 0;
 		movespeed = 0;
 		hsp = 0;
 	}
-	if sprite_index = spr_null && floor(image_index) = (image_number - 5)
+	if sprite_index == spr_null && floor(image_index) = (image_number - 5)
 	{
 		movespeed = 10 + bouncespeed;
 		if key_jump2 && !key_down

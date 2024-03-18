@@ -1,4 +1,4 @@
-if (place_meeting(x + 1, y, obj_player) && obj_player.sprite_index = spr_cotton_attack)
+if (place_meeting(x + 1, y, obj_player) && obj_player.sprite_index == spr_cotton_attack)
 {
 	instance_destroy();
 	with (instance_create(x, y, obj_sausageman_dead))
@@ -12,7 +12,7 @@ if (place_meeting(x - 1, y, obj_player) && obj_player.sprite_index == spr_cotton
 		sprite_index = spr_chocofrogbig;
 	instance_create(x, y, obj_poofeffect);
 }
-if (place_meeting(x, y - 1, obj_player) && obj_player.sprite_index = spr_cotton_drill)
+if (place_meeting(x, y - 1, obj_player) && obj_player.sprite_index == spr_cotton_drill)
 {
 	instance_destroy();
 	with (instance_create(x, y, obj_sausageman_dead))
@@ -21,7 +21,7 @@ if (place_meeting(x, y - 1, obj_player) && obj_player.sprite_index = spr_cotton_
 }
 if (place_meeting(x, y + 1, obj_player) || place_meeting(x, y - 1, obj_player) || place_meeting(x - 1, y, obj_player) || place_meeting(x + 1, y, obj_player))
 {
-	if (obj_player.state = states.bombpep && (place_meeting(x + 1, y, obj_player) || place_meeting(x - 1, y, obj_player)))
+	if (obj_player.state == states.bombpep && (place_meeting(x + 1, y, obj_player) || place_meeting(x - 1, y, obj_player)))
 	{
 		with (obj_player)
 		{

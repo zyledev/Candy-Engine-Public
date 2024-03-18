@@ -31,7 +31,7 @@ switch (state)
 		scr_enemy_charge();
 		break;
 }
-if (state = baddiestates.stun && stunned > 40 && !birdcreated)
+if (state == baddiestates.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -73,7 +73,7 @@ if (x != targetplayer.x && grounded)
 {
 	if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 20) && y >= (targetplayer.y - 20)))
 	{
-		if state = baddiestates.walk
+		if state == baddiestates.walk
 		{
 			state = baddiestates.charge;
 			movespeed = 0;
@@ -99,7 +99,7 @@ if (!hitboxcreate && state = baddiestates.charge && sprite_index = spr_banana_ch
 		mask_index = spr_chargershitbox;
 	}
 }
-if state = baddiestates.walk
+if state == baddiestates.walk
 {
 	movespeed = 0;
 	hsp = 0;

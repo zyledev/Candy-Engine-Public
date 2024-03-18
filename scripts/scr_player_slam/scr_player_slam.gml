@@ -5,15 +5,15 @@ function scr_player_slam()
 	move = key_left + key_right;
 	if !grounded
 		hsp = move * movespeed;
-	if (scr_solid(x + 1, y) && xscale = 1) || (scr_solid(x - 1, y) && xscale = -1)
+	if (scr_solid(x + 1, y) && xscale == 1) || (scr_solid(x - 1, y) && xscale = -1)
 		movespeed = 0;
-	if move = 0
+	if move == 0
 		movespeed = 0;
 	if move != 0 && movespeed < 4
 		movespeed += 0.5;
-	if xscale = 1 && move = -1
+	if xscale == 1 && move = -1
 		movespeed = 0;
-	if xscale = -1 && move = 1
+	if xscale == -1 && move = 1
 		movespeed = 0;
 	jumpAnim = true;
 	dashAnim = true;
@@ -23,11 +23,11 @@ function scr_player_slam()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	if floor(image_index) = 8
+	if floor(image_index) == 8
 		state = states.normal;
 	if move != 0
 		xscale = move;
-	if floor(image_index) = 3 && !grounded
+	if floor(image_index) == 3 && !grounded
 		image_speed = 0;
 	else if grounded && !slamming && vsp > 0
 	{

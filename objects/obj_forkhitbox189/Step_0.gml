@@ -10,7 +10,7 @@ if (instance_exists(ID))
 	{
 		if (object_index == obj_sluggy)
 		{
-			if (obj_sluggy.state = baddiestates.slugjump && obj_player.state != states.parry)
+			if (obj_sluggy.state == baddiestates.slugjump && obj_player.state != states.parry)
 			{
 				sluggyhitboxcreated = false;
 				instance_destroy(other.id);

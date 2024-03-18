@@ -33,11 +33,11 @@ function scr_enemy_walk()
 		state = baddiestates.idle;
 	}
 	image_speed = 0.35;
-	if scr_solid(x + 1, y) && image_xscale = 1 || scr_solid(x - 1, y) && image_xscale = -1 || place_meeting(x + hsp, y, obj_hallway)
+	if scr_solid(x + 1, y) && image_xscale == 1 || scr_solid(x - 1, y) && image_xscale = -1 || place_meeting(x + hsp, y, obj_hallway)
 	{
 		if !place_meeting(x + sign(hsp), y, obj_slope)
 		{
-			if object_index = obj_knight
+			if object_index == obj_knight
 			{
 				state = baddiestates.turn;
 				hsp = 0;

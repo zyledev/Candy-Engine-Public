@@ -82,5 +82,5 @@ switch (floor(image_index))
 		hudbounce = 0;
 		break;
 }
-if (floor(image_index) = 13)
+if (floor(image_index) == 13)
 	image_index = 0;

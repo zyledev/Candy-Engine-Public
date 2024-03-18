@@ -4,12 +4,12 @@ function __background_set_internal()
 	var __bind = argument1;
 	var __val = argument2;
 	var __backinfo = argument3;
-	if __backinfo[0] = -1
+	if __backinfo[0] == -1
 		return -1;
 	var __backid = __backinfo[0];
 	var __layerid = __backinfo[1];
 	var __isfore = __backinfo[2];
-	if __prop = 1
+	if __prop == 1
 	{
 		if round(__val) != round(__isfore)
 		{

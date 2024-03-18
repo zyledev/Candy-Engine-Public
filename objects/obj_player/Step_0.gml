@@ -20,7 +20,7 @@ with (obj_player)
 		baddiegrabbedID = -4;
 	if (character == "P")
 	{
-		if (anger = 0)
+		if (anger == 0)
 			angry = false;
 		if (anger > 0)
 		{
@@ -28,21 +28,21 @@ with (obj_player)
 			anger -= 1;
 		}
 	}
-	if (angry && sprite_index = spr_idle)
+	if (angry && sprite_index == spr_idle)
 		sprite_index = spr_player_3hpidle;
 	scr_playersounds();
-	if (state = states.machroll)
+	if (state == states.machroll)
 	{
 		if (!audio_is_playing(sound_tumble))
 			scr_sound(sound_tumble);
 	}
 	else
 		audio_stop_sound(sound_tumble);
-	if (sprite_index = spr_player_winding && state != states.normal)
+	if (sprite_index == spr_player_winding && state != states.normal)
 		windingAnim = 0;
 	else
 		audio_stop_sound(sound_superjumpcharge2);
-	if (state = states.cottonroll && sprite_index = spr_cotton_run)
+	if (state == states.cottonroll && sprite_index = spr_cotton_run)
 	{
 		if (!audio_is_playing(sound_customdash1))
 			scr_sound(sound_customdash1);
@@ -96,17 +96,17 @@ with (obj_player)
 		input_buffer_highjump++;
 	if (key_particles)
 		instance_create(random_range(x + 25, x - 25), random_range(y + 35, y - 25), obj_keyeffect);
-	if (inv_frames = 0 && !hurted)
+	if (inv_frames == 0 && !hurted)
 		image_alpha = 1;
-	if (state = states.mach2 || state = states.charge || state = states.skateboard || state = states.knightpep || state = states.boxxedpep || state = states.cheesepep || state = states.knightpepslopes || state = states.knightpepattack || state = states.bombpep || state = states.facestomp || state = states.facestomp || state = 27 || state = states.machroll || state = states.mach3 || state = states.freefall || state = states.Sjump)
+	if (state == states.mach2 || state = states.charge || state = states.skateboard || state = states.knightpep || state = states.boxxedpep || state = states.cheesepep || state = states.knightpepslopes || state = states.knightpepattack || state = states.bombpep || state = states.facestomp || state = states.facestomp || state = 27 || state = states.machroll || state = states.mach3 || state = states.freefall || state = states.Sjump)
 		attacking = true;
 	else
 		attacking = false;
-	if (state = states.Throw || state = states.punch || state = states.backkick || state = states.shoulder || state = states.uppunch)
+	if (state == states.Throw || state = states.punch || state = states.backkick || state = states.shoulder || state = states.uppunch)
 		grabbing = true;
 	else
 		grabbing = false;
-	if ((state = states.mach3 || state = states.Nhookshot || state = states.skateboard || state = 28 || state = states.freefall || state = states.Sjump || state = states.machroll || state = states.machfreefall || state = states.charge || (state = states.superslam && sprite_index = spr_piledriver) || (state = states.superslam && sprite_index = spr_player_piledriverstart) || state = states.knightpep || state = states.knightpepattack || state = states.knightpepslopes || state = states.boxxedpep || state = states.cheesepep || state = states.cheeseball) || state = states.uppercut)
+	if ((state == states.mach3 || state = states.Nhookshot || state = states.skateboard || state = 28 || state = states.freefall || state = states.Sjump || state = states.machroll || state = states.machfreefall || state = states.charge || (state = states.superslam && sprite_index = spr_piledriver) || (state = states.superslam && sprite_index = spr_player_piledriverstart) || state = states.knightpep || state = states.knightpepattack || state = states.knightpepslopes || state = states.boxxedpep || state = states.cheesepep || state = states.cheeseball) || state = states.uppercut)
 		instakillmove = true;
 	else
 		instakillmove = false;
@@ -156,7 +156,7 @@ with (obj_player)
 		mask_index = spr_player_mask;
 	else
 		mask_index = spr_crouchmask;
-	if (state = states.gottreasure || sprite_index = spr_knightpep_start || sprite_index = spr_knightpep_thunder || state = states.keyget || state = states.door || state = states.victory || state = states.comingoutdoor || state = states.gameover)
+	if (state == states.gottreasure || sprite_index = spr_knightpep_start || sprite_index = spr_knightpep_thunder || state = states.keyget || state = states.door || state = states.victory || state = states.comingoutdoor || state = states.gameover)
 		cutscene = true;
 	else
 		cutscene = false;
@@ -164,13 +164,13 @@ with (obj_player)
 		hurtsound = 0;
 	if (((place_meeting(x, y, obj_door) && !place_meeting(x, y, obj_doorblocked)) || place_meeting(x, y, obj_keydoorclock) || place_meeting(x, y, obj_keydoor) || (place_meeting(x, y, obj_exitgate) && global.panic)) && !instance_exists(obj_uparrow) && scr_solid(x, y + 1) && state =0)
 		instance_create(x, y, obj_uparrow);
-	if (state = states.mach2 && !instance_exists(obj_speedlines))
+	if (state == states.mach2 && !instance_exists(obj_speedlines))
 		instance_create(x, y, obj_speedlines);
 }
 scr_collide_destructibles();
 if (state != states.titlescreen && state != states.door && state != states.Sjump && state != states.comingoutdoor && state != states.boulder && state != states.keyget && state != states.victory && state != states.portal && state != states.timesup && state != states.gottreasure && state != states.gameover && state != states.door)
 	scr_collide_player();
-if (state = states.boulder)
+if (state == states.boulder)
 	scr_collide_player();
 if (state != states.bushdisguise)
 	bushdetection = false;
@@ -187,10 +187,10 @@ if (global.starrmode)
 {
 	if (global.starrmode && state == states.mach3) // I swear this second if statement is just sugary dev shenanigans
 		movespeed = 12;
-	else if (state = states.mach3 && movespeed > 12)
+	else if (state == states.mach3 && movespeed > 12)
 		movespeed = 12;
 }
-if (state = states.door || place_meeting(x, y, obj_hallway) || state = states.victory)
+if (state == states.door || place_meeting(x, y, obj_hallway) || state = states.victory)
 	global.roomsave = false;
 if (state == states.finishingblow && !animation_end())
 {
@@ -198,7 +198,7 @@ if (state == states.finishingblow && !animation_end())
 		vsp = 0;
 	grav = 0;
 }
-if (state = states.finishingblow && floor(image_index) = (image_number - 0))
+if (state == states.finishingblow && floor(image_index) = (image_number - 0))
 {
 	with (instance_place(x, y, obj_baddie))
 		vsp = 0.1;

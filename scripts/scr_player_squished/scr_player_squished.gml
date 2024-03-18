@@ -4,6 +4,6 @@ function scr_player_squished()
 	vsp = 0;
 	move = 0;
 	movespeed = 0;
-	if animation_end() && sprite_index = spr_player_squished
+	if animation_end() && sprite_index == spr_player_squished
 		state = states.normal;
 }

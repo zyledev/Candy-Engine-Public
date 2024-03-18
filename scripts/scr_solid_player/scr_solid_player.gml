@@ -1,6 +1,6 @@
 function scr_solid_player(argument0, argument1, argument2) //scr_solid_player
 {
-    if argument2 = undefined
+    if argument2 == undefined
         argument2 = false
     var old_x = x
     var old_y = y
@@ -28,7 +28,7 @@ function scr_solid_player(argument0, argument1, argument2) //scr_solid_player
                     platform = ds_list_find_value(_list, i)
 
                     var _can_collide = platform.can_collide(platform)
-					if (platform.object_index = obj_cottonplatform || platform.object_index = obj_cottonplatform_tiled) && state != states.cotton && state != states.cottonroll
+					if (platform.object_index == obj_cottonplatform || platform.object_index = obj_cottonplatform_tiled) && state != states.cotton && state != states.cottonroll
 					{
 						_can_collide = false
 					}
@@ -47,7 +47,7 @@ function scr_solid_player(argument0, argument1, argument2) //scr_solid_player
     }
     if y > old_y && !place_meeting(x, old_y, obj_minecartrail) && place_meeting(x, y, obj_minecartrail) && state == states.minecart
     {
-        if state = states.minecart
+        if state == states.minecart
         {
             x = old_x
             y = old_y

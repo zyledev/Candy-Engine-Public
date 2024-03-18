@@ -6,49 +6,49 @@ function scr_enemy_bounce()
 		hsp = 0;
 	if (sprite_index == jumpprepspr && animation_end())
 	{
-		if global.bosshealth = 8
+		if global.bosshealth == 8
 		{
 			attack = 10;
 			jumpheight = 14;
 			movespeed = 3;
 		}
-		if global.bosshealth = 7
+		if global.bosshealth == 7
 		{
 			attack = 10;
 			jumpheight = 7;
 			movespeed = 5;
 		}
-		if global.bosshealth = 6
+		if global.bosshealth == 6
 		{
 			attack = 10;
 			jumpheight = 14;
 			movespeed = 6;
 		}
-		if global.bosshealth = 5
+		if global.bosshealth == 5
 		{
 			attack = 50;
 			jumpheight = 16;
 			movespeed = 5;
 		}
-		if global.bosshealth = 4
+		if global.bosshealth == 4
 		{
 			attack = 10;
 			jumpheight = 20;
 			movespeed = 3;
 		}
-		if global.bosshealth = 3
+		if global.bosshealth == 3
 		{
 			attack = 250;
 			jumpheight = 16;
 			movespeed = 3;
 		}
-		if global.bosshealth = 2
+		if global.bosshealth == 2
 		{
 			attack = 200;
 			jumpheight = 12;
 			movespeed = 5;
 		}
-		if global.bosshealth = 1
+		if global.bosshealth == 1
 		{
 			attack = 120;
 			jumpheight = 10;
@@ -59,7 +59,7 @@ function scr_enemy_bounce()
 	}
 	if vsp > 1 && jumpspr
 		sprite_index = airspr;
-	if sprite_index = airspr && grounded
+	if sprite_index == airspr && grounded
 	{
 		image_index = 0;
 		with obj_camera
@@ -72,7 +72,7 @@ function scr_enemy_bounce()
 	/* // this will probably give issues if used. commenting this out to avoid any weird crashes.
 	if (sprite_index == landspr && animation_end())
 	{
-		if global.bosshealth = 8 && !instance_exists(obj_noisey)
+		if global.bosshealth == 8 && !instance_exists(obj_noisey)
 			instance_create(room_width - (room_width / 4), 60, obj_noisey);
 		else if (global.bosshealth == 7 && !instance_exists(obj_noisey))
 		{

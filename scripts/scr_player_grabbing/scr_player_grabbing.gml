@@ -11,11 +11,11 @@ function scr_player_grabbing()
 	}
 	if grounded && vsp > 0
 		jumpstop = false;
-	if ((scr_solid(x + 1, y) && xscale = 1) || (scr_solid(x - 1, y) && xscale = -1)) && !scr_solid(x + sign(hsp), y)
+	if ((scr_solid(x + 1, y) && xscale == 1) || (scr_solid(x - 1, y) && xscale = -1)) && !scr_solid(x + sign(hsp), y)
 		movespeed = 0;
-	if xscale = 1 && move = -1
+	if xscale == 1 && move = -1
 		movespeed = 0;
-	if xscale = -1 && move = 1
+	if xscale == -1 && move = 1
 		movespeed = 0;
 	if key_attack && grounded
 	{
@@ -37,7 +37,7 @@ function scr_player_grabbing()
 		image_index = 0;
 		image_speed = 0.35;
 	}
-	if move = 0 && grounded
+	if move == 0 && grounded
 	{
 		movespeed = 0;
 		sprite_index = spr_player_grabbing;
@@ -54,7 +54,7 @@ function scr_player_grabbing()
 		image_index = 0;
 		sprite_index = spr_player_grabbingjump;
 	}
-	if sprite_index = spr_player_grabbingjump && floor(image_index) = 2
+	if sprite_index == spr_player_grabbingjump && floor(image_index) = 2
 		sprite_index = spr_player_grabbingfall;
 	if !grounded && vsp > 0
 		sprite_index = spr_player_grabbingfall;
@@ -62,7 +62,7 @@ function scr_player_grabbing()
 	{
 		if movespeed < 6
 			movespeed += 0.5;
-		else if movespeed = 6
+		else if movespeed == 6
 			movespeed = 6;
 	}
 	else

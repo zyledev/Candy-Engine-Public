@@ -6,7 +6,7 @@ if (instance_exists(baddieID))
 	y = baddieID.y;
 	image_xscale = baddieID.image_xscale;
 }
-if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.cutscene = false)
+if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.cutscene == false)
 {
 	if (baddieID.state != baddiestates.grabbed)
 	{

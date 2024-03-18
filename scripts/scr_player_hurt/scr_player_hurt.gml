@@ -1,8 +1,8 @@
 function scr_player_hurt()
 {
-	if sprite_index = spr_hurtjump
+	if sprite_index == spr_hurtjump
 		hsp = xscale * movespeed;
-	if sprite_index = spr_hurt
+	if sprite_index == spr_hurt
 		hsp = -xscale * movespeed;
 	if movespeed > 0
 		movespeed -= 0.1;

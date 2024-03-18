@@ -1,6 +1,6 @@
 function point_in_camera(argument0, argument1, argument2) //gml_Script_point_in_camera
 {
-    if argument2 = undefined
+    if argument2 == undefined
         argument2 = view_camera[0]
     var cam_x = camera_get_view_x(argument2)
     var cam_y = camera_get_view_y(argument2)
@@ -20,7 +20,7 @@ function camera_shake(argument0, argument1)
 
 function camera_get_position_struct(argument0)
 {
-    if argument0 = undefined
+    if argument0 == undefined
         argument0 = view_camera[0]
     var camera_pos = undefined
     camera_pos = 

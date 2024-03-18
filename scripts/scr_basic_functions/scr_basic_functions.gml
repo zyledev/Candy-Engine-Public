@@ -26,7 +26,7 @@ function animation_end(value = floor(image_index), endpoint = (image_number - 1)
 }
 function rank_checker(argument0)
 {
-	if argument0 = undefined
+	if argument0 == undefined
 		argument0 = global.rank;
 	var value = 0;
 	switch (argument0)

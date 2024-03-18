@@ -1,6 +1,6 @@
 function scr_default_parallax()
 {
-	if argument0 = undefined
+	if argument0 == undefined
 		argument0 = false;
 	bg = undefined;
 	bg = function()
@@ -73,7 +73,7 @@ function scr_default_parallax()
 				{
 					with obj_parallax.layers[i]
 					{
-						if layer_get_name(layer_id) = "Backgrounds_long1"
+						if layer_get_name(layer_id) == "Backgrounds_long1"
 							lay_y = layer_yoffset;
 					}
 				}

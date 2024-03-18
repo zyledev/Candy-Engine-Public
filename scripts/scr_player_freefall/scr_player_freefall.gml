@@ -8,7 +8,7 @@ function scr_player_freefall()
 		hsp = move * movespeed;
 		if move != xscale && momemtum && movespeed != 0
 			movespeed -= 0.05;
-		if movespeed = 0
+		if movespeed == 0
 			momemtum = false;
 		if (move == 0 && !momemtum) || scr_solid(x + hsp, y)
 		{
@@ -19,7 +19,7 @@ function scr_player_freefall()
 			movespeed += 0.25;
 		if movespeed > 7
 			movespeed -= 0.05;
-		if (scr_solid(x + 1, y) && move = 1) || (scr_solid(x - 1, y) && move = -1)
+		if (scr_solid(x + 1, y) && move == 1) || (scr_solid(x - 1, y) && move = -1)
 			movespeed = 0;
 		if dir != xscale
 		{
@@ -27,7 +27,7 @@ function scr_player_freefall()
 			dir = xscale;
 			movespeed = 0;
 		}
-		if move = -xscale
+		if move == -xscale
 		{
 			mach2 = 0;
 			movespeed = 0;

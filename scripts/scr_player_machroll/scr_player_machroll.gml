@@ -16,7 +16,7 @@ function scr_player_machroll()
 		sprite_index = spr_player_mach4;
 		state = states.mach3;
 	}
-	if scr_solid(x + 1, y) && xscale = 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles)
+	if scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles)
 	{
 		scr_sound(sound_maximumspeedland);
 		with obj_camera
@@ -46,7 +46,7 @@ function scr_player_machroll()
 		image_index = 0;
 		instance_create(x + 10, y + 10, obj_bumpeffect);
 	}
-	if scr_solid(x - 1, y) && xscale = -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles)
+	if scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles)
 	{
 		scr_sound(sound_maximumspeedland);
 		with (obj_camera)
@@ -64,9 +64,9 @@ function scr_player_machroll()
 		image_index = 0;
 		instance_create(x - 10, y + 10, obj_bumpeffect);
 	}
-	if key_down && place_meeting(x, y, obj_slope) && xscale = 1
+	if key_down && place_meeting(x, y, obj_slope) && xscale == 1
 		x -= 2;
-	if key_down && place_meeting(x, y, obj_slope) && xscale = -1
+	if key_down && place_meeting(x, y, obj_slope) && xscale == -1
 		x += 2;
 	if !instance_exists(obj_cloudeffect) && grounded
 		instance_create(x, y + 43, obj_cloudeffect);
@@ -76,7 +76,7 @@ function scr_player_machroll()
 		image_index = 0;
 		scr_sound(sound_rollgetup);
 		state = states.mach2;
-		if character = "P"
+		if character == "P"
 			sprite_index = spr_player_rollgetup;
 	}
 	if !key_down && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16) && !key_attack
@@ -84,7 +84,7 @@ function scr_player_machroll()
 		image_index = 0;
 		scr_sound(sound_rollgetup);
 		state = states.normal;
-		if character = "P"
+		if character == "P"
 			sprite_index = spr_player_rollgetup;
 	}
 	if grounded

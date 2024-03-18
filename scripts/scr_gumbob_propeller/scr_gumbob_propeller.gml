@@ -16,13 +16,13 @@ function scr_gumbob_propeller()
 	else
 		movespeed = 0;
 	movespeed = 4;
-	if animation_end() && sprite_index = spr_gumbob_propeller_start
+	if animation_end() && sprite_index == spr_gumbob_propeller_start
 		sprite_index = spr_gumbob_propeller_fly;
-	if sprite_index = spr_gumbob_propeller_start
+	if sprite_index == spr_gumbob_propeller_start
 		vsp = 0;
-	if sprite_index = spr_gumbob_propeller_fly
+	if sprite_index == spr_gumbob_propeller_fly
 		vsp--;
-	if gumbobpropellerlength = 0
+	if gumbobpropellerlength == 0
 	{
 		gumbobpropellerlength = 100;
 		state = states.normal;

@@ -14,7 +14,7 @@ if (instance_exists(ID))
 			instance_destroy(other.id);
 		}
 	}
-	if (ID.state = baddiestates.slugjump)
+	if (ID.state == baddiestates.slugjump)
 	{
 		hitboxcreate = false;
 		instance_destroy(other.id);

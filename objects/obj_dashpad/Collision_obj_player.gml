@@ -5,7 +5,7 @@ if (other.state != states.bombpep && other.Dashpad_buffer <= 0)
 		if (state != states.Sjumpprep && state != states.crouch && sprite_get_bbox_bottom(mask_index) <= other.bbox_bottom)
 		{
 			movespeed = max(movespeed, 12);
-			if (character = "P")
+			if (character == "P")
 			{
 				state = states.mach3;
 				Dashpad_buffer = 10;

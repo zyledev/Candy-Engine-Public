@@ -1,6 +1,6 @@
 function scr_player_machfallback()
 {
-	if sprite_index = spr_player_machfallback && animation_end()
+	if sprite_index == spr_player_machfallback && animation_end()
 	{
 		if movespeed < 12
 		{

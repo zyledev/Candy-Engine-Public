@@ -5,7 +5,7 @@ function scr_player_secondjump()
 		hsp = move * movespeed;
 	else
 		hsp = xscale * movespeed;
-	if move = 0 && !momemtum
+	if move == 0 && !momemtum
 		movespeed = 0;
 	if move != 0 && movespeed < 6
 		movespeed += 0.5;

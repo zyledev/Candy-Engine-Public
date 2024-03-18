@@ -14,7 +14,7 @@ function scr_player_skateboard()
 			vsp = -5;
 		}
 	}
-	if scr_solid(x + 1, y) && xscale = 1
+	if scr_solid(x + 1, y) && xscale == 1
 	{
 		machhitAnim = false;
 		state = states.bump;
@@ -26,7 +26,7 @@ function scr_player_skateboard()
 		instance_create(x, y + 10, obj_skateboarddebris1);
 		instance_create(x, y + 10, obj_skateboarddebris2);
 	}
-	else if scr_solid(x - 1, y) && xscale = -1
+	else if scr_solid(x - 1, y) && xscale == -1
 	{
 		machhitAnim = false;
 		state = states.bump;

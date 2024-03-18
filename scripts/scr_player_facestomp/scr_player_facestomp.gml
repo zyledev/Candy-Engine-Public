@@ -3,15 +3,15 @@ function scr_player_facestomp()
 	move = key_left + key_right;
 	jumpAnim = false;
 	hsp = move * movespeed;
-	if scr_solid(x + 1, y) && xscale = 1 || scr_solid(x - 1, y) && xscale = -1
+	if scr_solid(x + 1, y) && xscale == 1 || scr_solid(x - 1, y) && xscale = -1
 		movespeed = 0;
-	if move = 0
+	if move == 0
 		movespeed = 0;
 	if move != 0 && movespeed < 6
 		movespeed += 0.5;
-	if xscale = 1 && move = -1
+	if xscale == 1 && move = -1
 		movespeed = 0;
-	if xscale = -1 && move = 1
+	if xscale == -1 && move = 1
 		movespeed = 0;
 	if !key_down
 		state = states.jump;
@@ -44,7 +44,7 @@ function scr_player_facestomp()
 	else if facestompAnim
 	{
 		sprite_index = spr_player_facestomphit;
-		if floor(image_index) = 5
+		if floor(image_index) == 5
 			facestompAnim = false;
 	}
 	if move != 0

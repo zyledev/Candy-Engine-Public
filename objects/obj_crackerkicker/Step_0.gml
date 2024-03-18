@@ -34,7 +34,7 @@ switch (state)
 		scr_enemy_kick();
 		break;
 }
-if (state = baddiestates.stun && stunned > 40 && !birdcreated)
+if (state == baddiestates.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -46,7 +46,7 @@ if (bombreset > 0)
 	bombreset--;
 if (((obj_player.x > (x - 80) && obj_player.x < (x + 80)) && (y <= (obj_player.y + 100) && y >= (obj_player.y - 100))) && bombreset == 0)
 {
-	if (state = baddiestates.walk)
+	if (state == baddiestates.walk)
 	{
 		movespeed = 0;
 		bombreset = 100;
@@ -72,7 +72,7 @@ if (!boundbox)
 		other.boundbox = 1;
 	}
 }
-if (state = baddiestates.land || state = baddiestates.walk)
+if (state == baddiestates.land || state = baddiestates.walk)
 	movespeed = 1;
 if ((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y <= (obj_player.y + 60) && y >= (obj_player.y - 60)))
 {

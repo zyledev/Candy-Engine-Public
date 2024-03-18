@@ -33,7 +33,7 @@ switch (state)
 }
 if (point_in_circle(x, y, obj_player.x + (75 * obj_player.xscale), obj_player.y, 125) && obj_player.inhaling && state != baddiestates.inhaled)
 	state = baddiestates.inhaled;
-if (state = baddiestates.stun && stunned > 40 && !birdcreated)
+if (state == baddiestates.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))

@@ -29,9 +29,9 @@ function scr_player_boxxedpep()
 		else if place_meeting(x, y + 1, obj_railh2)
 			hsp = (move * movespeed) + 5;
 	}
-	if scr_solid(x + sign(hsp), y) && xscale = 1 && move = 1 && !place_meeting(x + 1, y, obj_slope)
+	if scr_solid(x + sign(hsp), y) && xscale == 1 && move = 1 && !place_meeting(x + 1, y, obj_slope)
 		movespeed = 0;
-	if scr_solid(x + sign(hsp), y) && xscale = -1 && move = -1 && !place_meeting(x - 1, y, obj_slope)
+	if scr_solid(x + sign(hsp), y) && xscale == -1 && move = -1 && !place_meeting(x - 1, y, obj_slope)
 		movespeed = 0;
 	if grounded && input_buffer_jump < 8 && vsp > 0 && !scr_solid(x, y - 16) && !scr_solid(x, y - 32)
 	{
@@ -43,14 +43,14 @@ function scr_player_boxxedpep()
 	{
 		if movespeed < 8
 			movespeed += 0.5;
-		else if floor(movespeed) = 8
+		else if floor(movespeed) == 8
 			movespeed = 8;
 	}
 	else
 		movespeed = 0;
 	if movespeed > 8
 		movespeed -= 0.1;
-	if sprite_index = spr_boxxedpep_intro && animation_end()
+	if sprite_index == spr_boxxedpep_intro && animation_end()
 		sprite_index = spr_boxxedpep_idle;
 	if sprite_index != spr_boxxedpep_intro
 	{

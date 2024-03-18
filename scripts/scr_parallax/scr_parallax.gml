@@ -1,7 +1,7 @@
 function parallax_layer(argument0, argument1, argument2)
 {
 	var return_value;
-	if argument0 = undefined
+	if argument0 == undefined
 		argument0 = undefined;
 	return_value[0] = 0;
 	return_value[1] = 0;
@@ -9,7 +9,7 @@ function parallax_layer(argument0, argument1, argument2)
 	{
 		for (var i = 0; i < array_length(global.ParallaxArray); i++)
 		{
-			if global.ParallaxArray[i].layerName = layer_get_name(argument0)
+			if global.ParallaxArray[i].layerName == layer_get_name(argument0)
 			{
 				var _function = global.ParallaxArray[i].functionID;
 				return _function();
@@ -20,12 +20,12 @@ function parallax_layer(argument0, argument1, argument2)
 }
 function add_parallax_function(argument0, argument1, argument2)
 {
-	if argument2 = undefined
+	if argument2 == undefined
 		argument2 = false;
 	var array_pos = 0;
 	for (var i = 0; i < array_length(global.ParallaxArray); i++)
 	{
-		if global.ParallaxArray[i].layerName = argument0
+		if global.ParallaxArray[i].layerName == argument0
 		{
 			if argument2
 				array_pos = i;

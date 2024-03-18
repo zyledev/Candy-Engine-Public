@@ -9,7 +9,7 @@ if (place_meeting(x, y - 4, obj_player))
 	if (!instance_exists(obj_poofeffect))
 		instance_create(x, y, obj_poofeffect);
 }
-if (obj_player.state = states.minecart)
+if (obj_player.state == states.minecart)
 	visible = 0;
 else
 	visible = 1;

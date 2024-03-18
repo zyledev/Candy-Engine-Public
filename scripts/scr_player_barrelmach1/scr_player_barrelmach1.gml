@@ -28,7 +28,7 @@ function scr_player_barrelmach1()
 		image_index = 0;
 		mach2 = 0;
 	}
-	if scr_solid(x + 1, y) && image_xscale = 1
+	if scr_solid(x + 1, y) && image_xscale == 1
 	{
 		state = states.barrelfall;
 		hsp = -2;
@@ -37,7 +37,7 @@ function scr_player_barrelmach1()
 		image_index = 0;
 		instance_create(x + 10, y + 10, obj_bumpeffect);
 	}
-	if scr_solid(x - 1, y) && image_xscale = -1
+	if scr_solid(x - 1, y) && image_xscale == -1
 	{
 		state = states.barrelfall;
 		hsp = 2;

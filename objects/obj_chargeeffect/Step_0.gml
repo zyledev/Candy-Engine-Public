@@ -3,7 +3,7 @@ if (obj_player.state != states.mach3 && obj_player.state != states.minecart)
 	instance_destroy();
 if (obj_player.state != states.minecart)
 	x = obj_player.x;
-else if (obj_player.state = states.minecart)
+else if (obj_player.state == states.minecart)
 	x = obj_player.x + (32 * obj_player.xscale);
 y = obj_player.y;
 depth = obj_player.depth - 6;

@@ -3,7 +3,7 @@ function scr_player_Sjumpprep()
 	combo = 0;
 	mach2 = 0;
 	move = key_left + key_right;
-	if sprite_index = spr_player_superjumpprep
+	if sprite_index == spr_player_superjumpprep
 	{
 		if !place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2)
 			hsp = xscale * movespeed;
@@ -14,7 +14,7 @@ function scr_player_Sjumpprep()
 		if movespeed >= 0
 			movespeed -= 0.8;
 	}
-	if sprite_index = spr_player_superjumppreplight || sprite_index = spr_player_superjumpright || sprite_index = spr_player_superjumpleft
+	if sprite_index == spr_player_superjumppreplight || sprite_index = spr_player_superjumpright || sprite_index = spr_player_superjumpleft
 	{
 		if !place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2)
 			hsp = move * 2;
@@ -25,20 +25,20 @@ function scr_player_Sjumpprep()
 	}
 	if sprite_index != spr_player_superjumpprep
 	{
-		if sign(hsp) = 0
+		if sign(hsp) == 0
 			sprite_index = spr_player_superjumppreplight;
-		if sign(hsp) = 1
+		if sign(hsp) == 1
 		{
-			if xscale = 1
+			if xscale == 1
 				sprite_index = spr_player_superjumpright;
-			if xscale = -1
+			if xscale == -1
 				sprite_index = spr_player_superjumpleft;
 		}
-		if sign(hsp) = -1
+		if sign(hsp) == -1
 		{
-			if xscale = 1
+			if xscale == 1
 				sprite_index = spr_player_superjumpleft;
-			if xscale = -1
+			if xscale == -1
 				sprite_index = spr_player_superjumpright;
 		}
 	}
@@ -52,14 +52,14 @@ function scr_player_Sjumpprep()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	if animation_end() && sprite_index = spr_player_superjumpprep
+	if animation_end() && sprite_index == spr_player_superjumpprep
 		sprite_index = spr_player_superjumppreplight;
-	if !key_up && (sprite_index = spr_player_superjumppreplight || sprite_index = spr_player_superjumpleft || sprite_index = spr_player_superjumpright || sprite_index = spr_pizzano_sjumpprep) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32)
+	if !key_up && (sprite_index == spr_player_superjumppreplight || sprite_index = spr_player_superjumpleft || sprite_index = spr_player_superjumpright || sprite_index = spr_pizzano_sjumpprep) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32)
 	{
 		scr_sound(sound_superjumprelease);
 		instance_create(x, y, obj_explosioneffect);
 		sprite_index = spr_player_superjump;
-		if character = "N"
+		if character == "N"
 			sprite_index = spr_pizzano_sjump;
 		state = states.Sjump;
 		vsp = -15;

@@ -61,7 +61,7 @@ function __global_object_depths()
     global.__objectDepths[obj_gnomewall] = 0
     global.__objectDepths[obj_supercollect] = 0
     global.__objectDepths[obj_lolipopminer] = 0
-    global.__objectDepths[obj_verify] = 0
+    global.__objectDepths[obj_verif y] == 0
     global.__objectDepths[obj_secretbreakable] = 0
     global.__objectDepths[obj_file3] = 0
     global.__objectDepths[obj_shell] = 0
@@ -279,7 +279,7 @@ function __global_object_depths()
 	global.__objectNames[obj_boss] = "obj_boss";
 	global.__objectNames[obj_baddie] = "obj_baddie";
 	global.__objectNames[obj_baddiedead] = "obj_baddiedead";
-	global.__objectNames[obj_robotknife] = "obj_robotknife";
+	global.__objectNames[obj_robotknif e] == "obj_robotknife";
 	global.__objectNames[obj_spitcheesespike] = "obj_spitcheesespike";
 	global.__objectNames[obj_pineahitbox] = "obj_pineahitbox";
 	global.__objectNames[obj_sausagemancigar] = "obj_sausagemancigar";

@@ -2,16 +2,16 @@ var yoffset = 160;
 var _door = 30;
 with (obj_doortrigger_parent)
 {
-	if (other.targetDoor = id_door)
+	if (other.targetDoor == id_door)
 		_door = id;
 }
 if (instance_exists(_door))
 {
-	if (hallway = 1)
+	if (hallway == 1)
 		x = _door.x + (hallwaydirection * 32);
 	else if (vertical == 1)
 		x = _door.x + verticaloffset;
-	else if (box = 1)
+	else if (box == 1)
 		x = _door.x + 32;
 	else
 		x = _door.x + 16;

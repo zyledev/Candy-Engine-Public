@@ -2,13 +2,13 @@ function scr_player_tumble()
 {
 	mask_index = spr_crouchmask;
 	hsp = xscale * movespeed;
-	if sprite_index = spr_tumblestart
+	if sprite_index == spr_tumblestart
 		movespeed = 6;
 	else
 		movespeed = 14;
-	if !scr_slope() && sprite_index = spr_tumblestart && floor(image_index) < 11
+	if !scr_slope() && sprite_index == spr_tumblestart && floor(image_index) < 11
 		image_index = 11;
-	if sprite_index = spr_tumblestart && animation_end()
+	if sprite_index == spr_tumblestart && animation_end()
 		sprite_index = spr_tumble;
 	if place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles)
 	{
@@ -33,8 +33,8 @@ function scr_player_tumble()
 	image_speed = 0.35;
 	if !audio_is_playing(sound_tumble)
 		scr_sound(sound_tumble);
-	if place_meeting(x, y, obj_slope) && xscale = 1
+	if place_meeting(x, y, obj_slope) && xscale == 1
 		x -= 2;
-	if place_meeting(x, y, obj_slope) && xscale = -1
+	if place_meeting(x, y, obj_slope) && xscale == -1
 		x += 2;
 }

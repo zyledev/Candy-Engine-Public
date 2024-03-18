@@ -31,7 +31,7 @@ switch (state)
 		scr_enemy_charcherry();
 		break;
 }
-if (state = baddiestates.stun && stunned > 40 && !birdcreated)
+if (state == baddiestates.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -43,5 +43,5 @@ if (flash && alarm[2] <= 0)
 	alarm[2] = 0.15 * room_speed;
 if (sprite_index != spr_charcherry_wait && !global.panic)
 	sprite_index = spr_charcherry_wait;
-if (state = baddiestates.stun || (state = baddiestates.cherrywait && global.panic))
+if (state == baddiestates.stun || (state = baddiestates.cherrywait && global.panic))
 	instance_destroy();

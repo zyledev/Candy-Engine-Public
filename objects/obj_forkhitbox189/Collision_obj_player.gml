@@ -1,12 +1,12 @@
 with (obj_player)
 {
-	if ((state = states.knightpep || state = states.knightpepattack || state = states.knightpepslopes) && !cutscene)
+	if ((state == states.knightpep || state = states.knightpepattack || state = states.knightpepslopes) && !cutscene)
 		exit;	
-	else if (state = states.bombpep && !hurted)
+	else if (state == states.bombpep && !hurted)
 		exit;
-	else if (state = states.boxxedpep)
+	else if (state == states.boxxedpep)
 		exit;
-	else if (state = states.cheesepep || state = states.cheesepepstick)
+	else if (state == states.cheesepep || state = states.cheesepepstick)
 		exit;
 	else if (state != states.hurt && !hurted && !cutscene && state != states.bump && state != states.tumble)
 	{

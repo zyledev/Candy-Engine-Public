@@ -49,12 +49,12 @@ function scr_player_mach2()
 						sprite_index = spr_machpunch1;
 					if punch
 						sprite_index = spr_machpunch2;
-					if animation_end() && sprite_index = spr_machpunch1
+					if animation_end() && sprite_index == spr_machpunch1
 					{
 						punch = true;
 						machpunchAnim = false;
 					}
-					if animation_end() && sprite_index = spr_machpunch2
+					if animation_end() && sprite_index == spr_machpunch2
 					{
 						punch = false;
 						machpunchAnim = false;
@@ -63,7 +63,7 @@ function scr_player_mach2()
 			}
 			if !grounded
 				machpunchAnim = false;
-			if grounded && character = "P"
+			if grounded && character == "P"
 			{
 				if mach2 < 100
 					mach2 += 1.5;
@@ -91,7 +91,7 @@ function scr_player_mach2()
 					mach2 = 0;
 				}
 			}
-			if move = -1 && xscale = 1 && grounded
+			if move == -1 && xscale = 1 && grounded
 			{
 				scr_sound(sound_maximumspeedstop);
 				sprite_index = spr_machslideboost;
@@ -99,7 +99,7 @@ function scr_player_mach2()
 				image_index = 0;
 				mach2 = 35;
 			}
-			if move = 1 && xscale = -1 && grounded
+			if move == 1 && xscale = -1 && grounded
 			{
 				scr_sound(sound_maximumspeedstop);
 				sprite_index = spr_machslideboost;
@@ -110,7 +110,7 @@ function scr_player_mach2()
 			if key_down2 && grounded
 			{
 				sprite_index = spr_crouchslip;
-				if character = "P"
+				if character == "P"
 					machhitAnim = false;
 				state = states.crouchslide;
 			}
@@ -128,18 +128,18 @@ function scr_player_mach2()
 				instance_create(x, y, obj_dashcloud);
 			if !grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump && sprite_index != spr_player_machfallback && sprite_index != spr_player_bump
 				sprite_index = spr_secondjump1;
-			if animation_end() && sprite_index = spr_secondjump1
+			if animation_end() && sprite_index == spr_secondjump1
 				sprite_index = spr_secondjump2;
-			if grounded && animation_end() && sprite_index = spr_player_rollgetup
+			if grounded && animation_end() && sprite_index == spr_player_rollgetup
 				sprite_index = spr_mach;
-			if sprite_index = spr_player_machfallback
+			if sprite_index == spr_player_machfallback
 			{
 				move = 0;
 				dir = 0;
 				image_speed = 0.01;
 				vsp += 0.2;
 			}
-			if animation_end() && sprite_index = spr_player_machfallback
+			if animation_end() && sprite_index == spr_player_machfallback
 			{
 				movespeed = 12;
 				mach2 = 80;
@@ -157,7 +157,7 @@ function scr_player_mach2()
 				sprite_index = spr_player_taunt;
 				instance_create(x, y, obj_taunteffect);
 			}
-			if sprite_index = spr_player_rollgetup
+			if sprite_index == spr_player_rollgetup
 				image_speed = 0.4;
 			else
 				image_speed = 0.65;

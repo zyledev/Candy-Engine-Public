@@ -7,7 +7,7 @@ function scr_player_cottonroll()
 		movespeed = 0;
 	}
 	hsp = xscale * movespeed;
-	if sprite_index = spr_cotton_run && animation_end()
+	if sprite_index == spr_cotton_run && animation_end()
 	{
 		sprite_index = spr_cotton_maxrun;
 		flash = true;
@@ -25,7 +25,7 @@ function scr_player_cottonroll()
 	}
 	if place_meeting(x + 1, y, obj_solid) || place_meeting(x - 1, y, obj_solid) && !scr_slope()
 	{
-		if sprite_index = spr_cotton_maxrun && grounded
+		if sprite_index == spr_cotton_maxrun && grounded
 		{
 			state = states.cotton;
 			sprite_index = spr_cotton_slam3;
@@ -33,7 +33,7 @@ function scr_player_cottonroll()
 			image_index = 0;
 			movespeed = 0;
 		}
-		else if sprite_index = spr_cotton_maxrun && !grounded
+		else if sprite_index == spr_cotton_maxrun && !grounded
 		{
 			state = states.cotton;
 			sprite_index = spr_cotton_slam;
@@ -41,7 +41,7 @@ function scr_player_cottonroll()
 			image_index = 0;
 			movespeed = 0;
 		}
-		else if sprite_index = spr_cotton_run
+		else if sprite_index == spr_cotton_run
 		{
 			state = states.cotton;
 			sprite_index = spr_cotton_idle;
@@ -50,9 +50,9 @@ function scr_player_cottonroll()
 			image_index = 0;
 		}
 	}
-	if grounded && sprite_index = spr_cotton_maxrun && key_jump
+	if grounded && sprite_index == spr_cotton_maxrun && key_jump
 		vsp = -10;
-	if grounded && sprite_index = spr_cotton_run && key_jump
+	if grounded && sprite_index == spr_cotton_run && key_jump
 		vsp = -8;
 	if key_down2 && !grounded && drill && sprite_index = spr_cotton_maxrun
 	{

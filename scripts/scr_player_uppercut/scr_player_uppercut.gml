@@ -3,17 +3,17 @@ function scr_player_uppercut()
 	if !instance_exists(obj_mach3effect)
 		instance_create(x, y, obj_mach3effect);
 	image_speed = 0.35;
-	if sprite_index = spr_player_uppercutbegin && animation_end()
+	if sprite_index == spr_player_uppercutbegin && animation_end()
 	{
 		sprite_index = spr_player_uppercutend;
 		image_index = 0;
 	}
-	if scr_solid(x + sign(hsp), y) && xscale = 1 && move = 1 && !place_meeting(x + 1, y, obj_slope)
+	if scr_solid(x + sign(hsp), y) && xscale == 1 && move = 1 && !place_meeting(x + 1, y, obj_slope)
 		movespeed = 0;
-	if scr_solid(x + sign(hsp), y) && xscale = -1 && move = -1 && !place_meeting(x - 1, y, obj_slope)
+	if scr_solid(x + sign(hsp), y) && xscale == -1 && move = -1 && !place_meeting(x - 1, y, obj_slope)
 		movespeed = 0;
 	move = key_left + key_right;
-	if move = 0
+	if move == 0
 		hsp = xscale * movespeed;
 	else
 		hsp = move * movespeed;
@@ -25,7 +25,7 @@ function scr_player_uppercut()
 		if movespeed > 4
 			movespeed = 4;
 	}
-	if move = 0
+	if move == 0
 	{
 		if movespeed > 0
 			movespeed -= 0.3;

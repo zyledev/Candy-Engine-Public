@@ -32,7 +32,7 @@ function scr_confecti_normal()
 	image_xscale = obj_player.xscale;
 	x = targetx;
 	y = targety;
-	if obj_player.state = states.backbreaker && obj_player.sprite_index = spr_pizzelle_taunt && state != confectistates.taunt
+	if obj_player.state == states.backbreaker && obj_player.sprite_index = spr_pizzelle_taunt && state != confectistates.taunt
 	{
 		instance_create(x, y, obj_confectitaunt);
 		state = confectistates.taunt;

@@ -1,4 +1,4 @@
-if (obj_player.state = states.normal && obj_player.key_up && obj_player.grounded && global.key_inv && place_meeting(x, y, obj_player))
+if (obj_player.state == states.normal && obj_player.key_up && obj_player.grounded && global.key_inv && place_meeting(x, y, obj_player))
 {
 	ds_list_add(global.saveroom, id);
 	scr_sound(sound_unlockingdoor);

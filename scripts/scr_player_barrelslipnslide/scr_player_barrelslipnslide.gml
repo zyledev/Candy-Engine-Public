@@ -7,7 +7,7 @@ function scr_player_barrelslipnslide()
 	if vsp < 12
 		vsp += grav;
 	sprite_index = spr_player_barrelslipnslide;
-	if floor(image_index) = 6
+	if floor(image_index) == 6
 	{
 		state = states.barrelroll;
 		flash = true;

@@ -5,7 +5,7 @@ function scr_player_highjump()
 		hsp = move * movespeed;
 	else
 		hsp = xscale * movespeed;
-	if move = 0 && !momemtum
+	if move == 0 && !momemtum
 		movespeed = 0;
 	if move != 0 && movespeed < 6
 		movespeed += 0.5;
@@ -63,7 +63,7 @@ function scr_player_highjump()
 	if jumpAnim
 	{
 		sprite_index = spr_player_Sjumpstart;
-		if floor(image_index) = 3
+		if floor(image_index) == 3
 			jumpAnim = false;
 	}
 	if !jumpAnim

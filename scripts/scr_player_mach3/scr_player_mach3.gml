@@ -38,16 +38,16 @@ function scr_player_mach3()
 				sprite_index = spr_player_mach3jump;
 				vsp = -9;
 			}
-			if sprite_index = spr_player_mach3jump && animation_end()
+			if sprite_index == spr_player_mach3jump && animation_end()
 				sprite_index = spr_player_mach4;
-			if animation_end() && (sprite_index = spr_player_rollgetup || sprite_index = spr_player_parry || sprite_index = spr_player_dashpad)
+			if animation_end() && (sprite_index == spr_player_rollgetup || sprite_index = spr_player_parry || sprite_index = spr_player_dashpad)
 				sprite_index = spr_player_mach4;
 			if movespeed > 20 && sprite_index != spr_player_crazyrun && sprite_index != spr_player_dive && sprite_index != spr_player_rollgetup
 			{
 				flash = true;
 				sprite_index = spr_player_crazyrun;
 			}
-			if sprite_index = spr_player_crazyrun && !instance_exists(obj_crazyrunothereffect)
+			if sprite_index == spr_player_crazyrun && !instance_exists(obj_crazyrunothereffect)
 				instance_create(x, y, obj_crazyrunothereffect);
 			if key_jump
 				input_buffer_jump = 0;
@@ -87,7 +87,7 @@ function scr_player_mach3()
 				flash = false;
 				state = states.machroll;
 			}
-			if sprite_index = spr_player_dive && grounded
+			if sprite_index == spr_player_dive && grounded
 				sprite_index = spr_player_mach4;
 			if !key_down && sprite_index == spr_player_dive && !grounded
 			{
@@ -131,13 +131,13 @@ function scr_player_mach3()
 			}
 			if !grounded
 			{
-				if scr_solid(x + 1, y) && xscale = 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + 1, y, obj_destructibles)
+				if scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + 1, y, obj_destructibles)
 				{
 					wallspeed = movespeed;
 					machhitAnim = false;
 					state = states.climbwall;
 				}
-				else if scr_solid(x - 1, y) && xscale = -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x - 1, y, obj_destructibles)
+				else if scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x - 1, y, obj_destructibles)
 				{
 					wallspeed = movespeed;
 					machhitAnim = false;
@@ -156,13 +156,13 @@ function scr_player_mach3()
 				state = states.shotgun;
 				image_index = 0;
 			}
-			if sprite_index = spr_player_mach4
+			if sprite_index == spr_player_mach4
 				image_speed = 0.4;
-			if sprite_index = spr_player_crazyrun
+			if sprite_index == spr_player_crazyrun
 				image_speed = 0.55;
-			if sprite_index = spr_player_rollgetup
+			if sprite_index == spr_player_rollgetup
 				image_speed = 0.35;
-			if sprite_index = spr_player_dashpad
+			if sprite_index == spr_player_dashpad
 				image_speed = 0.3;
 			if key_taunt2
 			{

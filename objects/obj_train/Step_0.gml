@@ -10,5 +10,5 @@ if (place_meeting(x + 4, y, obj_metalblock))
 	instance_destroy(obj_metalblock);
 if (place_meeting(x - 4, y, obj_metalblock))
 	instance_destroy(obj_metalblock);
-if (animation_end() && sprite_index = spr_spraydie)
+if (animation_end() && sprite_index == spr_spraydie)
 	instance_destroy();

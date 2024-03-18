@@ -8,7 +8,7 @@ function scr_player_parry()
 		movespeed += 0.2;
 	if movespeed > 0
 		movespeed = 0;
-	if sprite_index = spr_player_parry && floor(image_index) >= (image_number - 1)
+	if sprite_index == spr_player_parry && floor(image_index) >= (image_number - 1)
 	{
 		state = tauntstoredstate;
 		movespeed = tauntstoredmovespeed;
