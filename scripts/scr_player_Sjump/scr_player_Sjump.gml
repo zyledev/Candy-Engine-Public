@@ -14,26 +14,26 @@ function scr_player_Sjump()
 		move = key_left + key_right;
 	if move != 0
 		xscale = move;
-	if sprite_index == spr_player_superjump || sprite_index = spr_pizzano_sjump
+	if sprite_index = spr_player_superjump || sprite_index = spr_pizzano_sjump
 		vsp--;
-	if sprite_index == spr_player_supersidejump || sprite_index = spr_null
+	if sprite_index = spr_player_supersidejump || sprite_index = spr_null
 	{
 		if a < 25
 			a += 0.5;
 		hsp = xscale * a;
 		vsp = 0;
 	}
-	if sprite_index == spr_pizzano_sjump && animation_end()
+	if sprite_index = spr_pizzano_sjump && animation_end()
 	{
 		sprite_index = spr_pizzano_sjump;
 		vsp = -15;
 	}
-	if sprite_index == spr_null && animation_end()
+	if sprite_index = spr_null && animation_end()
 	{
 		sprite_index = spr_null;
 		a = 15;
 	}
-	if sprite_index == spr_null || sprite_index = spr_null
+	if sprite_index = spr_null || sprite_index = spr_null
 	{
 		vsp = 0;
 		movespeed = 0;
@@ -43,11 +43,11 @@ function scr_player_Sjump()
 	{
 		scr_sound(sound_maximumspeedland);
 		a = 0;
-		if sprite_index == spr_player_supersidejump
+		if sprite_index = spr_player_supersidejump
 			sprite_index = spr_player_supersidejumpland;
-		if sprite_index == spr_player_superjump
+		if sprite_index = spr_player_superjump
 			sprite_index = spr_player_superjumpland;
-		if sprite_index == spr_pizzano_sjump
+		if sprite_index = spr_pizzano_sjump
 			sprite_index = spr_player_superjumpland;
 		with obj_camera
 		{
@@ -68,7 +68,7 @@ function scr_player_Sjump()
 		state = states.Sjumpland;
 		machhitAnim = false;
 	}
-	if sprite_index == spr_null && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles)
+	if sprite_index = spr_null && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles)
 	{
 		scr_sound(sound_maximumspeedland);
 		a = 0;

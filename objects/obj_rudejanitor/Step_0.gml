@@ -28,7 +28,7 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 }
-if (state == baddiestates.stun && stunned > 40 && !birdcreated)
+if (state = baddiestates.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -42,7 +42,7 @@ if ((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y <= (obj_player.
 {
 	if (state != baddiestates.pizzagoblinthrow && !bombreset && obj_player.state != states.cotton)
 	{
-		if (state == baddiestates.walk || state = baddiestates.idle)
+		if (state = baddiestates.walk || state = baddiestates.idle)
 		{
 			image_index = 0;
 			state = baddiestates.pizzagoblinthrow;

@@ -14,7 +14,7 @@ function scr_player_timesup()
 		vsp = -8;
 		hsp = -4;
 	}
-	if room == timesuproom
+	if room = timesuproom
 	{
 		obj_player.x = 480;
 		obj_player.y = 270;

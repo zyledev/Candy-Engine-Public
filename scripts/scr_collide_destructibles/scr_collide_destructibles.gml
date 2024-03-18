@@ -1,6 +1,6 @@
 function scr_collide_destructibles()
 {
-	if state == states.mach2 || state = states.mach3 || state = states.machroll || state = states.Nhookshot || state = states.knightpep || state = states.crouchslide || state = states.uppercut || state = states.parry || state = states.puddle || state = states.tumble || state = states.machpizzano || state = states.door || state = states.comingoutdoor
+	if state = states.mach2 || state = states.mach3 || state = states.machroll || state = states.Nhookshot || state = states.knightpep || state = states.crouchslide || state = states.uppercut || state = states.parry || state = states.puddle || state = states.tumble || state = states.machpizzano || state = states.door || state = states.comingoutdoor
 	{
 		if place_meeting(x + hsp, y, obj_destructibles)
 		{
@@ -13,7 +13,7 @@ function scr_collide_destructibles()
 				instance_destroy();
 		}
 	}
-	if state == states.freefall || state = states.freefallland || state = states.puddle
+	if state = states.freefall || state = states.freefallland || state = states.puddle
 	{
 		if place_meeting(x, y + 1, obj_destructibles)
 		{
@@ -28,7 +28,7 @@ function scr_collide_destructibles()
 			sprite_index = spr_player_bodyslamland;
 		}
 	}
-	if state == states.normal && global.cane && sprite_index = spr_caneslam
+	if state = states.normal && global.cane && sprite_index = spr_caneslam
 	{
 		if place_meeting(x, y + 1, obj_destructibles)
 		{
@@ -41,7 +41,7 @@ function scr_collide_destructibles()
 				instance_destroy();
 		}
 	}
-	if sprite_index == spr_null
+	if sprite_index = spr_null
 	{
 		if place_meeting(x + hsp, y, obj_destructibles)
 		{
@@ -64,7 +64,7 @@ function scr_collide_destructibles()
 				instance_destroy();
 		}
 	}
-	if state == states.knightpep || state = states.superslam || state = states.Nhookshot
+	if state = states.knightpep || state = states.superslam || state = states.Nhookshot
 	{
 		if place_meeting(x, y + 1, obj_destructibles)
 		{
@@ -82,11 +82,11 @@ function scr_collide_destructibles()
 		with instance_place(x, y + 1, obj_destructibleplatform)
 		{
 			falling = true;
-			if falling == true
+			if falling = true
 				image_speed = 0.35;
 		}
 	}
-	if state == states.jump || state = states.Sjump || state = states.mach2 || state = states.mach3 || state = states.machpizzano
+	if state = states.jump || state = states.Sjump || state = states.mach2 || state = states.mach3 || state = states.machpizzano
 	{
 		if place_meeting(x, y - 1, obj_destructibles)
 		{
@@ -99,7 +99,7 @@ function scr_collide_destructibles()
 				instance_destroy();
 		}
 	}
-	if state == states.uppercut
+	if state = states.uppercut
 	{
 		if place_meeting(x, y - 1, obj_destructibles)
 		{
@@ -122,7 +122,7 @@ function scr_collide_destructibles()
 				instance_destroy();
 		}
 	}
-	if state == states.handstandjump
+	if state = states.handstandjump
 	{
 		with obj_bigdestructibles
 		{

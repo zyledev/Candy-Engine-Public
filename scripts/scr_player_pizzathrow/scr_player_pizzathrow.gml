@@ -21,9 +21,9 @@ function scr_player_pizzathrow()
 	{
 		if !obj_toppinsacrifice.throwed && key_slap2
 		{
-			obj_toppinsacrif ice.hsp == -4;
-			obj_toppinsacrif ice.throwed == true;
-			obj_toppinsacrif ice.vsp == -10;
+			obj_toppinsacrifice.hsp = -4;
+			obj_toppinsacrifice.throwed = true;
+			obj_toppinsacrifice.vsp = -10;
 		}
 	}
 	if key_slap2
@@ -31,7 +31,7 @@ function scr_player_pizzathrow()
 		scr_sound(sound_combo2);
 		sprite_index = spr_player_pizzathrow2;
 	}
-	if floor(image_index) == 3
+	if floor(image_index) = 3
 		sprite_index = spr_player_pizzathrow3;
 	image_speed = 0.35;
 }

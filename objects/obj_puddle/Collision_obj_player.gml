@@ -1,4 +1,4 @@
-if (sprite_index == spr_juicepuddledone && other.grounded)
+if (sprite_index = spr_juicepuddledone && other.grounded)
 {
 	obj_player.image_index = 0;
 	obj_player.image_speed = 0.35;

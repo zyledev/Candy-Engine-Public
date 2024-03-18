@@ -1,6 +1,6 @@
 function scr_enemy_charge()
 {
-	if object_index == obj_swedishfish
+	if object_index = obj_swedishfish
 	{
 		hsp = image_xscale * movespeed;
 		if (place_meeting(x + hsp, y, obj_solid))
@@ -9,7 +9,7 @@ function scr_enemy_charge()
 			stunned = 100;
 		}
 	}
-	if object_index == obj_charger
+	if object_index = obj_charger
 	{
 		hsp = image_xscale * movespeed;
 		if sprite_index != spr_banana_chargestart

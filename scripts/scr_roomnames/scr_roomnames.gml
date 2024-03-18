@@ -1,6 +1,6 @@
 function scr_roomnames()
 {
-	if argument0 == undefined
+	if argument0 = undefined
 		argument0 = room;
 	var room_name = -4;
     switch (argument0)

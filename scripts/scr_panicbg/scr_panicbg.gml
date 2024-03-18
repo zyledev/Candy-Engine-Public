@@ -2,7 +2,7 @@ function scr_panicbg_start()
 {
 	if !variable_global_exists("panicbg_surface") || !surface_exists(global.panicbg_surface)
 		global.panicbg_surface = surface_create(camera_get_view_width(view_camera[0]) + 128, camera_get_view_height(view_camera[0]) + 128);
-	if event_type == ev_draw && event_number = ev_create
+	if event_type = ev_draw && event_number = ev_create
 	{
 		surface_set_target(global.panicbg_surface);
 		draw_clear_alpha(c_black, 0);
@@ -22,7 +22,7 @@ function scr_panicbg_start()
 }
 function scr_panicbg_end()
 {
-	if event_type == ev_draw && event_number = ev_create
+	if event_type = ev_draw && event_number = ev_create
 	{
 		gpu_set_blendenable(false);
 		gpu_set_colorwriteenable(false, false, false, true);

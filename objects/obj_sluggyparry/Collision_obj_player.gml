@@ -2,7 +2,7 @@ with (obj_player)
 {
 	with (obj_player)
 	{
-		if (state == states.cheesepep || state = states.cheesepepstick)
+		if (state = states.cheesepep || state = states.cheesepepstick)
 		{
             scr_sound(sound_combo4)
 			obj_player.grav = 0.5;
@@ -31,7 +31,7 @@ with (obj_player)
 			alarm[8] = 60;
 			alarm[7] = 120;
 			hurted = true;
-			if (xscale == other.image_xscale)
+			if (xscale = other.image_xscale)
 				sprite_index = spr_hurtjump;
 			else
 				sprite_index = spr_hurt;

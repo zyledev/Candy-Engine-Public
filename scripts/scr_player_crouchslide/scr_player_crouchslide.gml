@@ -67,7 +67,7 @@ function scr_player_crouchslide()
 					other.xscale = -sign(image_xscale);
 				}
 			}
-			else if _xscale == -sign(image_xscale)
+			else if _xscale = -sign(image_xscale)
 			{
 				if other.movespeed < 18
 					other.movespeed += (0.25 * slope_acceleration);

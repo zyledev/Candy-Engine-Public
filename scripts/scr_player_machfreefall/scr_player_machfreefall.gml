@@ -1,6 +1,6 @@
 function scr_player_machfreefall()
 {
-	if mach2 == 0
+	if mach2 = 0
 	{
 		hsp = move * movespeed;
 		movespeed = 4;
@@ -15,7 +15,7 @@ function scr_player_machfreefall()
 	move = key_right + key_left;
 	crouchslideAnim = true;
 	sprite_index = spr_player_machfreefall;
-	if scr_solid(x + 1, y) && image_xscale == 1
+	if scr_solid(x + 1, y) && image_xscale = 1
 	{
 		machhitAnim = false;
 		state = states.bump;
@@ -28,7 +28,7 @@ function scr_player_machfreefall()
 		if !audio_is_playing(sfx_bump)
 			audio_play_sound(sfx_bump, 1, false);
 	}
-	else if scr_solid(x - 1, y) && image_xscale == -1
+	else if scr_solid(x - 1, y) && image_xscale = -1
 	{
 		machhitAnim = false;
 		state = states.bump;

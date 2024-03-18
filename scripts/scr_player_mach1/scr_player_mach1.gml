@@ -28,7 +28,7 @@ function scr_player_mach1()
 				hsp = (xscale * movespeed) - 5;
 			else if place_meeting(x, y + 1, obj_railh2)
 				hsp = (xscale * movespeed) + 5;
-			if grounded && xscale == 1 && move = -1
+			if grounded && xscale = 1 && move = -1
 			{
 				momemtum = false;
 				mach2 = 0;
@@ -36,7 +36,7 @@ function scr_player_mach1()
 				image_index = 0;
 				xscale = -1;
 			}
-			if grounded && xscale == -1 && move = 1
+			if grounded && xscale = -1 && move = 1
 			{
 				momemtum = false;
 				mach2 = 0;

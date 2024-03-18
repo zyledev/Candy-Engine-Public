@@ -1,6 +1,6 @@
 with (obj_player)
 {
-	if (state == states.cheesepep || state = states.cheesepepstick)
+	if (state = states.cheesepep || state = states.cheesepepstick)
 	{
 		scr_sound(sound_combo4);
 		obj_player.grav = 0.5;

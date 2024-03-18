@@ -22,7 +22,7 @@ function scr_player_grab()
 		{
 			if movespeed < 6
 				movespeed += 0.5;
-			else if floor(movespeed) == 6
+			else if floor(movespeed) = 6
 				movespeed = 6;
 		}
 		else
@@ -59,13 +59,13 @@ function scr_player_grab()
 			hsp = xscale * movespeed;
 		if move != xscale && momemtum && movespeed != 0
 			movespeed -= 0.05;
-		if movespeed == 0
+		if movespeed = 0
 			momemtum = false;
 		if move != 0 && movespeed < 6
 			movespeed += 0.5;
 		if movespeed > 6
 			movespeed -= 0.5;
-		if scr_solid(x + 1, y) && move == 1 || scr_solid(x - 1, y) && move = -1
+		if scr_solid(x + 1, y) && move = 1 || scr_solid(x - 1, y) && move = -1
 			movespeed = 0;
 		if dir != xscale && sprite_index != spr_player_swingding
 		{
@@ -73,7 +73,7 @@ function scr_player_grab()
 			movespeed = 2;
 			facehurt = false;
 		}
-		if move == -xscale
+		if move = -xscale
 		{
 			mach2 = 0;
 			momemtum = false;
@@ -106,18 +106,18 @@ function scr_player_grab()
 	}
 	if grounded && move != 0
 		sprite_index = spr_player_haulingwalk;
-	else if grounded && move == 0
+	else if grounded && move = 0
 		sprite_index = spr_player_haulingidle;
-	if sprite_index == spr_player_haulingstart && animation_end()
+	if sprite_index = spr_player_haulingstart && animation_end()
 		sprite_index = spr_player_haulingidle;
-	if sprite_index == spr_player_haulingjump && animation_end() || !grounded && (sprite_index = spr_player_haulingwalk || sprite_index = spr_player_haulingidle)
+	if sprite_index = spr_player_haulingjump && animation_end() || !grounded && (sprite_index = spr_player_haulingwalk || sprite_index = spr_player_haulingidle)
 		sprite_index = spr_player_haulingfall;
 	if grounded && vsp > 0 && (sprite_index = spr_player_haulingfall || sprite_index = spr_player_haulingjump)
 	{
 		sprite_index = spr_player_haulingland;
 		movespeed = 2;
 	}
-	if sprite_index == spr_player_haulingland && animation_end()
+	if sprite_index = spr_player_haulingland && animation_end()
 		sprite_index = spr_player_haulingidle;
 	if move != 0 && move != lastmove && swingdingbuffer < 300
 	{

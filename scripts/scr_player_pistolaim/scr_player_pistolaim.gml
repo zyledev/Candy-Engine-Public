@@ -34,7 +34,7 @@ function scr_player_pistolaim()
 		state = states.pistol;
 		shoot = true;
 	}
-	if key_shoot2 && sprite_index == spr_player_aimdiagonal
+	if key_shoot2 && sprite_index = spr_player_aimdiagonal
 	{
 		sprite_index = spr_player_shootdiagonal;
 		image_index = 0;

@@ -15,7 +15,7 @@ function scr_player_barrelmach2()
 		image_index = 0;
 		mach2 = 0;
 	}
-	if scr_solid(x + 1, y) && image_xscale == 1
+	if scr_solid(x + 1, y) && image_xscale = 1
 	{
 		barrel = false;
 		state = states.bump;
@@ -35,7 +35,7 @@ function scr_player_barrelmach2()
 		instance_create(x + random_range(15, -15), y + random_range(15, -15), obj_wooddebris);
 		instance_create(x + random_range(15, -15), y + random_range(15, -15), obj_wooddebris);
 	}
-	if scr_solid(x - 1, y) && image_xscale == -1
+	if scr_solid(x - 1, y) && image_xscale = -1
 	{
 		barrel = false;
 		state = states.bump;

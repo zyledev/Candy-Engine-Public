@@ -1,19 +1,19 @@
 ini_open("saveData.ini");
 levelrank = ini_read_string("Ranks", string(levelsign), "none");
 ini_close();
-if (levelrank == "none")
+if (levelrank = "none")
 	visible = false;
 else
 	visible = true;
-if (levelrank == "e")
+if (levelrank = "e")
 	image_index = 0;
-if (levelrank == "s")
+if (levelrank = "s")
 	image_index = 1;
-if (levelrank == "a")
+if (levelrank = "a")
 	image_index = 2;
-if (levelrank == "b")
+if (levelrank = "b")
 	image_index = 3;
-if (levelrank == "c")
+if (levelrank = "c")
 	image_index = 4;
-if (levelrank == "d")
+if (levelrank = "d")
 	image_index = 5;

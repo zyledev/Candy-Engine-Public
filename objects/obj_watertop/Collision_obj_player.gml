@@ -1,6 +1,6 @@
 with (obj_player)
 {
-	if (state == states.cotton || state = states.cottondrill || state = states.cottonroll)
+	if (state = states.cotton || state = states.cottondrill || state = states.cottonroll)
 	{
 		state = states.normal;
 		sprite_index = spr_idle;

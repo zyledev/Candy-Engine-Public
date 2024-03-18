@@ -2,9 +2,9 @@ function scr_player_shotgunjump()
 {
 	move = key_left + key_right;
 	hsp = move * movespeed;
-	if (scr_solid(x + 1, y) && xscale == 1) || (scr_solid(x - 1, y) && xscale = -1)
+	if (scr_solid(x + 1, y) && xscale = 1) || (scr_solid(x - 1, y) && xscale = -1)
 		movespeed = 0;
-	if move == 0
+	if move = 0
 		movespeed = 0;
 	if move != 0 && movespeed < 6
 		movespeed += 0.5;
@@ -21,7 +21,7 @@ function scr_player_shotgunjump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if sprite_index == spr_player_shotgunjump2 && animation_end()
+	if sprite_index = spr_player_shotgunjump2 && animation_end()
 	{
 		mach2 = 50;
 		state = states.mach2;
@@ -41,7 +41,7 @@ function scr_player_shotgunjump()
 		if !audio_is_playing(sfx_jump)
 			audio_play_sound(sfx_jump, 1, false);
 	}
-	if shoot && floor(image_index) == 0
+	if shoot && floor(image_index) = 0
 	{
 		with obj_camera
 		{
@@ -78,7 +78,7 @@ function scr_player_shotgunjump()
 	}
 	if key_jump
 		input_buffer_jump = 0;
-	if sprite_index == spr_player_shotgunjump1 && floor(image_index) = 3
+	if sprite_index = spr_player_shotgunjump1 && floor(image_index) = 3
 		sprite_index = spr_player_shotgunjump2;
 	if move != 0
 		xscale = move;

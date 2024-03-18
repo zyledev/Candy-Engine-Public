@@ -44,7 +44,7 @@ function scr_player_charge()
 	}
 	if key_jump
 		input_buffer_jump = 0;
-	if scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + 1, y, obj_slope) || scr_solid(x - 1, y) && xscale = -1 && !place_meeting(x - 1, y, obj_slope)
+	if scr_solid(x + 1, y) && xscale = 1 && !place_meeting(x + 1, y, obj_slope) || scr_solid(x - 1, y) && xscale = -1 && !place_meeting(x - 1, y, obj_slope)
 		xscale *= -1;
 	image_speed = 0.65;
 	if !instance_exists(obj_dashcloud) && grounded

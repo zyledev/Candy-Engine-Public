@@ -1,7 +1,7 @@
 if (!global.panic)
 {
 	var roomname = room_get_name(room);
-	if (string_letters(roomname) == "hubroom" || string_letters(roomname) = "hubpublic" || room = outer_room1)
+	if (string_letters(roomname) = "hubroom" || string_letters(roomname) = "hubpublic" || room = outer_room1)
 	{
 		if (!audio_is_playing(mu_hub))
 		{
@@ -10,7 +10,7 @@ if (!global.panic)
 			pausedmusic = mu_hub;
 		}
 	}
-	if (string_letters(roomname) == "entryway" && obj_player.character = "P")
+	if (string_letters(roomname) = "entryway" && obj_player.character = "P")
 	{
 		if (!audio_is_playing(mu_waffle))
 		{
@@ -19,7 +19,7 @@ if (!global.panic)
 			pausedmusic = mu_waffle;
 		}
 	}
-	if (string_letters(roomname) == "entryway" && obj_player.character = "N")
+	if (string_letters(roomname) = "entryway" && obj_player.character = "N")
 	{
 		if (!audio_is_playing(mu_pizzanothemetune))
 		{
@@ -28,7 +28,7 @@ if (!global.panic)
 			pausedmusic = mu_pizzanothemetune;
 		}
 	}
-	if (string_letters(roomname) == "entrywaysecret")
+	if (string_letters(roomname) = "entrywaysecret")
 	{
 		if (!audio_is_playing(mu_wafflesecret))
 		{
@@ -37,7 +37,7 @@ if (!global.panic)
 			pausedmusic = mu_wafflesecret;
 		}
 	}
-	if (string_letters(roomname) == "tutorial")
+	if (string_letters(roomname) = "tutorial")
 	{
 		if (!audio_is_playing(mu_tutorial))
 		{
@@ -46,7 +46,7 @@ if (!global.panic)
 			pausedmusic = mu_tutorial;
 		}
 	}
-	if (string_letters(roomname) == "molasses")
+	if (string_letters(roomname) = "molasses")
 	{
 		if (!audio_is_playing(mu_swamp))
 		{
@@ -55,11 +55,11 @@ if (!global.panic)
 			pausedmusic = mu_swamp;
 		}
 	}
-	if (string_letters(roomname) == "steamy")
+	if (string_letters(roomname) = "steamy")
 	{
 		for (var i = 0; i < 20; i++)
 		{
-			if (roomname == ("steamy_" + string(i)) && i < 8 && string_letters(roomname) != "steamy_secret")
+			if (roomname = ("steamy_" + string(i)) && i < 8 && string_letters(roomname) != "steamy_secret")
 			{
 				if (!audio_is_playing(mu_steamy))
 				{
@@ -69,7 +69,7 @@ if (!global.panic)
 					pausedmusic = mu_steamy;
 				}
 			}
-			if (roomname == ("steamy_" + string(i)) && i >= 7) && string_letters(roomname) != "steamy_secret" || room = steamy_11_1
+			if (roomname = ("steamy_" + string(i)) && i >= 7) && string_letters(roomname) != "steamy_secret" || room = steamy_11_1
 			{
 				if (!audio_is_playing(mu_steamyinner))
 				{
@@ -81,7 +81,7 @@ if (!global.panic)
 			}
 		}
 	}
-	if string_letters(roomname) == "steamy_secret"
+	if string_letters(roomname) = "steamy_secret"
 	{
 		if (!audio_is_playing(mu_steamysecret))
 		{
@@ -91,7 +91,7 @@ if (!global.panic)
 			pausedmusic = mu_steamysecret;
 		}
 	}
-	if (string_letters(roomname) == "molassessecret")
+	if (string_letters(roomname) = "molassessecret")
 	{
 		if (!audio_is_playing(mu_swampsecret))
 		{
@@ -101,7 +101,7 @@ if (!global.panic)
 			pausedmusic = mu_swampsecret;
 		}
 	}
-	if (string_letters(roomname) == "devroom")
+	if (string_letters(roomname) = "devroom")
 	{
 		if (!audio_is_playing(mu_what))
 		{
@@ -111,11 +111,11 @@ if (!global.panic)
 			pausedmusic = mu_what;
 		}
 	}
-	if (string_letters(roomname) == "mines")
+	if (string_letters(roomname) = "mines")
 	{
 		for (var i = 0; i < 20; i++)
 		{
-			if (roomname == ("mines_" + string(i)) && i < 7)
+			if (roomname = ("mines_" + string(i)) && i < 7)
 			{
 				if (!audio_is_playing(mu_mineshaft))
 				{
@@ -125,7 +125,7 @@ if (!global.panic)
 					pausedmusic = mu_mineshaft;
 				}
 			}
-			if (roomname == ("mines_" + string(i)) && i >= 7)
+			if (roomname = ("mines_" + string(i)) && i >= 7)
 			{
 				if (!audio_is_playing(mu_cobaltcaverns))
 				{
@@ -137,7 +137,7 @@ if (!global.panic)
 			}
 		}
 	}
-	if (string_letters(roomname) == "minessecret")
+	if (string_letters(roomname) = "minessecret")
 	{
 		if (!audio_is_playing(mu_minessecret))
 		{
@@ -147,7 +147,7 @@ if (!global.panic)
 			pausedmusic = mu_minessecret;
 		}
 	}
-	if (string_letters(roomname) == "palroom")
+	if (string_letters(roomname) = "palroom")
 	{
 		if (!audio_is_playing(mu_paletteselect))
 		{

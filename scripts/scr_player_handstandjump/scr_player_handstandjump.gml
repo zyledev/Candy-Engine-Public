@@ -47,7 +47,7 @@ function scr_player_handstandjump()
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);
 			}
-			if scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + xscale, y, obj_destructibles)
+			if scr_solid(x + 1, y) && xscale = 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + xscale, y, obj_destructibles)
 			{
 				movespeed = 0;
 				state = states.bump;
@@ -62,7 +62,7 @@ function scr_player_handstandjump()
 					audio_stop_sound(sound_suplex1);
 				scr_sound(sound_bump);
 			}
-			if scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + xscale, y, obj_destructibles)
+			if scr_solid(x - 1, y) && xscale = -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + xscale, y, obj_destructibles)
 			{
 				movespeed = 0;
 				state = states.bump;

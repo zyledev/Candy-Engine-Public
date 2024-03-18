@@ -1,6 +1,6 @@
 function scr_player_portal()
 {
-	if animation_end() && sprite_index == spr_pizzaportalentrancestart
+	if animation_end() && sprite_index = spr_pizzaportalentrancestart
 	{
 		instance_create(x, y, obj_pizzaportalfade);
 		state = states.freefall;

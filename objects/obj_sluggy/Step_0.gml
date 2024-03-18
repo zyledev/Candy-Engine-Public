@@ -37,7 +37,7 @@ switch (state)
 		scr_enemy_slugparry();
 		break;
 }
-if (state == baddiestates.stun && stunned > 40 && !birdcreated)
+if (state = baddiestates.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -61,7 +61,7 @@ if (!boundbox)
 		other.boundbox = true;
 	}
 }
-if (obj_player.state == states.mach3)
+if (obj_player.state = states.mach3)
 	jumptimer = 0;
 if (state != baddiestates.idle && state != baddiestates.stun && state != baddiestates.grabbed && state != baddiestates.slugidle && state != baddiestates.slugjump && state != baddiestates.slugparry && idletimer > 0)
 	idletimer--;

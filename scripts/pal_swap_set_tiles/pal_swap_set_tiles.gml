@@ -13,7 +13,7 @@ function pal_swap_set_tiles()
 	var _start_exists = false;
 	with obj_tile_swapper_start
 	{
-		if depth == _low
+		if depth = _low
 		{
 			_start_exists = true;
 			active = true;
@@ -36,7 +36,7 @@ function pal_swap_set_tiles()
 	var _end_exists = false;
 	with obj_tile_swapper_end
 	{
-		if depth == _high
+		if depth = _high
 		{
 			_end_exists = true;
 			active = true;

@@ -1,7 +1,7 @@
 function scr_player_pal()
 {
 	move = key_left2 + key_right2;
-	if move == 1
+	if move = 1
 	{
 		if paletteselect < 12
 		{
@@ -14,7 +14,7 @@ function scr_player_pal()
 			}
 		}
 	}
-	else if move == -1
+	else if move = -1
 	{
 		if paletteselect > 1
 		{

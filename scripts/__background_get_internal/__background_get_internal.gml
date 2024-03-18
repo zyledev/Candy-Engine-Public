@@ -6,7 +6,7 @@ function __background_get_internal(argument0, argument1, argument2)
 	if __backinfo[0] == -1 || !layer_background_exists(__backinfo[1], __backinfo[0])
 	{
 		__backinfo = __background_get_element(__bind);
-		if __backinfo[0] == -1
+		if __backinfo[0] = -1
 			return -1;
 	}
 	var __res = -1;

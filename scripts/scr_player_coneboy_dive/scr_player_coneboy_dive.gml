@@ -3,19 +3,19 @@ function scr_player_coneboy_dive()
 	hsp = xscale * movespeed;
 	if !grounded
 		movespeed = 10;
-	if instance_place(x + xscale, y, obj_slope) && xscale == 1 && instance_place(x + xscale, y, obj_slope).image_xscale < 1
+	if instance_place(x + xscale, y, obj_slope) && xscale = 1 && instance_place(x + xscale, y, obj_slope).image_xscale < 1
 	{
 		if movespeed < 12
 			movespeed += 0.25;
 	}
-	if instance_place(x + xscale, y, obj_slope) && xscale == -1 && instance_place(x + xscale, y, obj_slope).image_xscale >= 1
+	if instance_place(x + xscale, y, obj_slope) && xscale = -1 && instance_place(x + xscale, y, obj_slope).image_xscale >= 1
 	{
 		if movespeed < 12
 			movespeed += 0.25;
 	}
-	if instance_place(x + xscale, y, obj_slope) && xscale == 1 && instance_place(x + xscale, y, obj_slope).image_xscale >= 1
+	if instance_place(x + xscale, y, obj_slope) && xscale = 1 && instance_place(x + xscale, y, obj_slope).image_xscale >= 1
 		movespeed -= 0.25;
-	if instance_place(x + xscale, y, obj_slope) && xscale == -1 && instance_place(x + xscale, y, obj_slope).image_xscale < 1
+	if instance_place(x + xscale, y, obj_slope) && xscale = -1 && instance_place(x + xscale, y, obj_slope).image_xscale < 1
 		movespeed -= 0.25;
 	if !instance_exists(obj_slidecloud) && grounded && movespeed > 5
 		instance_create(x, y, obj_slidecloud);

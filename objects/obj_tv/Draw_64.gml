@@ -6,7 +6,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 	draw_set_color(c_white);
 	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
 	draw_sprite_ext(tvsprite, image_index, 832, 74, 1, 1, 0, c_white, alpha);
-	if (tvsprite == spr_pizzytvcotton)
+	if (tvsprite = spr_pizzytvcotton)
 		draw_sprite_ext(spr_tvpropeller, -1, 832, 74, 1, 1, 1, c_white, alpha);
 	shader_reset();
 	draw_sprite_ext(invsprite, image_index, 700, 57, 1, 1, 0, c_white, alpha);

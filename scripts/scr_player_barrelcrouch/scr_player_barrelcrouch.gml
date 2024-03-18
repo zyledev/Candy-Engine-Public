@@ -11,7 +11,7 @@ function scr_player_barrelcrouch()
 		image_index = 0;
 	}
 	sprite_index = spr_player_barrelcrouch;
-	if floor(image_index) == 5
+	if floor(image_index) = 5
 		image_speed = 0;
 	else
 		image_speed = 0.35;

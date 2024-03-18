@@ -1,6 +1,6 @@
 with (obj_player)
 {
-	if (state == states.mach1 || state = states.mach2)
+	if (state = states.mach1 || state = states.mach2)
 	{
 		if (place_meeting(x + hsp, y, other.id) && other.hp != 0)
 		{
@@ -23,7 +23,7 @@ with (obj_player)
 			state = states.tackle;
 		}
 	}
-	if (state == states.mach1 || state = states.mach2)
+	if (state = states.mach1 || state = states.mach2)
 	{
 		if (place_meeting(x + hsp, y, other.id) && other.hp <= 0)
 		{

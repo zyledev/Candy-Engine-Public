@@ -44,13 +44,13 @@ function scr_playerN_hookshot()
 			}
 		}
 	}
-	if animation_end() && sprite_index == spr_playerN_hookshot1
+	if animation_end() && sprite_index = spr_playerN_hookshot1
 		sprite_index = spr_playerN_hookshot2;
 	if move != 0
 	{
 		if movespeed < 8
 			movespeed += 0.25;
-		else if movespeed == 8
+		else if movespeed = 8
 			movespeed = 8;
 	}
 	else

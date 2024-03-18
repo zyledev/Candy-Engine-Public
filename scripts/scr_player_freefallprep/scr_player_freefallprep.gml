@@ -1,7 +1,7 @@
 function scr_player_freefallprep()
 {
 	hsp = 0;
-	if ((scr_solid(x + 1, y) && move == 1) || (scr_solid(x - 1, y) && move = -1)) && !place_meeting(x + sign(hsp), y, obj_slope)
+	if ((scr_solid(x + 1, y) && move = 1) || (scr_solid(x - 1, y) && move = -1)) && !place_meeting(x + sign(hsp), y, obj_slope)
 		movespeed = 0;
 	start_running = true;
 	alarm[4] = 14;
@@ -20,9 +20,9 @@ function scr_player_freefallprep()
 		hsp = move * movespeed;
 		if move != xscale && momemtum && movespeed != 0
 			movespeed -= 0.05;
-		if movespeed == 0
+		if movespeed = 0
 			momemtum = false;
-		if (move == 0 && !momemtum) || scr_solid(x + hsp, y)
+		if (move = 0 && !momemtum) || scr_solid(x + hsp, y)
 		{
 			movespeed = 0;
 			mach2 = 0;
@@ -31,7 +31,7 @@ function scr_player_freefallprep()
 			movespeed += 0.25;
 		if movespeed > 7
 			movespeed -= 0.05;
-		if (scr_solid(x + 1, y) && move == 1) || (scr_solid(x - 1, y) && move = -1)
+		if (scr_solid(x + 1, y) && move = 1) || (scr_solid(x - 1, y) && move = -1)
 			movespeed = 0;
 		if dir != xscale
 		{
@@ -39,7 +39,7 @@ function scr_player_freefallprep()
 			dir = xscale;
 			movespeed = 0;
 		}
-		if move == -xscale
+		if move = -xscale
 		{
 			mach2 = 0;
 			movespeed = 0;

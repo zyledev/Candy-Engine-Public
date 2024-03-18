@@ -116,7 +116,7 @@ switch (menu)
 			select++;
 			scr_sound(sound_step);
 		}
-		else if (key_down2 && select == 3)
+		else if (key_down2 && select = 3)
 		{
 			select = 0;
 			scr_sound(sound_step);
@@ -126,7 +126,7 @@ switch (menu)
 			select--;
 			scr_sound(sound_step);
 		}
-		else if (key_up2 && select == 0)
+		else if (key_up2 && select = 0)
 		{
 			select = 3;
 			scr_sound(sound_step);
@@ -154,9 +154,9 @@ switch (menu)
 	case "MISC":
 		break;
 }
-if (key_slap2 && menu == "HOME")
+if (key_slap2 && menu = "HOME")
 {
-	if (room == realtitlescreen)
+	if (room = realtitlescreen)
 		obj_mainfartselect.abletomove = true;
 	if (instance_exists(obj_pause))
 		obj_pause.canmove = true;

@@ -1,4 +1,4 @@
-if (collectvanish && collectboxid.activated == 1)
+if (collectvanish && collectboxid.activated = 1)
 {
 	x = xstart;
 	y = ystart;

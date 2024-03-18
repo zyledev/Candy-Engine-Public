@@ -23,7 +23,7 @@ function scr_player_stunned()
 	alarm[7] = 60;
 	sprite_index = spr_player_stunned;
 	image_speed = 0.35;
-	if floor(image_index) == 53
+	if floor(image_index) = 53
 	{
 		mask_index = spr_player_mask;
 		state = states.normal;

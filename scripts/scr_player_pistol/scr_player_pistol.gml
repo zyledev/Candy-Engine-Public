@@ -29,7 +29,7 @@ function scr_player_pistol()
 		sprite_index = spr_player_shootslide;
 		state = states.crouchslide;
 	}
-	if shoot && floor(image_index) == 0 && (sprite_index = spr_player_pistol || sprite_index = spr_player_pistolair)
+	if shoot && floor(image_index) = 0 && (sprite_index = spr_player_pistol || sprite_index = spr_player_pistolair)
 	{
 		with obj_camera
 		{
@@ -38,7 +38,7 @@ function scr_player_pistol()
 		}
 		with instance_create(x + (xscale * 10), y - 5, obj_pistoleffect)
 			image_xscale = other.xscale;
-		if xscale == 1
+		if xscale = 1
 			var box = bbox_right;
 		else
 			box = bbox_left;
@@ -46,7 +46,7 @@ function scr_player_pistol()
 		ID.hspeed = xscale * 15;
 		shoot = false;
 	}
-	if shoot && floor(image_index) == 0 && sprite_index = spr_player_crouchshoot
+	if shoot && floor(image_index) = 0 && sprite_index = spr_player_crouchshoot
 	{
 		with obj_camera
 		{
@@ -55,7 +55,7 @@ function scr_player_pistol()
 		}
 		with instance_create(x + (xscale * 10), y + 16, obj_pistoleffect)
 			image_xscale = other.xscale;
-		if xscale == 1
+		if xscale = 1
 			box = bbox_right;
 		else
 			box = bbox_left;
@@ -63,7 +63,7 @@ function scr_player_pistol()
 		ID.hspeed = xscale * 15;
 		shoot = false;
 	}
-	if shoot && floor(image_index) == 0 && sprite_index = spr_player_shootup
+	if shoot && floor(image_index) = 0 && sprite_index = spr_player_shootup
 	{
 		with obj_camera
 		{
@@ -80,7 +80,7 @@ function scr_player_pistol()
 		ID.vspeed = -15;
 		shoot = false;
 	}
-	if shoot && floor(image_index) == 0 && sprite_index = spr_player_shootdiagonal
+	if shoot && floor(image_index) = 0 && sprite_index = spr_player_shootdiagonal
 	{
 		with obj_camera
 		{
@@ -89,7 +89,7 @@ function scr_player_pistol()
 		}
 		with instance_create(x, y - 10, obj_pistoleffect)
 		{
-			if other.xscale == 1
+			if other.xscale = 1
 				image_angle = -60;
 			else
 				image_angle = 60;

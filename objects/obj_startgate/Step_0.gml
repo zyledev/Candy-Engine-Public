@@ -1,4 +1,4 @@
-if (level == "placeholder")
+if (level = "placeholder")
 {
 	if (distance_to_object(obj_player) < 50)
 	{
@@ -10,7 +10,7 @@ if (level == "placeholder")
 		}
 	}
 }
-else if (level == "entryway")
+else if (level = "entryway")
 {
 	if (distance_to_object(obj_player) < 50)
 	{
@@ -22,7 +22,7 @@ else if (level == "entryway")
 		}
 	}
 }
-else if (level == "steamy")
+else if (level = "steamy")
 {
 	if (distance_to_object(obj_player) < 50)
 	{
@@ -34,7 +34,7 @@ else if (level == "steamy")
 		}
 	}
 }
-else if (level == "stormy")
+else if (level = "stormy")
 {
 	if (distance_to_object(obj_player) < 50)
 	{
@@ -46,7 +46,7 @@ else if (level == "stormy")
 		}
 	}
 }
-else if (level == "mines")
+else if (level = "mines")
 {
 	if (distance_to_object(obj_player) < 50)
 	{
@@ -58,7 +58,7 @@ else if (level == "mines")
 		}
 	}
 }
-else if (level == "tutorial")
+else if (level = "tutorial")
 {
 	if (distance_to_object(obj_player) < 50)
 	{
@@ -70,7 +70,7 @@ else if (level == "tutorial")
 		}
 	}
 }
-else if (level == "molasses")
+else if (level = "molasses")
 {
 	if (distance_to_object(obj_player) < 50)
 	{
@@ -82,7 +82,7 @@ else if (level == "molasses")
 		}
 	}
 }
-else if (level == "wipsorry")
+else if (level = "wipsorry")
 {
 	if (distance_to_object(obj_player) < 50)
 	{
@@ -94,7 +94,7 @@ else if (level == "wipsorry")
 		}
 	}
 }
-else if (level == "mechanical")
+else if (level = "mechanical")
 {
 	if (distance_to_object(obj_player) < 50)
 	{

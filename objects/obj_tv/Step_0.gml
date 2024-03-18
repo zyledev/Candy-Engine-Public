@@ -1,12 +1,12 @@
 scr_tvsprites();
-if (room == steamy_1)
+if (room = steamy_1)
 {
 	global.srank = 8000;
 	global.arank = global.srank - (global.srank / 4);
 	global.brank = global.srank - ((global.srank / 4) * 2);
 	global.crank = global.srank - ((global.srank / 4) * 3);
 }
-if (room == entryway_1)
+if (room = entryway_1)
 {
 	global.srank = 6000;
 	global.arank = global.srank - (global.srank / 4);
@@ -55,14 +55,14 @@ else if (global.collect > global.crank && !shownrankc)
 if (global.hurtcounter >= global.hurtmilestone)
 {
 	alarm[0] = 150;
-	if (obj_player.character == "P")
+	if (obj_player.character = "P")
 		character = "PIZZELLE";
 	else
 		character = "THE PIZZANO";
 	message = "YOU HAVE HURT " + string(character) + " " + string(global.hurtmilestone) + " TIMES...";
 	global.hurtmilestone += 3;
 }
-if (obj_player.state == states.keyget)
+if (obj_player.state = states.keyget)
 {
 	showtext = true;
 	message = "KEY OBTAINED!";
@@ -102,13 +102,13 @@ if (!global.panic)
 			}
 			if (tvsprite != idletvspr)
 				tvcount = 500;
-			if ((tvsprite == tvchange1 && animation_end()) || (tvsprite = tvchange2 && animation_end()))
+			if ((tvsprite = tvchange1 && animation_end()) || (tvsprite = tvchange2 && animation_end()))
 			{
 				tvcount = choose(500, 450, 400, 550);
 				tvsprite = idletvspr;
 				image_index = 0;
 			}
-			if (tvsprite == idletvspr)
+			if (tvsprite = idletvspr)
 				tvcount -= 1;
 			break;
 	}
@@ -132,6 +132,6 @@ if ((tvsprite == spr_pizzytvcotton && obj_player.state != states.cotton && obj_p
 if (tvsprite == spr_tvturnon && animation_end())
 	tvsprite = idletvspr;
 var roomname = room_get_name(room);
-if (string_letters(roomname) == "tutorial") 
+if (string_letters(roomname) = "tutorial") 
 	tvsprite = spr_tvstatic;
 sprite_index = tvsprite;

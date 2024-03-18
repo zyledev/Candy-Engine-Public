@@ -6,7 +6,7 @@ function scr_player_chainsaw()
 		movespeed -= 0.2;
 	if animation_end()// && 315
 		sprite_index = spr_player_chainsawend;
-	if sprite_index == spr_player_chainsawend || sprite_index = spr_player_chainsawend && !key_shoot
+	if sprite_index = spr_player_chainsawend || sprite_index = spr_player_chainsawend && !key_shoot
 	{
 		image_index = 0;
 		state = states.normal;

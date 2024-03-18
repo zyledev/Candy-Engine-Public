@@ -1,5 +1,5 @@
 draw_set_font(global.smallfont);
-if (obj_player.character == "P")
+if (obj_player.character = "P")
 {
 	switch (obj_player.paletteselect)
 	{
@@ -44,7 +44,7 @@ if (obj_player.character == "P")
 			break;
 	}
 }
-else if (obj_player.character == "DEEZNUTS")
+else if (obj_player.character = "DEEZNUTS")
 {
 	switch (obj_player.paletteselect)
 	{
@@ -89,7 +89,7 @@ else if (obj_player.character == "DEEZNUTS")
 			break;
 	}
 }
-else if (obj_player.character == "G")
+else if (obj_player.character = "G")
 {
 	switch (obj_player.paletteselect)
 	{

@@ -17,7 +17,7 @@ function scr_player_normal()
 		hsp = (move * movespeed) + 5;
 	if !machslideAnim && !landAnim && !shotgunAnim
 	{
-		if move == 0
+		if move = 0
 		{
 			if idle < 400
 				idle++;
@@ -55,26 +55,26 @@ function scr_player_normal()
 							else
 								sprite_index = spr_idle;
 						}
-						else if character == "P"
+						else if character = "P"
 						{
 							idle = 0;
 							windingAnim--;
 							sprite_index = spr_player_winding;
 						}
 					}
-					else if facehurt && character == "P"
+					else if facehurt && character = "P"
 					{
 						windingAnim = 0;
 						if sprite_index != spr_player_facehurtup && sprite_index != spr_player_facehurt
 							sprite_index = spr_player_facehurtup;
-						if animation_end() && sprite_index == spr_player_facehurtup
+						if animation_end() && sprite_index = spr_player_facehurtup
 							sprite_index = spr_player_facehurt;
 					}
 				}
 			}
 			if global.panic
 				sprite_index = spr_escapeidle;
-			if instance_exists(obj_coneball) && sprite_index == spr_escapeidle
+			if instance_exists(obj_coneball) && sprite_index = spr_escapeidle
 				sprite_index = spr_timesupidle;
 		}
 		if move != 0
@@ -96,7 +96,7 @@ function scr_player_normal()
 	{
 		if !shotgunAnim
 		{
-			if move == 0
+			if move = 0
 			{
 				movespeed = 0;
 				sprite_index = spr_land;
@@ -134,14 +134,14 @@ function scr_player_normal()
 	if machslideAnim
 	{
 		sprite_index = spr_machslideend;
-		if animation_end() && sprite_index == spr_machslideend
+		if animation_end() && sprite_index = spr_machslideend
 			machslideAnim = false;
 	}
-	if sprite_index == spr_player_shotgun && animation_end()
+	if sprite_index = spr_player_shotgun && animation_end()
 		sprite_index = spr_shotgun_idle;
 	if !landAnim
 	{
-		if shotgunAnim && move == 0 && sprite_index != spr_player_shotgun
+		if shotgunAnim && move = 0 && sprite_index != spr_player_shotgun
 			sprite_index = spr_shotgun_idle;
 		else if shotgunAnim && sprite_index != spr_player_shotgun
 			sprite_index = spr_shotgun_walk;
@@ -161,7 +161,7 @@ function scr_player_normal()
 		state = states.jump;
 		image_index = 0;
 	}
-	if character == "P"
+	if character = "P"
 	{
 		if key_attack && grounded && !(scr_solid(x + 1, y) && xscale = 1 && !place_meeting(x + xscale, y, obj_slope)) && !(scr_solid(x - 1, y) && xscale = -1 && !place_meeting(x + xscale, y, obj_slope))
 		{
@@ -173,14 +173,14 @@ function scr_player_normal()
 			image_index = 0;
 		}
 	}
-	if character == "N" && key_attack
+	if character = "N" && key_attack
 	{
 		sprite_index = spr_pizzano_pogo_land;
 		vsp = -4;
 		state = states.machpizzano;
 		image_index = 0;
 	}
-	if character == "C" && key_attack
+	if character = "C" && key_attack
 		state = states.coneboyinhale;
 	if key_jump && grounded && !key_down
 	{
@@ -221,7 +221,7 @@ function scr_player_normal()
 	{
 		if movespeed < 7
 			movespeed += 0.5;
-		else if floor(movespeed) == 7
+		else if floor(movespeed) = 7
 			movespeed = 7;
 	}
 	else
@@ -248,7 +248,7 @@ function scr_player_normal()
 	}
 	else
 		image_speed = 0.35;
-	if character == "P" && key_slap2 && !key_down && !suplexmove && !shotgunAnim && !global.cane && obj_player.character != "G" && obj_player.sprite_index != spr_mach1 && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && !key_attack
+	if character = "P" && key_slap2 && !key_down && !suplexmove && !shotgunAnim && !global.cane && obj_player.character != "G" && obj_player.sprite_index != spr_mach1 && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && !key_attack
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
@@ -283,9 +283,9 @@ function scr_player_normal()
 	}
 	if global.cane
 	{
-		if scr_solid(x + sign(hsp), y) && xscale == 1 && move = 1 && !place_meeting(x + 1, y, obj_slope)
+		if scr_solid(x + sign(hsp), y) && xscale = 1 && move = 1 && !place_meeting(x + 1, y, obj_slope)
 			movespeed = 0;
-		if scr_solid(x + sign(hsp), y) && xscale == -1 && move = -1 && !place_meeting(x - 1, y, obj_slope)
+		if scr_solid(x + sign(hsp), y) && xscale = -1 && move = -1 && !place_meeting(x - 1, y, obj_slope)
 			movespeed = 0;
 		if key_jump2 && grounded && !canrebound
 		{
@@ -304,7 +304,7 @@ function scr_player_normal()
 			image_index = 0;
 			sprite_index = spr_canesuplex;
 			state = states.handstandjump;
-			if character == "DEEZNUTS"
+			if character = "DEEZNUTS"
 				vsp = -5;
 		}
 	}
@@ -315,19 +315,19 @@ function scr_player_normal()
 		image_index = 0;
 		breakdanceammo -= 1;
 	}
-	if key_slap2 && character == "G"
+	if key_slap2 && character = "G"
 	{
 		state = states.gumbobmixnbrew;
 		image_index = 0;
 		sprite_index = spr_gumbob_brew_pulloutdrink;
 	}
-	if key_slap2 && character == "C"
+	if key_slap2 && character = "C"
 	{
 		image_index = 0;
 		sprite_index = spr_coneboy_attack;
 		state = states.coneboyattack;
 	}
-	if key_attack2 && character == "C" && !grounded
+	if key_attack2 && character = "C" && !grounded
 	{
 		vsp -= 4;
 		image_index = 0;

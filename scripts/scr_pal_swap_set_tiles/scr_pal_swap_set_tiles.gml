@@ -36,7 +36,7 @@ function scr_pal_swap_set_tiles()
 	var _end_exists = 0;
 	with obj_tile_swapper_end
 	{
-		if depth == _high
+		if depth = _high
 		{
 			_end_exists = true;
 			active = true;

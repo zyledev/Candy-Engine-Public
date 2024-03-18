@@ -1,5 +1,5 @@
 var roomname = room_get_name(room);	
-if (string_letters(roomname) == "steamy" || string_letters(roomname) = "steamysecret")
+if (string_letters(roomname) = "steamy" || string_letters(roomname) = "steamysecret")
 {
 	instance_activate_all();
 	with obj_player 

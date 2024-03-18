@@ -6,7 +6,7 @@ function scr_player_bump()
 	alarm[4] = 14;
 	if grounded && vsp > 0
 		hsp = 0;
-	if floor(image_index) == image_number - 1
+	if floor(image_index) = image_number - 1
 		state = states.normal;
 	if sprite_index != spr_player_catched && sprite_index != spr_tumbleend && sprite_index != spr_player_mach3hitwall
 		sprite_index = spr_bump;

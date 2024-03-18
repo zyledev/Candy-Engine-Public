@@ -19,14 +19,14 @@ function scr_player_slipnslide()
 		movespeed += 0.2;
 	machhitAnim = false;
 	crouchslideAnim = true;
-	if movespeed == 0 && !scr_slope()
+	if movespeed = 0 && !scr_slope()
 	{
 		state = states.normal;
 		movespeed = 0;
 		mach2 = 0;
 		image_index = 0;
 	}
-	if scr_solid(x + 1, y) && xscale == 1
+	if scr_solid(x + 1, y) && xscale = 1
 	{
 		state = states.bump;
 		hsp = -2;
@@ -35,7 +35,7 @@ function scr_player_slipnslide()
 		image_index = 0;
 		instance_create(x + 10, y + 10, obj_bumpeffect);
 	}
-	if scr_solid(x - 1, y) && xscale == -1
+	if scr_solid(x - 1, y) && xscale = -1
 	{
 		state = states.bump;
 		hsp = 2;

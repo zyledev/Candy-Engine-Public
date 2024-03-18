@@ -3,7 +3,7 @@ function scr_player_fireass()
 	image_speed = 0.35;
 	if place_meeting(x + hsp, y, obj_solid)
 		xscale *= -1;
-	if sprite_index == spr_player_fireass
+	if sprite_index = spr_player_fireass
 	{
 		move = key_left + key_right;
 		if move != 0
@@ -17,7 +17,7 @@ function scr_player_fireass()
 			image_index = 0;
 		}
 	}
-	if sprite_index == spr_player_fireassend
+	if sprite_index = spr_player_fireassend
 	{
 		hsp = xscale * movespeed;
 		if movespeed > 0

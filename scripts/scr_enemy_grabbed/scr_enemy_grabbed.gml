@@ -8,13 +8,13 @@ function scr_enemy_grabbed()
 		x = obj_player.x;
 		if (obj_player.sprite_index != spr_player_haulingstart)
 			y = obj_player.y - 40;
-		else if floor(obj_player.image_index) == 0
+		else if floor(obj_player.image_index) = 0
 			y = obj_player.y;
-		else if floor(obj_player.image_index) == 1
+		else if floor(obj_player.image_index) = 1
 			y = obj_player.y - 10;
-		else if floor(obj_player.image_index) == 2
+		else if floor(obj_player.image_index) = 2
 			y = obj_player.y - 20;
-		else if floor(obj_player.image_index) == 3
+		else if floor(obj_player.image_index) = 3
 			y = obj_player.y - 30;
 		image_xscale = -obj_player.xscale;
 	}
@@ -32,11 +32,11 @@ function scr_enemy_grabbed()
 		}
 	}
 	hsp = 0;
-	if obj_player.state == states.punch && floor(obj_player.image_index) = 2
+	if obj_player.state = states.punch && floor(obj_player.image_index) = 2
 	{
 		alarm[3] = 3;
 		global.hit += 1;
-		if other.object_index == obj_pizzaball
+		if other.object_index = obj_pizzaball
 			global.golfhit += 1;
 		hp -= 1;
 		instance_create(x + (obj_player.xscale * 30), y, obj_bumpeffect);
@@ -58,11 +58,11 @@ function scr_enemy_grabbed()
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if obj_player.state == states.backkick && floor(obj_player.image_index) = 2
+	if obj_player.state = states.backkick && floor(obj_player.image_index) = 2
 	{
 		alarm[3] = 3;
 		global.hit += 1;
-		if other.object_index == obj_pizzaball
+		if other.object_index = obj_pizzaball
 			global.golfhit += 1;
 		hp -= 1;
 		instance_create(x + (-obj_player.xscale * 50), y, obj_bumpeffect);
@@ -84,7 +84,7 @@ function scr_enemy_grabbed()
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if obj_player.state == states.shoulder && floor(obj_player.image_index) = 2
+	if obj_player.state = states.shoulder && floor(obj_player.image_index) = 2
 	{
 		global.hit += 1;
 		hp -= 1;
@@ -106,7 +106,7 @@ function scr_enemy_grabbed()
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if obj_player.state == states.Throw && floor(obj_player.image_index) = 2
+	if obj_player.state = states.Throw && floor(obj_player.image_index) = 2
 	{
 		global.hit += 1;
 		hp -= 1;
@@ -118,65 +118,65 @@ function scr_enemy_grabbed()
 		hsp = -image_xscale * 10;
 		vsp = -10;
 	}
-	if obj_player.state == states.charge
+	if obj_player.state = states.charge
 	{
-		if floor(obj_player.image_index) == 0
+		if floor(obj_player.image_index) = 0
 		{
 			depth = 0;
 			x = obj_player.x + (obj_player.xscale * 10);
 			y = obj_player.y;
 		}
-		if floor(obj_player.image_index) == 1
+		if floor(obj_player.image_index) = 1
 		{
 			depth = 0;
 			x = obj_player.x + (obj_player.xscale * 5);
 			y = obj_player.y;
 		}
-		if floor(obj_player.image_index) == 2
+		if floor(obj_player.image_index) = 2
 		{
 			depth = 0;
 			x = obj_player.x;
 			y = obj_player.y;
 		}
-		if floor(obj_player.image_index) == 3
+		if floor(obj_player.image_index) = 3
 		{
 			depth = 0;
 			x = obj_player.x + (obj_player.xscale * -5);
 			y = obj_player.y;
 		}
-		if floor(obj_player.image_index) == 4
+		if floor(obj_player.image_index) = 4
 		{
 			depth = 0;
 			x = obj_player.x + (obj_player.xscale * -10);
 			y = obj_player.y;
 		}
-		if floor(obj_player.image_index) == 5
+		if floor(obj_player.image_index) = 5
 		{
 			depth = -8;
 			x = obj_player.x + (obj_player.xscale * -5);
 			y = obj_player.y;
 		}
-		if floor(obj_player.image_index) == 6
+		if floor(obj_player.image_index) = 6
 		{
 			depth = -8;
 			x = obj_player.x;
 			y = obj_player.y;
 		}
-		if floor(obj_player.image_index) == 7
+		if floor(obj_player.image_index) = 7
 		{
 			depth = -8;
 			x = obj_player.x + (obj_player.xscale * 5);
 			y = obj_player.y;
 		}
 	}
-	if obj_player.state == states.crouch
+	if obj_player.state = states.crouch
 	{
 		x = obj_player.x;
 		y = obj_player.y;
 	}
-	if obj_player.state == states.superslam
+	if obj_player.state = states.superslam
 	{
-		if obj_player.character == "P"
+		if obj_player.character = "P"
 		{
 			x = obj_player.x - (obj_player.xscale * 2);
 			y = obj_player.y - 70;
@@ -187,7 +187,7 @@ function scr_enemy_grabbed()
 			x = obj_player.x;
 			y = obj_player.y - 40;
 		}
-		if obj_player.sprite_index == obj_player.spr_piledriverland
+		if obj_player.sprite_index = obj_player.spr_piledriverland
 		{
 			scr_sound(sound_explosion);
 			instance_create(x, y, obj_slapstar);
@@ -207,7 +207,7 @@ function scr_enemy_grabbed()
 	}
 	sprite_index = grabbedspr;
 	image_speed = 0.35;
-	if obj_player.state == states.finishingblow && !thrown
+	if obj_player.state = states.finishingblow && !thrown
 	{
 		x = obj_player.x + (60 * obj_player.xscale);
 		y = obj_player.y;

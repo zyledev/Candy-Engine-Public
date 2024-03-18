@@ -7,11 +7,11 @@ if ((sprite_index == spr_onoffswitch_bluetored || sprite_index == spr_onoffswitc
 }
 var player = instance_nearest(x, y, obj_player);
 player = obj_player;
-if (player.state == states.handstandjump && place_meeting(x, y, player))
+if (player.state = states.handstandjump && place_meeting(x, y, player))
 {
 	with (player)
 	{
-		if (state == states.handstandjump)
+		if (state = states.handstandjump)
 		{
 			sprite_index = choose(spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4);
 			suplexdashtimer = 7;

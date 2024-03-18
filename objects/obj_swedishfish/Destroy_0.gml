@@ -51,19 +51,19 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
 			vsp *= 3;
 		}
 		global.combo += 1;
-		if (global.combo == 1)
+		if (global.combo = 1)
 		{
 			scr_sound(sound_combo1);
 			instance_create(x, y, obj_10);
 			global.collect += 10;
 		}
-		if (global.combo == 2)
+		if (global.combo = 2)
 		{
 			scr_sound(sound_combo1);
 			instance_create(x, y, obj_20);
 			global.collect += 20;
 		}
-		if (global.combo == 3)
+		if (global.combo = 3)
 		{
 			scr_sound(sound_combo1);
 			instance_create(x, y, obj_40);

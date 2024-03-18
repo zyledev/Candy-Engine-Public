@@ -150,7 +150,7 @@ function __background_set_element(argument0, argument1, argument2, argument3, ar
 	}
 
 	var __layerid;
-	if __bind == -1
+	if __bind = -1
 		__layerid = __collayer;
 	else
 		__layerid = __slots[__bind];

@@ -22,7 +22,7 @@ function scr_mach_pizzano()
 	if grounded
 		sprite_index = spr_pizzano_pogo_land;
 	stop = true;
-	if sprite_index == spr_pizzano_pogo_land && animation_end()
+	if sprite_index = spr_pizzano_pogo_land && animation_end()
 		sprite_index = spr_pizzano_pogo_air;
 	if !key_attack
 		state = states.normal;
@@ -32,9 +32,9 @@ function scr_mach_pizzano()
 		vsp = -6;
 	if key_jump2 && !key_down && grounded
 		vsp = -14;
-	if movespeed == 12 && grounded
+	if movespeed = 12 && grounded
 		flash = true;
-	if movespeed == 12 && key_slap2
+	if movespeed = 12 && key_slap2
 	{
 		state = states.rocketfistpizzano;
 		sprite_index = spr_pizzano_sjumpprepside;

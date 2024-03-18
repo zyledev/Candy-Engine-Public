@@ -10,9 +10,9 @@ if (global.debugmode)
 	draw_set_font(global.font);
 	draw_text(x, y - 50, state);
 	draw_text(x, y - 150, movespeed);
-	if (object_index == obj_cottonwitch)
+	if (object_index = obj_cottonwitch)
 		draw_text(x, y - 100, bombreset);
-	if (object_index == obj_sluggy)
+	if (object_index = obj_sluggy)
 	{
 		draw_text(x, y - 100, idletimer);
 		draw_text(x, y - 150, jumptimer);

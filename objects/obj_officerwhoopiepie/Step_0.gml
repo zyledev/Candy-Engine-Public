@@ -25,7 +25,7 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 }
-if (state == baddiestates.stun && stunned > 40 && !birdcreated)
+if (state = baddiestates.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -49,13 +49,13 @@ if (!boundbox)
 		other.boundbox = 1;
 	}
 }
-if (hitboxcreate == 0 && (state = baddiestates.idle || state = baddiestates.walk) && obj_player.state != states.mach3)
+if (hitboxcreate = 0 && (state = baddiestates.idle || state = baddiestates.walk) && obj_player.state != states.mach3)
 {
 	hitboxcreate = true;
 	with (instance_create(x, y, obj_taserhitbox))
 		ID = other.id;
 }
-if (state == baddiestates.stun)
+if (state = baddiestates.stun)
 	hitboxcreate = false;
 if (x != obj_player.x)
 {

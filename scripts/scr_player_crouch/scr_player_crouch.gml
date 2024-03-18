@@ -39,7 +39,7 @@ function scr_player_crouch()
 	}
 	if !crouchAnim
 	{
-		if move == 0
+		if move = 0
 		{
 			if !shotgunAnim
 				sprite_index = spr_crouch;
@@ -51,7 +51,7 @@ function scr_player_crouch()
 	}
 	if !crouchAnim
 	{
-		if move == 0
+		if move = 0
 		{
 			if !shotgunAnim
 				sprite_index = spr_couchstart;

@@ -1,3 +1,3 @@
-if (state == states.tackle)
+if (state = states.tackle)
 	movespeed = 0;
 hsp = 0;
