@@ -37,7 +37,7 @@ function scr_player_crouch()
 		image_index = 0;
 		mask_index = spr_player_mask;
 	}
-	if !crouchAnim
+	if crouchAnim
 	{
 		if move = 0
 		{
